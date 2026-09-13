@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "pack": {
+    "id": "anima",
+    "name": "Anima词库",
+    "version": "1.1.0",
+    "source": "CircleStone Labs Anima 模型卡与 Comfy Org 官方文档",
+    "priority": 20
+  },
+  "tags": [
+    {
+      "english": "absurdres",
+      "chinese": "超高分辨率",
+      "aliases": [],
+      "category": "质量",
+      "models": [
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "clean line art",
+      "chinese": "干净线稿",
+      "aliases": [
+        "清晰线条"
+      ],
+      "category": "风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "cel shading",
+      "chinese": "赛璐璐上色",
+      "aliases": [
+        "动画式上色"
+      ],
+      "category": "风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "anime illustration",
+      "chinese": "动漫插画",
+      "aliases": [
+        "二次元插画"
+      ],
+      "category": "风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "anime coloring",
+      "chinese": "动漫上色",
+      "aliases": [
+        "二次元上色"
+      ],
+      "category": "Anima风格",
+      "models": [
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "game character illustration",
+      "chinese": "游戏角色插画",
+      "aliases": [
+        "游戏人物立绘"
+      ],
+      "category": "Anima风格",
+      "models": [
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "character sheet",
+      "chinese": "角色设定图",
+      "aliases": [
+        "人物设定图"
+      ],
+      "category": "Anima构图",
+      "models": [
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "official art",
+      "chinese": "官方美术风格",
+      "aliases": [
+        "官方立绘风格"
+      ],
+      "category": "Anima风格",
+      "models": [
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "safe",
+      "chinese": "安全内容",
+      "aliases": [
+        "SFW",
+        "普通内容"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "sensitive",
+      "chinese": "轻度敏感内容",
+      "aliases": [
+        "擦边内容"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "score_7",
+      "chinese": "质量评分7",
+      "aliases": [
+        "Anima基础版质量标签"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "score_1",
+      "chinese": "质量评分1",
+      "aliases": [
+        "低质量评分"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "score_2",
+      "chinese": "质量评分2",
+      "aliases": [
+        "低质量评分"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "score_3",
+      "chinese": "质量评分3",
+      "aliases": [
+        "低质量评分"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "newest",
+      "chinese": "最新年代风格",
+      "aliases": [
+        "新式画风"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "year 2025",
+      "chinese": "2025年画风",
+      "aliases": [
+        "2025年代标签"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "no humans",
+      "chinese": "无人类角色",
+      "aliases": [
+        "纯景物"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "solo focus",
+      "chinese": "单人主体聚焦",
+      "aliases": [
+        "独立人物焦点"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "male focus",
+      "chinese": "男性主体聚焦",
+      "aliases": [
+        "男主角焦点"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "other focus",
+      "chinese": "非二元主体聚焦",
+      "aliases": [
+        "其他性别焦点"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "anime aesthetic",
+      "chinese": "动漫审美",
+      "aliases": [
+        "动画美学"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "non-photorealistic",
+      "chinese": "非写实风格",
+      "aliases": [
+        "非照片风格"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "sharp line art",
+      "chinese": "锐利线稿",
+      "aliases": [
+        "清晰线条"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "soft texture",
+      "chinese": "柔和纹理",
+      "aliases": [
+        "柔软质感"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "2.5D",
+      "chinese": "2.5D风格",
+      "aliases": [
+        "二维半风格"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "delicate illustration",
+      "chinese": "精致插画",
+      "aliases": [
+        "细腻插画"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "highly detailed background",
+      "chinese": "高度细致背景",
+      "aliases": [
+        "精细场景"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    },
+    {
+      "english": "clean character silhouette",
+      "chinese": "清晰人物轮廓",
+      "aliases": [
+        "易读剪影"
+      ],
+      "category": "Anima控制词",
+      "models": [
+        "anima"
+      ],
+      "source": "anima-official",
+      "verified": true
+    }
+  ]
+}

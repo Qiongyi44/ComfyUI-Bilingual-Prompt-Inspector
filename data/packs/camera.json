@@ -1,0 +1,2324 @@
+{
+  "schema_version": 1,
+  "pack": {
+    "id": "camera",
+    "name": "镜头构图词库",
+    "version": "1.1.0",
+    "source": "Adobe/Nikon 摄影资料、Anima/Civitai 示例与人工精选",
+    "priority": 50
+  },
+  "tags": [
+    {
+      "english": "from front",
+      "chinese": "正面视角",
+      "aliases": [
+        "从正面拍摄"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "from behind",
+      "chinese": "背面视角",
+      "aliases": [
+        "从背后拍摄"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "from side",
+      "chinese": "侧面视角",
+      "aliases": [
+        "从侧面拍摄"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "high angle",
+      "chinese": "俯视角度",
+      "aliases": [
+        "高机位",
+        "从上往下拍"
+      ],
+      "category": "相机高度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "eye-level",
+      "chinese": "平视角度",
+      "aliases": [
+        "视线高度机位"
+      ],
+      "category": "相机高度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "low angle",
+      "chinese": "仰视角度",
+      "aliases": [
+        "低机位",
+        "从下往上拍"
+      ],
+      "category": "相机高度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "bird's-eye view",
+      "chinese": "鸟瞰视角",
+      "aliases": [
+        "顶视图",
+        "极限俯视"
+      ],
+      "category": "相机高度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "worm's-eye view",
+      "chinese": "虫视角",
+      "aliases": [
+        "极限仰视"
+      ],
+      "category": "相机高度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "dutch angle",
+      "chinese": "荷兰角",
+      "aliases": [
+        "倾斜构图",
+        "倾斜镜头"
+      ],
+      "category": "相机角度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "extreme close-up",
+      "chinese": "大特写",
+      "aliases": [
+        "极近特写"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "close-up",
+      "chinese": "特写",
+      "aliases": [
+        "近景特写"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "medium shot",
+      "chinese": "中景",
+      "aliases": [
+        "半身附近构图"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "cowboy shot",
+      "chinese": "牛仔景别",
+      "aliases": [
+        "大腿以上构图"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "upper body",
+      "chinese": "上半身构图",
+      "aliases": [
+        "半身像"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "full body",
+      "chinese": "全身构图",
+      "aliases": [
+        "全身像"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "wide shot",
+      "chinese": "远景",
+      "aliases": [
+        "广角远景"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "portrait",
+      "chinese": "人像构图",
+      "aliases": [
+        "肖像"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "centered composition",
+      "chinese": "中心构图",
+      "aliases": [
+        "居中构图"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "rule of thirds",
+      "chinese": "三分法构图",
+      "aliases": [
+        "三分构图"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "symmetrical composition",
+      "chinese": "对称构图",
+      "aliases": [],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "dynamic composition",
+      "chinese": "动态构图",
+      "aliases": [],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "negative space",
+      "chinese": "负空间构图",
+      "aliases": [
+        "留白构图"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "85mm lens",
+      "chinese": "85毫米镜头",
+      "aliases": [
+        "人像镜头"
+      ],
+      "category": "镜头",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "50mm lens",
+      "chinese": "50毫米镜头",
+      "aliases": [
+        "标准镜头"
+      ],
+      "category": "镜头",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "35mm lens",
+      "chinese": "35毫米镜头",
+      "aliases": [
+        "人文广角镜头"
+      ],
+      "category": "镜头",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "wide-angle lens",
+      "chinese": "广角镜头",
+      "aliases": [],
+      "category": "镜头",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "telephoto lens",
+      "chinese": "长焦镜头",
+      "aliases": [],
+      "category": "镜头",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "fisheye lens",
+      "chinese": "鱼眼镜头",
+      "aliases": [
+        "鱼眼效果"
+      ],
+      "category": "镜头",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "shallow depth of field",
+      "chinese": "浅景深",
+      "aliases": [
+        "背景虚化"
+      ],
+      "category": "景深",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "deep depth of field",
+      "chinese": "大景深",
+      "aliases": [
+        "远近都清晰"
+      ],
+      "category": "景深",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "bokeh",
+      "chinese": "散景",
+      "aliases": [
+        "焦外光斑"
+      ],
+      "category": "景深",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "handheld camera",
+      "chinese": "手持摄影效果",
+      "aliases": [
+        "手持镜头"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "camera pan",
+      "chinese": "横摇镜头",
+      "aliases": [
+        "水平摇摄"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "camera tilt",
+      "chinese": "纵摇镜头",
+      "aliases": [
+        "垂直摇摄"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "dolly in",
+      "chinese": "推近镜头",
+      "aliases": [
+        "向前推进"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "dolly out",
+      "chinese": "拉远镜头",
+      "aliases": [
+        "向后拉开"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "tracking shot",
+      "chinese": "跟拍镜头",
+      "aliases": [
+        "追踪镜头"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "orbit shot",
+      "chinese": "环绕镜头",
+      "aliases": [
+        "环绕运镜"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "front three-quarter view",
+      "chinese": "正面四分之三视角",
+      "aliases": [
+        "正面半侧视角"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "rear three-quarter view",
+      "chinese": "背面四分之三视角",
+      "aliases": [
+        "背后半侧视角"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "side view",
+      "chinese": "侧面视角",
+      "aliases": [
+        "正侧面"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "profile shot",
+      "chinese": "侧脸镜头",
+      "aliases": [
+        "人物侧面镜头"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "over-the-shoulder shot",
+      "chinese": "过肩镜头",
+      "aliases": [
+        "越肩视角"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "point of view",
+      "chinese": "主观视角",
+      "aliases": [
+        "POV"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "first-person view",
+      "chinese": "第一人称视角",
+      "aliases": [
+        "第一视角"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "selfie",
+      "chinese": "自拍视角",
+      "aliases": [
+        "自拍"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "top-down view",
+      "chinese": "垂直俯视",
+      "aliases": [
+        "正上方视角"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "overhead shot",
+      "chinese": "头顶俯拍",
+      "aliases": [
+        "正上方镜头"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "aerial view",
+      "chinese": "空中俯瞰",
+      "aliases": [
+        "航拍视角"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "drone view",
+      "chinese": "无人机视角",
+      "aliases": [
+        "无人机航拍"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "ground-level shot",
+      "chinese": "贴地机位",
+      "aliases": [
+        "地面高度镜头"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "shoulder-level shot",
+      "chinese": "肩部高度机位",
+      "aliases": [
+        "肩平视角"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "hip-level shot",
+      "chinese": "腰部高度机位",
+      "aliases": [
+        "胯部机位"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "knee-level shot",
+      "chinese": "膝盖高度机位",
+      "aliases": [
+        "膝部机位"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "foot-level shot",
+      "chinese": "脚部高度机位",
+      "aliases": [
+        "低至脚面的镜头"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "from above",
+      "chinese": "从上方拍摄",
+      "aliases": [
+        "上方视角"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "from below",
+      "chinese": "从下方拍摄",
+      "aliases": [
+        "下方视角"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "tilted camera",
+      "chinese": "倾斜相机",
+      "aliases": [
+        "歪斜镜头"
+      ],
+      "category": "相机方位",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "macro shot",
+      "chinese": "微距镜头",
+      "aliases": [
+        "超近距离细节"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "detail shot",
+      "chinese": "细节特写",
+      "aliases": [
+        "局部细节镜头"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "headshot",
+      "chinese": "头部肖像",
+      "aliases": [
+        "头像镜头"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "bust shot",
+      "chinese": "胸像镜头",
+      "aliases": [
+        "胸部以上"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "medium close-up",
+      "chinese": "中近景",
+      "aliases": [
+        "胸部以上镜头"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "waist-up shot",
+      "chinese": "腰部以上镜头",
+      "aliases": [
+        "半身像"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "knee-up shot",
+      "chinese": "膝盖以上镜头",
+      "aliases": [
+        "七分身"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "thigh-up shot",
+      "chinese": "大腿以上镜头",
+      "aliases": [
+        "大腿景别"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "medium wide shot",
+      "chinese": "中远景",
+      "aliases": [
+        "较宽中景"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "long shot",
+      "chinese": "远景",
+      "aliases": [
+        "全身远距离"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "extreme wide shot",
+      "chinese": "大远景",
+      "aliases": [
+        "极远景"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "establishing shot",
+      "chinese": "建立镜头",
+      "aliases": [
+        "环境交代镜头"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "two shot",
+      "chinese": "双人镜头",
+      "aliases": [
+        "两人同框"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "group shot",
+      "chinese": "群像镜头",
+      "aliases": [
+        "多人合影"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "environmental portrait",
+      "chinese": "环境人像",
+      "aliases": [
+        "带场景的人像"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "tight close-up",
+      "chinese": "紧凑特写",
+      "aliases": [
+        "贴脸特写"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "full figure",
+      "chinese": "完整人物全身",
+      "aliases": [
+        "全身完整入镜"
+      ],
+      "category": "景别",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "leading lines",
+      "chinese": "引导线构图",
+      "aliases": [
+        "线条引导视线"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "diagonal composition",
+      "chinese": "对角线构图",
+      "aliases": [
+        "斜线构图"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "triangular composition",
+      "chinese": "三角形构图",
+      "aliases": [
+        "三角构图"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "golden ratio composition",
+      "chinese": "黄金比例构图",
+      "aliases": [
+        "黄金分割"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "frame within a frame",
+      "chinese": "框中框构图",
+      "aliases": [
+        "画框式构图"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "foreground framing",
+      "chinese": "前景框架构图",
+      "aliases": [
+        "用前景包围主体"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "central framing",
+      "chinese": "中心框架构图",
+      "aliases": [
+        "主体居中框定"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "off-center composition",
+      "chinese": "偏心构图",
+      "aliases": [
+        "主体偏离中心"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "balanced composition",
+      "chinese": "平衡构图",
+      "aliases": [
+        "视觉均衡"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "asymmetrical composition",
+      "chinese": "非对称构图",
+      "aliases": [
+        "不对称平衡"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "radial composition",
+      "chinese": "放射式构图",
+      "aliases": [
+        "中心放射构图"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "layered composition",
+      "chinese": "分层构图",
+      "aliases": [
+        "多层次画面"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "depth composition",
+      "chinese": "纵深构图",
+      "aliases": [
+        "空间深度构图"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "foreground, middle ground, background",
+      "chinese": "前景、中景和背景",
+      "aliases": [
+        "三层空间"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "vanishing point",
+      "chinese": "消失点透视",
+      "aliases": [
+        "灭点"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "linear perspective",
+      "chinese": "线性透视",
+      "aliases": [
+        "一点透视"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "forced perspective",
+      "chinese": "强制透视",
+      "aliases": [
+        "错位透视"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "subject on the left",
+      "chinese": "主体位于左侧",
+      "aliases": [
+        "人物靠左"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "subject on the right",
+      "chinese": "主体位于右侧",
+      "aliases": [
+        "人物靠右"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "ample headroom",
+      "chinese": "充足头顶空间",
+      "aliases": [
+        "头部留白"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "tight framing",
+      "chinese": "紧密取景",
+      "aliases": [
+        "紧凑构图"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "cropped composition",
+      "chinese": "裁切式构图",
+      "aliases": [
+        "局部切出画面"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "fill the frame",
+      "chinese": "主体充满画面",
+      "aliases": [
+        "填满画幅"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "silhouette composition",
+      "chinese": "剪影构图",
+      "aliases": [
+        "轮廓构图"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "foreground emphasis",
+      "chinese": "强调前景",
+      "aliases": [
+        "前景突出"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "background emphasis",
+      "chinese": "强调背景",
+      "aliases": [
+        "背景突出"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "single focal point",
+      "chinese": "单一视觉焦点",
+      "aliases": [
+        "唯一焦点"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "multiple focal points",
+      "chinese": "多个视觉焦点",
+      "aliases": [
+        "多焦点构图"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "visual balance",
+      "chinese": "视觉平衡",
+      "aliases": [
+        "画面均衡"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "visual tension",
+      "chinese": "视觉张力",
+      "aliases": [
+        "紧张构图"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "open composition",
+      "chinese": "开放式构图",
+      "aliases": [
+        "画外延伸"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "closed composition",
+      "chinese": "封闭式构图",
+      "aliases": [
+        "主体完整闭合"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "vertical composition",
+      "chinese": "竖向构图",
+      "aliases": [
+        "纵向画面"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "horizontal composition",
+      "chinese": "横向构图",
+      "aliases": [
+        "横幅画面"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "square composition",
+      "chinese": "方形构图",
+      "aliases": [
+        "正方形画幅"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "panoramic composition",
+      "chinese": "全景构图",
+      "aliases": [
+        "宽幅全景"
+      ],
+      "category": "构图",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "14mm lens",
+      "chinese": "14毫米超广角镜头",
+      "aliases": [
+        "14mm超广角"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "24mm lens",
+      "chinese": "24毫米广角镜头",
+      "aliases": [
+        "24mm镜头"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "28mm lens",
+      "chinese": "28毫米广角镜头",
+      "aliases": [
+        "28mm镜头"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "70mm lens",
+      "chinese": "70毫米中长焦镜头",
+      "aliases": [
+        "70mm镜头"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "105mm lens",
+      "chinese": "105毫米人像镜头",
+      "aliases": [
+        "105mm镜头"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "135mm lens",
+      "chinese": "135毫米长焦镜头",
+      "aliases": [
+        "135mm镜头"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "200mm lens",
+      "chinese": "200毫米长焦镜头",
+      "aliases": [
+        "200mm镜头"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "macro lens",
+      "chinese": "微距镜头",
+      "aliases": [],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "prime lens",
+      "chinese": "定焦镜头",
+      "aliases": [],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "zoom lens",
+      "chinese": "变焦镜头",
+      "aliases": [],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "tilt-shift lens",
+      "chinese": "移轴镜头",
+      "aliases": [],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "anamorphic lens",
+      "chinese": "变形宽银幕镜头",
+      "aliases": [
+        "电影宽银幕镜头"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "wide aperture",
+      "chinese": "大光圈",
+      "aliases": [
+        "开放光圈"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "narrow aperture",
+      "chinese": "小光圈",
+      "aliases": [
+        "收小光圈"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "f/1.4",
+      "chinese": "F1.4大光圈",
+      "aliases": [
+        "1.4光圈"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "f/1.8",
+      "chinese": "F1.8大光圈",
+      "aliases": [
+        "1.8光圈"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "f/2.8",
+      "chinese": "F2.8光圈",
+      "aliases": [
+        "2.8光圈"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "f/8",
+      "chinese": "F8小光圈",
+      "aliases": [
+        "8光圈"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "lens compression",
+      "chinese": "长焦空间压缩",
+      "aliases": [
+        "透视压缩"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "perspective distortion",
+      "chinese": "透视畸变",
+      "aliases": [
+        "近大远小夸张"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "barrel distortion",
+      "chinese": "桶形畸变",
+      "aliases": [
+        "广角桶形变形"
+      ],
+      "category": "镜头与焦距",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "selective focus",
+      "chinese": "选择性对焦",
+      "aliases": [
+        "局部清晰"
+      ],
+      "category": "对焦与动态效果",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "foreground blur",
+      "chinese": "前景虚化",
+      "aliases": [
+        "模糊前景"
+      ],
+      "category": "对焦与动态效果",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "background blur",
+      "chinese": "背景虚化",
+      "aliases": [
+        "模糊背景"
+      ],
+      "category": "对焦与动态效果",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "soft focus",
+      "chinese": "柔焦",
+      "aliases": [
+        "柔化焦点"
+      ],
+      "category": "对焦与动态效果",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "motion blur",
+      "chinese": "运动模糊",
+      "aliases": [
+        "动态拖影"
+      ],
+      "category": "对焦与动态效果",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "radial blur",
+      "chinese": "径向模糊",
+      "aliases": [
+        "放射模糊"
+      ],
+      "category": "对焦与动态效果",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "zoom blur",
+      "chinese": "变焦模糊",
+      "aliases": [
+        "推拉爆炸效果"
+      ],
+      "category": "对焦与动态效果",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "long exposure",
+      "chinese": "长曝光",
+      "aliases": [
+        "慢门效果"
+      ],
+      "category": "对焦与动态效果",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "freeze frame",
+      "chinese": "动作定格",
+      "aliases": [
+        "冻结瞬间"
+      ],
+      "category": "对焦与动态效果",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "light trails",
+      "chinese": "光轨",
+      "aliases": [
+        "长曝光灯光轨迹"
+      ],
+      "category": "对焦与动态效果",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "shutter drag",
+      "chinese": "慢速快门拖影",
+      "aliases": [
+        "慢门拖影"
+      ],
+      "category": "对焦与动态效果",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "sharp subject, blurred background",
+      "chinese": "主体清晰、背景模糊",
+      "aliases": [
+        "人清景虚"
+      ],
+      "category": "对焦与动态效果",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "foreground in focus",
+      "chinese": "前景对焦",
+      "aliases": [
+        "焦点在前景"
+      ],
+      "category": "对焦与动态效果",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "background in focus",
+      "chinese": "背景对焦",
+      "aliases": [
+        "焦点在背景"
+      ],
+      "category": "对焦与动态效果",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "push in",
+      "chinese": "镜头推进",
+      "aliases": [
+        "向主体靠近"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "pull out",
+      "chinese": "镜头拉远",
+      "aliases": [
+        "从主体后退"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "crane shot",
+      "chinese": "摇臂镜头",
+      "aliases": [
+        "升降机镜头"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "crane up",
+      "chinese": "镜头升起",
+      "aliases": [
+        "摇臂上升"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "crane down",
+      "chinese": "镜头下降",
+      "aliases": [
+        "摇臂下降"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "pedestal up",
+      "chinese": "机位垂直上升",
+      "aliases": [
+        "相机升高"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "pedestal down",
+      "chinese": "机位垂直下降",
+      "aliases": [
+        "相机降低"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "truck left",
+      "chinese": "镜头向左横移",
+      "aliases": [
+        "相机左移"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "truck right",
+      "chinese": "镜头向右横移",
+      "aliases": [
+        "相机右移"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "whip pan",
+      "chinese": "快速摇镜",
+      "aliases": [
+        "甩镜头"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "zoom in",
+      "chinese": "镜头放大",
+      "aliases": [
+        "变焦拉近"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "zoom out",
+      "chinese": "镜头缩小",
+      "aliases": [
+        "变焦拉远"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "camera roll",
+      "chinese": "镜头滚转",
+      "aliases": [
+        "相机旋转"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "arc shot",
+      "chinese": "弧形环绕镜头",
+      "aliases": [
+        "弧线运镜"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "steadicam shot",
+      "chinese": "斯坦尼康镜头",
+      "aliases": [
+        "稳定器跟拍"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "gimbal shot",
+      "chinese": "云台稳定镜头",
+      "aliases": [
+        "稳定云台拍摄"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "drone shot",
+      "chinese": "无人机航拍镜头",
+      "aliases": [
+        "航拍"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "locked-off camera",
+      "chinese": "固定机位",
+      "aliases": [
+        "静止相机"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "slow camera movement",
+      "chinese": "缓慢运镜",
+      "aliases": [
+        "慢速相机运动"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    },
+    {
+      "english": "dynamic camera movement",
+      "chinese": "动态运镜",
+      "aliases": [
+        "快速相机运动"
+      ],
+      "category": "运镜",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "adobe-nikon-curated",
+      "verified": true
+    }
+  ]
+}

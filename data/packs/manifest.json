@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "packs": [
+    {
+      "id": "base",
+      "name": "基础常用词库",
+      "filename": "base.json",
+      "version": "1.1.0",
+      "source": "Danbooru 标签文档、Adobe/Nikon 摄影资料与人工精选",
+      "priority": 10,
+      "enabled": true
+    },
+    {
+      "id": "anima",
+      "name": "Anima词库",
+      "filename": "anima.json",
+      "version": "1.1.0",
+      "source": "CircleStone Labs Anima 模型卡与 Comfy Org 官方文档",
+      "priority": 20,
+      "enabled": true
+    },
+    {
+      "id": "characters",
+      "name": "角色与作品词库",
+      "filename": "characters.json",
+      "version": "1.1.0",
+      "source": "Danbooru 标签文档、HoYoverse 角色命名与人工精选",
+      "priority": 30,
+      "enabled": true
+    },
+    {
+      "id": "poses",
+      "name": "姿势词库",
+      "filename": "poses.json",
+      "version": "1.1.0",
+      "source": "Danbooru 姿势/手势标签组与人工精选",
+      "priority": 40,
+      "enabled": true
+    },
+    {
+      "id": "camera",
+      "name": "镜头构图词库",
+      "filename": "camera.json",
+      "version": "1.1.0",
+      "source": "Adobe/Nikon 摄影资料、Anima/Civitai 示例与人工精选",
+      "priority": 50,
+      "enabled": true
+    },
+    {
+      "id": "clothing",
+      "name": "服装词库",
+      "filename": "clothing.json",
+      "version": "1.1.0",
+      "source": "Danbooru 服装标签组与人工精选",
+      "priority": 60,
+      "enabled": true
+    },
+    {
+      "id": "adult",
+      "name": "成人内容词库",
+      "filename": "adult.json",
+      "version": "1.1.0",
+      "source": "Civitai 成人分级社区示例、Danbooru 成人标签体系与人工筛选（仅成年角色）",
+      "priority": 70,
+      "enabled": false
+    }
+  ]
+}

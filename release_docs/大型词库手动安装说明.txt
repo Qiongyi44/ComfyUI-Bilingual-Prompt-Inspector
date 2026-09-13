@@ -1,0 +1,295 @@
+可选大型 Danbooru 中英词库：下载、转换与安装说明（v19 Final）
+================================================================
+
+本说明面向第一次使用命令行的 Windows 用户。请按顺序操作，不要跳步。
+
+
+一、重要说明
+------------
+
+1. 公开分享包不包含大型词库。用户需要自行下载第三方来源文件。
+2. 下载得到的 tag.sqlite 不能直接改名为 danbooru_tags.sqlite3。
+3. 必须使用扩展自带的 build_large_dictionary.py 转换，扩展才能正确查询。
+4. 转换只在本机进行；来源 tag.sqlite 会以只读方式打开，不会被修改。
+5. 大型词库是可选功能。未安装时，节点、内置词库和个人词库仍可使用。
+
+
+二、下载来源数据库
+------------------
+
+仓库名称：ffdkj-Danbooru_Tag-Chinese-English-Translation-Table
+
+来源页面：
+https://github.com/ffdkj/ffdkj-Danbooru_Tag-Chinese-English-Translation-Table
+
+下载步骤：
+
+1. 打开来源页面。
+2. 点击绿色“Code”按钮。
+3. 点击“Download ZIP”。
+4. 下载后右键 ZIP，选择“全部解压”。不要直接在压缩包预览窗口中操作。
+5. 在解压后的文件夹中找到 tag.sqlite。
+
+注意：tag.sqlite 是数据库文件，不是程序，不要双击运行。
+
+本扩展整理时未在来源仓库中看到明确的开源许可证。请用户自行确认来源、许可、
+准确性和适用范围。本扩展不会重新分发 tag.sqlite 或转换后的数据库。
+
+
+三、把来源文件放到扩展根目录（推荐做法）
+----------------------------------------
+
+为了避免盘符、中文目录、空格和长路径填写错误，建议先把 tag.sqlite 临时复制到扩展
+根目录。
+
+扩展根目录通常为：
+
+ComfyUI\custom_nodes\ComfyUI-Bilingual-Prompt-Inspector
+
+正确的扩展根目录里应该能同时看到：
+
+__init__.py
+nodes.py
+data 文件夹
+tools 文件夹
+
+把 tag.sqlite 复制到这里。复制完成后，目录中应同时存在：
+
+tag.sqlite
+tools\build_large_dictionary.py
+
+不要把 tag.sqlite 放进 tools 文件夹，也不要写成 D:\C:\Users\... 这种包含两个盘符
+的路径。
+
+
+四、关闭 ComfyUI 并打开 PowerShell
+---------------------------------
+
+1. 完全关闭 ComfyUI，等待启动窗口也退出，避免旧数据库被占用。
+2. 在资源管理器中打开扩展根目录。
+3. 点击资源管理器顶部地址栏，输入 powershell，然后按回车。
+4. 新窗口的提示符末尾应该是：
+
+ComfyUI-Bilingual-Prompt-Inspector>
+
+先复制并执行下面两条检查命令：
+
+Test-Path -LiteralPath ".\tag.sqlite"
+Test-Path -LiteralPath ".\tools\build_large_dictionary.py"
+
+两条都必须返回 True。只要有一条返回 False，就不要继续：请检查是否打开了正确的
+扩展目录，以及 tag.sqlite 是否已经复制过来。
+
+
+五、执行转换：根据自己的 ComfyUI 类型选择一条命令
+---------------------------------------------------
+
+只执行与你的安装类型对应的一条命令。不要优先使用网上随意安装的 Python。
+
+【A. ComfyUI Desktop 官方桌面版】
+
+先检查桌面版虚拟环境：
+
+Test-Path -LiteralPath "..\..\.venv\Scripts\python.exe"
+
+如果返回 True，执行：
+
+& "..\..\.venv\Scripts\python.exe" ".\tools\build_large_dictionary.py" ".\tag.sqlite"
+
+如果返回 False，再检查桌面版备用环境：
+
+Test-Path -LiteralPath "..\..\..\standalone-env\python.exe"
+
+如果返回 True，执行：
+
+& "..\..\..\standalone-env\python.exe" ".\tools\build_large_dictionary.py" ".\tag.sqlite"
+
+
+【B. ComfyUI Windows Portable 便携版】
+
+先检查内置 Python：
+
+Test-Path -LiteralPath "..\..\..\python_embeded\python.exe"
+
+如果返回 True，执行：
+
+& "..\..\..\python_embeded\python.exe" ".\tools\build_large_dictionary.py" ".\tag.sqlite"
+
+注意：ComfyUI 便携版的文件夹通常叫 python_embeded，embeded 只有一个 d，请按实际
+文件夹名称填写。
+
+
+【C. Git 手动安装版或其他整合包】
+
+如果上面的 Python 路径全部返回 False，先执行：
+
+python --version
+
+只有明确显示 Python 3.x.x 版本号时，才执行：
+
+python ".\tools\build_large_dictionary.py" ".\tag.sqlite"
+
+如果 python --version 没有显示版本号、直接返回或跳转 Microsoft Store，说明它不是
+可用的 Python。请在整合包目录中找到实际 python.exe，使用下面的格式执行：
+
+& "你的实际Python完整路径\python.exe" ".\tools\build_large_dictionary.py" ".\tag.sqlite"
+
+不要为了这一步盲目重新安装 Python；优先使用 ComfyUI 自己正在使用的 Python。
+
+
+六、判断是否转换成功
+--------------------
+
+数据较多时请等待，不要关闭窗口。成功后 PowerShell 会显示一段结果，其中至少包含：
+
+"rows": 大于 0 的数字
+"source_format": "ffdkj-sqlite"
+"path": 指向 data\danbooru_tags.sqlite3
+
+示例：
+
+{
+  "rows": 327676,
+  "source_format": "ffdkj-sqlite",
+  "path": "...\\ComfyUI-Bilingual-Prompt-Inspector\\data\\danbooru_tags.sqlite3"
+}
+
+记录数会随来源仓库更新而变化，不要求与示例完全相同。
+
+继续执行：
+
+Get-Item -LiteralPath ".\data\danbooru_tags.sqlite3"
+
+能够显示文件名称、大小和时间，才表示数据库已经写入当前扩展目录。
+
+转换完成后，可以删除扩展根目录里临时复制的 tag.sqlite；不要删除 data 文件夹中的
+danbooru_tags.sqlite3。
+
+
+七、启动并在节点中验证
+----------------------
+
+1. 启动 ComfyUI。
+2. 页面加载后按 Ctrl+F5 强制刷新。
+3. 打开“双语提示词检查器（英文输出）”。
+4. 展开“标签翻译与词库管理”。
+5. 点击“刷新词库”。
+6. 打开“词库管理”。
+7. 确认“Danbooru 中英大型词库”显示为可用，并显示大量记录。
+8. 搜索一个不在基础词库中的标签，确认能够返回中文解释。
+
+
+八、最常见问题
+--------------
+
+【执行命令后完全没有输出】
+
+原因通常是系统的 python 命令指向 Windows Store 空壳，而不是实际 Python。
+不要继续重复输入同一命令。改用第五节中 ComfyUI Desktop 或 Portable 的完整
+python.exe 路径。
+
+【路径写成 D:\C:\Users\...】
+
+这是两个盘符拼接后的无效路径。本说明采用 .\tag.sqlite，不需要手动填写下载路径，
+可以避免此问题。
+
+【Test-Path 返回 False】
+
+False 表示文件不存在于填写的位置。确认：
+
+- 当前 PowerShell 是否在 ComfyUI-Bilingual-Prompt-Inspector 根目录；
+- tag.sqlite 是否已经从 ZIP 中完整解压并复制过来；
+- 扩展目录是否错误地多嵌套了一层同名文件夹；
+- tools\build_large_dictionary.py 是否存在。
+
+【找不到源词库】
+
+脚本已经运行，但 .\tag.sqlite 不存在。重新执行第三、四节的两个 Test-Path 检查。
+
+【来源 SQLite 缺少 tags 表或必要字段】
+
+选择的文件不是当前支持的 ffdkj 数据库，或者文件下载/解压不完整。重新从来源页面
+下载并“全部解压”，不要使用其他同名数据库代替。
+
+【PermissionError、Access is denied 或文件被占用】
+
+完全关闭 ComfyUI 和数据库查看器后重试。如果扩展装在受 Windows 保护的目录，请确认
+当前用户对该扩展目录具有写入权限。
+
+【PowerShell 找不到 .venv、standalone-env 或 python_embeded】
+
+说明当前整合包目录结构不同。找到启动 ComfyUI 时实际使用的 python.exe，再按照第五节
+C 类格式填写完整路径。
+
+【成功生成，但节点仍显示未安装】
+
+检查成功结果中的 path 是否属于当前启动的那一份 ComfyUI。电脑中存在多套 ComfyUI
+时，最容易把数据库生成到另一套扩展目录。确认后重启 ComfyUI，并按 Ctrl+F5。
+
+【想查看刚才命令是否失败】
+
+紧接着执行：
+
+$LASTEXITCODE
+
+0 通常表示成功；非 0 表示执行失败。请连同完整红色错误信息一起反馈，不要只截取命令。
+
+
+九、升级已有大型词库
+--------------------
+
+1. 下载并解压新版 tag.sqlite。
+2. 关闭 ComfyUI。
+3. 把新版 tag.sqlite 临时复制到扩展根目录。
+4. 重复第四至第六节。
+
+转换工具会先完整生成和检查新数据库，成功后才替换当前数据库。旧数据库会备份为：
+
+data\danbooru_tags.sqlite3.previous
+
+如果新版异常：关闭 ComfyUI，移走新的 danbooru_tags.sqlite3，再把
+danbooru_tags.sqlite3.previous 改名为 danbooru_tags.sqlite3。
+
+
+十、移除大型词库
+----------------
+
+1. 关闭 ComfyUI。
+2. 删除：
+
+data\danbooru_tags.sqlite3
+
+3. 如果不需要回退备份，也可以删除：
+
+data\danbooru_tags.sqlite3.previous
+
+4. 重新启动 ComfyUI。
+
+移除大型词库不会影响节点、内置词库或个人词库。
+
+
+十一、兼容旧版四列 TSV
+----------------------
+
+转换工具仍兼容制表符分隔的四列 TSV，列顺序必须为：
+
+name    category    post_count    cn_name
+
+把 TSV 临时复制到扩展根目录，然后把上述命令最后的 .\tag.sqlite 改成实际 TSV 文件名。
+工具会根据文件内容自动识别 SQLite 或 TSV，不需要手动指定格式。
+
+
+十二、工作方式与来源声明
+----------------------
+
+- 来源数据库始终以只读方式打开。
+- 转换失败不会用不完整文件替换当前可用数据库。
+- 前端不会一次加载全部大型词库，只在检测未知标签或主动搜索时按需查询。
+- 个人词库优先级高于大型词库。
+- 修改大型词库解释只会创建个人覆盖，不会改写大型数据库。
+- 旧版测试库曾由 Kohya-LoRA-Tool 附带的 danbooru_zh.tsv 构建；当前推荐安装方式是
+  用户自行下载 ffdkj 的 tag.sqlite 后在本机转换。
+- 本说明中的链接只用于帮助用户找到第三方来源。本扩展作者不声明拥有第三方标签
+  数据，不对其许可状态、准确性、完整性、更新频率或使用后果作保证。
+- 本扩展和转换工具仅用于社区学习、交流和本地测试，不出售、不捆绑、不重新发布
+  第三方数据库。

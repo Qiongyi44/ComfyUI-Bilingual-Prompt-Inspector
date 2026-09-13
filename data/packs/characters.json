@@ -1,0 +1,2613 @@
+{
+  "schema_version": 1,
+  "pack": {
+    "id": "characters",
+    "name": "角色与作品词库",
+    "version": "1.1.0",
+    "source": "Danbooru 标签文档、HoYoverse 角色命名与人工精选",
+    "priority": 30
+  },
+  "tags": [
+    {
+      "english": "1girl",
+      "chinese": "一名女性角色",
+      "aliases": [
+        "单个女孩",
+        "一个女孩"
+      ],
+      "category": "人物数量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "1boy",
+      "chinese": "一名男性角色",
+      "aliases": [
+        "单个男孩",
+        "一个男孩"
+      ],
+      "category": "人物数量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "solo",
+      "chinese": "单人",
+      "aliases": [
+        "只有一个角色"
+      ],
+      "category": "人物数量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "multiple girls",
+      "chinese": "多名女性角色",
+      "aliases": [
+        "多个女孩"
+      ],
+      "category": "人物数量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "two girls",
+      "chinese": "两名女性角色",
+      "aliases": [
+        "两个女孩"
+      ],
+      "category": "人物数量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "long hair",
+      "chinese": "长发",
+      "aliases": [],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "short hair",
+      "chinese": "短发",
+      "aliases": [],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "twin tails",
+      "chinese": "双马尾",
+      "aliases": [
+        "双尾发型"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "ponytail",
+      "chinese": "马尾",
+      "aliases": [
+        "马尾辫"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "braid",
+      "chinese": "辫子",
+      "aliases": [
+        "编发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "bangs",
+      "chinese": "刘海",
+      "aliases": [],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "black hair",
+      "chinese": "黑发",
+      "aliases": [],
+      "category": "发色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "brown hair",
+      "chinese": "棕发",
+      "aliases": [
+        "褐色头发"
+      ],
+      "category": "发色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "blonde hair",
+      "chinese": "金发",
+      "aliases": [],
+      "category": "发色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "white hair",
+      "chinese": "白发",
+      "aliases": [],
+      "category": "发色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "purple hair",
+      "chinese": "紫发",
+      "aliases": [],
+      "category": "发色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "red eyes",
+      "chinese": "红色眼睛",
+      "aliases": [
+        "红瞳"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "blue eyes",
+      "chinese": "蓝色眼睛",
+      "aliases": [
+        "蓝瞳"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "purple eyes",
+      "chinese": "紫色眼睛",
+      "aliases": [
+        "紫瞳"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "closed eyes",
+      "chinese": "闭眼",
+      "aliases": [
+        "双眼闭合"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "one eye closed",
+      "chinese": "单眼闭合",
+      "aliases": [
+        "眨眼"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "smile",
+      "chinese": "微笑",
+      "aliases": [
+        "笑容"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "soft smile",
+      "chinese": "温柔微笑",
+      "aliases": [
+        "浅笑"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "grin",
+      "chinese": "咧嘴笑",
+      "aliases": [
+        "露齿笑"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "blush",
+      "chinese": "脸红",
+      "aliases": [
+        "红晕"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "pout",
+      "chinese": "撅嘴",
+      "aliases": [
+        "嘟嘴"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "puckered lips",
+      "chinese": "嘟起嘴唇",
+      "aliases": [
+        "亲吻嘴型",
+        "准备亲吻"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "open mouth",
+      "chinese": "张嘴",
+      "aliases": [
+        "嘴巴张开"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "closed mouth",
+      "chinese": "闭嘴",
+      "aliases": [
+        "嘴巴闭合"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "looking at viewer",
+      "chinese": "看向镜头",
+      "aliases": [
+        "直视镜头",
+        "看观众",
+        "看向摄像机"
+      ],
+      "category": "视线",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "looking away",
+      "chinese": "移开视线",
+      "aliases": [
+        "不看镜头"
+      ],
+      "category": "视线",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "looking back",
+      "chinese": "回头看",
+      "aliases": [
+        "回眸"
+      ],
+      "category": "视线",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "looking up",
+      "chinese": "向上看",
+      "aliases": [
+        "抬头看"
+      ],
+      "category": "视线",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "looking down",
+      "chinese": "向下看",
+      "aliases": [
+        "低头看"
+      ],
+      "category": "视线",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "Hu Tao (Genshin Impact)",
+      "chinese": "胡桃（原神）",
+      "aliases": [
+        "胡桃"
+      ],
+      "category": "原神角色",
+      "models": [
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "Keqing (Genshin Impact)",
+      "chinese": "刻晴（原神）",
+      "aliases": [
+        "刻晴"
+      ],
+      "category": "原神角色",
+      "models": [
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "Nahida (Genshin Impact)",
+      "chinese": "纳西妲（原神）",
+      "aliases": [
+        "纳西妲"
+      ],
+      "category": "原神角色",
+      "models": [
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "Raiden Shogun (Genshin Impact)",
+      "chinese": "雷电将军（原神）",
+      "aliases": [
+        "雷电将军",
+        "雷神"
+      ],
+      "category": "原神角色",
+      "models": [
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "Ganyu (Genshin Impact)",
+      "chinese": "甘雨（原神）",
+      "aliases": [
+        "甘雨"
+      ],
+      "category": "原神角色",
+      "models": [
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "Yae Miko (Genshin Impact)",
+      "chinese": "八重神子（原神）",
+      "aliases": [
+        "八重神子"
+      ],
+      "category": "原神角色",
+      "models": [
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "Lumine (Genshin Impact)",
+      "chinese": "荧（原神）",
+      "aliases": [
+        "荧",
+        "女旅行者"
+      ],
+      "category": "原神角色",
+      "models": [
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "Aether (Genshin Impact)",
+      "chinese": "空（原神）",
+      "aliases": [
+        "空",
+        "男旅行者"
+      ],
+      "category": "原神角色",
+      "models": [
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "1other",
+      "chinese": "一名其他性别角色",
+      "aliases": [
+        "单个其他性别角色"
+      ],
+      "category": "人物数量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "2boys",
+      "chinese": "两名男性角色",
+      "aliases": [
+        "两个男生"
+      ],
+      "category": "人物数量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "3boys",
+      "chinese": "三名男性角色",
+      "aliases": [
+        "三个男生"
+      ],
+      "category": "人物数量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "3girls",
+      "chinese": "三名女性角色",
+      "aliases": [
+        "三个女生"
+      ],
+      "category": "人物数量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "4girls",
+      "chinese": "四名女性角色",
+      "aliases": [
+        "四个女生"
+      ],
+      "category": "人物数量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "group",
+      "chinese": "多人组合",
+      "aliases": [
+        "群体"
+      ],
+      "category": "人物数量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "crowd",
+      "chinese": "人群",
+      "aliases": [
+        "大量人物"
+      ],
+      "category": "人物数量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "couple",
+      "chinese": "一对人物",
+      "aliases": [
+        "双人组合"
+      ],
+      "category": "人物数量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "very long hair",
+      "chinese": "超长发",
+      "aliases": [
+        "及地长发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "medium hair",
+      "chinese": "中长发",
+      "aliases": [
+        "中等长度头发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "shoulder-length hair",
+      "chinese": "齐肩发",
+      "aliases": [
+        "肩长发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bob cut",
+      "chinese": "波波头",
+      "aliases": [
+        "短波波发型"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hime cut",
+      "chinese": "姬发式",
+      "aliases": [
+        "公主切"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "blunt bangs",
+      "chinese": "齐刘海",
+      "aliases": [
+        "平刘海"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "swept bangs",
+      "chinese": "侧扫刘海",
+      "aliases": [
+        "斜刘海"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "asymmetrical bangs",
+      "chinese": "不对称刘海",
+      "aliases": [
+        "偏斜刘海"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hair over one eye",
+      "chinese": "头发遮住一只眼",
+      "aliases": [
+        "单眼被头发遮挡"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hair between eyes",
+      "chinese": "眼间发束",
+      "aliases": [
+        "刘海垂在双眼之间"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "side braid",
+      "chinese": "侧边辫子",
+      "aliases": [
+        "侧辫"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "twin braids",
+      "chinese": "双辫子",
+      "aliases": [
+        "两条辫子"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "braided ponytail",
+      "chinese": "编发马尾",
+      "aliases": [
+        "辫状马尾"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "high ponytail",
+      "chinese": "高马尾",
+      "aliases": [],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "low ponytail",
+      "chinese": "低马尾",
+      "aliases": [],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "side ponytail",
+      "chinese": "侧马尾",
+      "aliases": [],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hair bun",
+      "chinese": "发髻",
+      "aliases": [
+        "丸子头"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "double bun",
+      "chinese": "双发髻",
+      "aliases": [
+        "双丸子头"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "half updo",
+      "chinese": "半扎发",
+      "aliases": [
+        "半盘发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "wavy hair",
+      "chinese": "波浪发",
+      "aliases": [
+        "波浪卷发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "curly hair",
+      "chinese": "卷发",
+      "aliases": [
+        "卷曲头发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "straight hair",
+      "chinese": "直发",
+      "aliases": [
+        "顺直头发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "messy hair",
+      "chinese": "凌乱头发",
+      "aliases": [
+        "乱发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "spiked hair",
+      "chinese": "尖刺发型",
+      "aliases": [
+        "刺猬头"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "ahoge",
+      "chinese": "呆毛",
+      "aliases": [
+        "头顶翘发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "loose hair strand",
+      "chinese": "松散发丝",
+      "aliases": [
+        "零散发束"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "floating hair",
+      "chinese": "飘浮的头发",
+      "aliases": [
+        "头发飘起"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hair spread out",
+      "chinese": "铺散的头发",
+      "aliases": [
+        "头发散开"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "wet hair",
+      "chinese": "湿发",
+      "aliases": [
+        "湿润头发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "two-tone hair",
+      "chinese": "双色头发",
+      "aliases": [
+        "双拼发色"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "multicolored hair",
+      "chinese": "多色头发",
+      "aliases": [
+        "彩色头发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "gradient hair",
+      "chinese": "渐变发色",
+      "aliases": [
+        "渐变头发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "streaked hair",
+      "chinese": "挑染头发",
+      "aliases": [
+        "发色挑染"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "colored inner hair",
+      "chinese": "内层染发",
+      "aliases": [
+        "内层异色头发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "silver hair",
+      "chinese": "银发",
+      "aliases": [
+        "银色头发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "gray hair",
+      "chinese": "灰发",
+      "aliases": [
+        "灰色头发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "pink hair",
+      "chinese": "粉发",
+      "aliases": [
+        "粉色头发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "blue hair",
+      "chinese": "蓝发",
+      "aliases": [
+        "蓝色头发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "green hair",
+      "chinese": "绿发",
+      "aliases": [
+        "绿色头发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "orange hair",
+      "chinese": "橙发",
+      "aliases": [
+        "橙色头发"
+      ],
+      "category": "发型",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "green eyes",
+      "chinese": "绿色眼睛",
+      "aliases": [
+        "绿眼"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "yellow eyes",
+      "chinese": "黄色眼睛",
+      "aliases": [
+        "黄眼"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "golden eyes",
+      "chinese": "金色眼睛",
+      "aliases": [
+        "金瞳"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "brown eyes",
+      "chinese": "棕色眼睛",
+      "aliases": [
+        "棕眼"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "black eyes",
+      "chinese": "黑色眼睛",
+      "aliases": [
+        "黑瞳"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "white eyes",
+      "chinese": "白色眼睛",
+      "aliases": [
+        "白瞳"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "heterochromia",
+      "chinese": "异色瞳",
+      "aliases": [
+        "双眼异色"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "glowing eyes",
+      "chinese": "发光眼睛",
+      "aliases": [
+        "亮眼"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "gradient eyes",
+      "chinese": "渐变瞳色",
+      "aliases": [
+        "渐变眼睛"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "star-shaped pupils",
+      "chinese": "星形瞳孔",
+      "aliases": [
+        "星星眼"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "heart-shaped pupils",
+      "chinese": "心形瞳孔",
+      "aliases": [
+        "爱心瞳"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "slit pupils",
+      "chinese": "竖瞳",
+      "aliases": [
+        "细长瞳孔"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "dilated pupils",
+      "chinese": "瞳孔放大",
+      "aliases": [
+        "扩张瞳孔"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "half-closed eyes",
+      "chinese": "半闭眼",
+      "aliases": [
+        "慵懒眼神"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "wide eyes",
+      "chinese": "睁大眼睛",
+      "aliases": [
+        "圆睁双眼"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "teary eyes",
+      "chinese": "含泪的眼睛",
+      "aliases": [
+        "泪眼"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "empty eyes",
+      "chinese": "空洞眼神",
+      "aliases": [
+        "无神双眼"
+      ],
+      "category": "眼睛",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "angry",
+      "chinese": "生气",
+      "aliases": [
+        "愤怒表情"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sad",
+      "chinese": "悲伤",
+      "aliases": [
+        "难过表情"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "crying",
+      "chinese": "哭泣",
+      "aliases": [
+        "流泪"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "tears",
+      "chinese": "眼泪",
+      "aliases": [
+        "泪水"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "surprised",
+      "chinese": "惊讶",
+      "aliases": [
+        "吃惊表情"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "embarrassed",
+      "chinese": "害羞尴尬",
+      "aliases": [
+        "羞涩表情"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "nervous",
+      "chinese": "紧张",
+      "aliases": [
+        "不安表情"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "serious",
+      "chinese": "严肃",
+      "aliases": [
+        "认真表情"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "expressionless",
+      "chinese": "无表情",
+      "aliases": [
+        "面无表情"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "smug",
+      "chinese": "得意表情",
+      "aliases": [
+        "自满神情"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "smirk",
+      "chinese": "坏笑",
+      "aliases": [
+        "得意微笑"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "laughing",
+      "chinese": "大笑",
+      "aliases": [
+        "开怀笑"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "screaming",
+      "chinese": "尖叫",
+      "aliases": [
+        "张口喊叫"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sleepy",
+      "chinese": "困倦",
+      "aliases": [
+        "睡眼惺忪"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "tired",
+      "chinese": "疲惫",
+      "aliases": [
+        "劳累表情"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "worried",
+      "chinese": "担忧",
+      "aliases": [
+        "担心表情"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "confused",
+      "chinese": "困惑",
+      "aliases": [
+        "疑惑表情"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "determined",
+      "chinese": "坚定",
+      "aliases": [
+        "坚毅表情"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "scared",
+      "chinese": "害怕",
+      "aliases": [
+        "惊恐表情"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "shy",
+      "chinese": "羞怯",
+      "aliases": [
+        "害羞"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "flustered",
+      "chinese": "慌乱脸红",
+      "aliases": [
+        "不知所措"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "teasing smile",
+      "chinese": "调皮微笑",
+      "aliases": [
+        "戏谑笑容"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "gentle expression",
+      "chinese": "温柔表情",
+      "aliases": [
+        "柔和神情"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "parted lips",
+      "chinese": "微张嘴唇",
+      "aliases": [
+        "嘴唇微启"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "biting lip",
+      "chinese": "咬嘴唇",
+      "aliases": [
+        "轻咬下唇"
+      ],
+      "category": "表情",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "looking to the side",
+      "chinese": "看向侧面",
+      "aliases": [
+        "侧目"
+      ],
+      "category": "视线与朝向",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "looking over shoulder",
+      "chinese": "回头看",
+      "aliases": [
+        "越肩回望"
+      ],
+      "category": "视线与朝向",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "eye contact",
+      "chinese": "眼神接触",
+      "aliases": [
+        "对视"
+      ],
+      "category": "视线与朝向",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "averted eyes",
+      "chinese": "移开视线",
+      "aliases": [
+        "回避目光"
+      ],
+      "category": "视线与朝向",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "facing viewer",
+      "chinese": "面向观众",
+      "aliases": [
+        "正对镜头"
+      ],
+      "category": "视线与朝向",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "facing away",
+      "chinese": "背向观众",
+      "aliases": [
+        "背对镜头"
+      ],
+      "category": "视线与朝向",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "head tilted",
+      "chinese": "歪头",
+      "aliases": [
+        "头部倾斜"
+      ],
+      "category": "视线与朝向",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "head down",
+      "chinese": "低头",
+      "aliases": [
+        "垂头"
+      ],
+      "category": "视线与朝向",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "head up",
+      "chinese": "抬头",
+      "aliases": [
+        "仰头"
+      ],
+      "category": "视线与朝向",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "side profile",
+      "chinese": "侧脸轮廓",
+      "aliases": [
+        "人物侧脸"
+      ],
+      "category": "视线与朝向",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "three-quarter face",
+      "chinese": "四分之三侧脸",
+      "aliases": [
+        "半侧脸"
+      ],
+      "category": "视线与朝向",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "dark skin",
+      "chinese": "深色皮肤",
+      "aliases": [
+        "黑皮肤"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "tan skin",
+      "chinese": "小麦色皮肤",
+      "aliases": [
+        "晒黑皮肤"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "pale skin",
+      "chinese": "苍白皮肤",
+      "aliases": [
+        "白皙皮肤"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "freckles",
+      "chinese": "雀斑",
+      "aliases": [],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "mole under eye",
+      "chinese": "眼下痣",
+      "aliases": [
+        "泪痣"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "fangs",
+      "chinese": "尖牙",
+      "aliases": [
+        "虎牙"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "elf ears",
+      "chinese": "精灵耳朵",
+      "aliases": [
+        "尖耳"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "animal ears",
+      "chinese": "动物耳朵",
+      "aliases": [
+        "兽耳"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cat ears",
+      "chinese": "猫耳",
+      "aliases": [
+        "猫咪耳朵"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "fox ears",
+      "chinese": "狐狸耳朵",
+      "aliases": [
+        "狐耳"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "horns",
+      "chinese": "角",
+      "aliases": [
+        "头角"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "halo",
+      "chinese": "光环",
+      "aliases": [
+        "头顶光环"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "wings",
+      "chinese": "翅膀",
+      "aliases": [
+        "羽翼"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "tail",
+      "chinese": "尾巴",
+      "aliases": [],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "slim",
+      "chinese": "苗条体型",
+      "aliases": [
+        "纤细身材"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "petite",
+      "chinese": "娇小体型",
+      "aliases": [
+        "小个子"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "curvy",
+      "chinese": "曲线丰满",
+      "aliases": [
+        "丰盈身材"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "muscular",
+      "chinese": "肌肉体型",
+      "aliases": [
+        "健壮"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "tall",
+      "chinese": "高挑",
+      "aliases": [
+        "高个子"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "short stature",
+      "chinese": "矮小身材",
+      "aliases": [
+        "个子较矮"
+      ],
+      "category": "人物特征",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Furina (Genshin Impact)",
+      "chinese": "芙宁娜（原神）",
+      "aliases": [
+        "水神芙宁娜"
+      ],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Neuvillette (Genshin Impact)",
+      "chinese": "那维莱特（原神）",
+      "aliases": [
+        "最高审判官"
+      ],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Arlecchino (Genshin Impact)",
+      "chinese": "阿蕾奇诺（原神）",
+      "aliases": [
+        "仆人"
+      ],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Navia (Genshin Impact)",
+      "chinese": "娜维娅（原神）",
+      "aliases": [],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Clorinde (Genshin Impact)",
+      "chinese": "克洛琳德（原神）",
+      "aliases": [],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Zhongli (Genshin Impact)",
+      "chinese": "钟离（原神）",
+      "aliases": [
+        "岩王帝君"
+      ],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Venti (Genshin Impact)",
+      "chinese": "温迪（原神）",
+      "aliases": [
+        "风神巴巴托斯"
+      ],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Xiao (Genshin Impact)",
+      "chinese": "魈（原神）",
+      "aliases": [
+        "降魔大圣"
+      ],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Kaedehara Kazuha (Genshin Impact)",
+      "chinese": "枫原万叶（原神）",
+      "aliases": [
+        "万叶"
+      ],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Kamisato Ayaka (Genshin Impact)",
+      "chinese": "神里绫华（原神）",
+      "aliases": [
+        "绫华"
+      ],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Kamisato Ayato (Genshin Impact)",
+      "chinese": "神里绫人（原神）",
+      "aliases": [
+        "绫人"
+      ],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Sangonomiya Kokomi (Genshin Impact)",
+      "chinese": "珊瑚宫心海（原神）",
+      "aliases": [
+        "心海"
+      ],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Yoimiya (Genshin Impact)",
+      "chinese": "宵宫（原神）",
+      "aliases": [],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Nilou (Genshin Impact)",
+      "chinese": "妮露（原神）",
+      "aliases": [],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Dehya (Genshin Impact)",
+      "chinese": "迪希雅（原神）",
+      "aliases": [],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Alhaitham (Genshin Impact)",
+      "chinese": "艾尔海森（原神）",
+      "aliases": [],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Kaveh (Genshin Impact)",
+      "chinese": "卡维（原神）",
+      "aliases": [],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Tighnari (Genshin Impact)",
+      "chinese": "提纳里（原神）",
+      "aliases": [],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Wanderer (Genshin Impact)",
+      "chinese": "流浪者（原神）",
+      "aliases": [
+        "散兵"
+      ],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Tartaglia (Genshin Impact)",
+      "chinese": "达达利亚（原神）",
+      "aliases": [
+        "公子",
+        "Childe"
+      ],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Eula (Genshin Impact)",
+      "chinese": "优菈（原神）",
+      "aliases": [],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Jean (Genshin Impact)",
+      "chinese": "琴（原神）",
+      "aliases": [
+        "琴团长"
+      ],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Mona (Genshin Impact)",
+      "chinese": "莫娜（原神）",
+      "aliases": [],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Fischl (Genshin Impact)",
+      "chinese": "菲谢尔（原神）",
+      "aliases": [
+        "皇女"
+      ],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Shenhe (Genshin Impact)",
+      "chinese": "申鹤（原神）",
+      "aliases": [],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "Xianyun (Genshin Impact)",
+      "chinese": "闲云（原神）",
+      "aliases": [
+        "留云借风真君"
+      ],
+      "category": "原神角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    }
+  ]
+}

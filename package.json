@@ -1,0 +1,22 @@
+{
+  "name": "comfyui-bilingual-prompt-inspector",
+  "version": "1.0.0",
+  "description": "ComfyUI bilingual prompt inspection, translation, Anima sorting, and on-demand Danbooru dictionary extension.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qiongyi44/ComfyUI-Bilingual-Prompt-Inspector.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Qiongyi44/ComfyUI-Bilingual-Prompt-Inspector/issues"
+  },
+  "homepage": "https://github.com/Qiongyi44/ComfyUI-Bilingual-Prompt-Inspector#readme",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node tests/test_parser.mjs && node tests/test_mixed_boundaries.mjs && node tests/test_dictionary_tools.mjs && node tests/test_anima_sorter.mjs && node tests/test_panel_sync.mjs && node tests/test_wheel_guard.mjs && node tests/test_author_link.mjs && node tests/test_performance.mjs"
+  }
+}

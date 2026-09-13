@@ -1,0 +1,1919 @@
+{
+  "schema_version": 1,
+  "pack": {
+    "id": "poses",
+    "name": "姿势词库",
+    "version": "1.1.0",
+    "source": "Danbooru 姿势/手势标签组与人工精选",
+    "priority": 40
+  },
+  "tags": [
+    {
+      "english": "standing",
+      "chinese": "站立",
+      "aliases": [
+        "站姿"
+      ],
+      "category": "姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "sitting",
+      "chinese": "坐着",
+      "aliases": [
+        "坐姿"
+      ],
+      "category": "姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "kneeling",
+      "chinese": "跪姿",
+      "aliases": [
+        "跪着"
+      ],
+      "category": "姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "lying",
+      "chinese": "躺着",
+      "aliases": [
+        "躺姿"
+      ],
+      "category": "姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "walking",
+      "chinese": "行走",
+      "aliases": [
+        "走路"
+      ],
+      "category": "动作",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "running",
+      "chinese": "奔跑",
+      "aliases": [
+        "跑步"
+      ],
+      "category": "动作",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "jumping",
+      "chinese": "跳跃",
+      "aliases": [
+        "跳起"
+      ],
+      "category": "动作",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "leaning forward",
+      "chinese": "身体前倾",
+      "aliases": [
+        "向前倾"
+      ],
+      "category": "姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "leaning back",
+      "chinese": "身体后仰",
+      "aliases": [
+        "向后倾"
+      ],
+      "category": "姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "crossed legs",
+      "chinese": "双腿交叉",
+      "aliases": [
+        "交叉腿"
+      ],
+      "category": "姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "hand on hip",
+      "chinese": "手放在胯部",
+      "aliases": [
+        "叉腰"
+      ],
+      "category": "手部动作",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "arms crossed",
+      "chinese": "双臂交叉",
+      "aliases": [
+        "抱臂"
+      ],
+      "category": "手部动作",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "index finger to lips",
+      "chinese": "食指放在嘴唇前",
+      "aliases": [
+        "噤声手势",
+        "手指贴唇"
+      ],
+      "category": "手部动作",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "peace sign",
+      "chinese": "剪刀手",
+      "aliases": [
+        "V手势",
+        "胜利手势"
+      ],
+      "category": "手部动作",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "waving",
+      "chinese": "挥手",
+      "aliases": [
+        "招手"
+      ],
+      "category": "手部动作",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "facing left",
+      "chinese": "朝向左侧",
+      "aliases": [
+        "面向左边"
+      ],
+      "category": "人物朝向",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "facing right",
+      "chinese": "朝向右侧",
+      "aliases": [
+        "面向右边"
+      ],
+      "category": "人物朝向",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "profile",
+      "chinese": "侧脸",
+      "aliases": [
+        "侧面轮廓"
+      ],
+      "category": "人物朝向",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "standing on one leg",
+      "chinese": "单腿站立",
+      "aliases": [
+        "金鸡独立"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "contrapposto",
+      "chinese": "对立式站姿",
+      "aliases": [
+        "重心落在单腿"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "leaning against wall",
+      "chinese": "靠墙",
+      "aliases": [
+        "倚墙"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "crouching",
+      "chinese": "蹲伏",
+      "aliases": [
+        "低身蹲下"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "squatting",
+      "chinese": "下蹲",
+      "aliases": [
+        "蹲姿"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sitting on chair",
+      "chinese": "坐在椅子上",
+      "aliases": [
+        "椅上坐姿"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sitting on floor",
+      "chinese": "坐在地上",
+      "aliases": [
+        "席地而坐"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sitting on edge",
+      "chinese": "坐在边缘",
+      "aliases": [
+        "坐在台沿"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cross-legged",
+      "chinese": "盘腿坐",
+      "aliases": [
+        "交叉腿坐姿"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "seiza",
+      "chinese": "正坐",
+      "aliases": [
+        "日式跪坐"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "kneeling on one knee",
+      "chinese": "单膝跪地",
+      "aliases": [
+        "单膝跪姿"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "on all fours",
+      "chinese": "四肢着地",
+      "aliases": [
+        "跪趴姿势"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "lying on back",
+      "chinese": "仰卧",
+      "aliases": [
+        "躺在背部"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "lying on stomach",
+      "chinese": "俯卧",
+      "aliases": [
+        "趴着"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "lying on side",
+      "chinese": "侧卧",
+      "aliases": [
+        "侧躺"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "reclining",
+      "chinese": "斜躺",
+      "aliases": [
+        "倚靠躺姿"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "tiptoes",
+      "chinese": "踮脚",
+      "aliases": [
+        "踮起脚尖"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "falling",
+      "chinese": "下落",
+      "aliases": [
+        "坠落"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "floating",
+      "chinese": "漂浮",
+      "aliases": [
+        "悬浮"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "dancing",
+      "chinese": "跳舞",
+      "aliases": [
+        "舞蹈"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "fighting stance",
+      "chinese": "战斗姿势",
+      "aliases": [
+        "格斗架势"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "ready stance",
+      "chinese": "准备姿势",
+      "aliases": [
+        "预备架势"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "stretching",
+      "chinese": "伸展身体",
+      "aliases": [
+        "拉伸"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "arching back",
+      "chinese": "弓起背部",
+      "aliases": [
+        "背部后弯"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bent over",
+      "chinese": "弯腰",
+      "aliases": [
+        "俯身"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "twisting torso",
+      "chinese": "扭转躯干",
+      "aliases": [
+        "转动上身"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "walking toward viewer",
+      "chinese": "朝镜头走来",
+      "aliases": [
+        "向观众走近"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "walking away",
+      "chinese": "向远处走去",
+      "aliases": [
+        "背向走开"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "stepping forward",
+      "chinese": "向前迈步",
+      "aliases": [
+        "跨步"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "dynamic pose",
+      "chinese": "动态姿势",
+      "aliases": [
+        "有动势的姿态"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "relaxed pose",
+      "chinese": "放松姿势",
+      "aliases": [
+        "自然站姿"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "elegant pose",
+      "chinese": "优雅姿势",
+      "aliases": [
+        "优美姿态"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "action pose",
+      "chinese": "动作姿势",
+      "aliases": [
+        "运动姿态"
+      ],
+      "category": "基础姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "arms behind back",
+      "chinese": "双手放在背后",
+      "aliases": [
+        "背手"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hands on hips",
+      "chinese": "双手叉腰",
+      "aliases": [
+        "两手扶腰"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "one hand on hip",
+      "chinese": "单手叉腰",
+      "aliases": [
+        "一只手扶腰"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hands in pockets",
+      "chinese": "双手插兜",
+      "aliases": [
+        "手放口袋"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hands clasped",
+      "chinese": "双手合拢",
+      "aliases": [
+        "十指相扣"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "arms raised",
+      "chinese": "双臂举起",
+      "aliases": [
+        "举起双手"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "one arm raised",
+      "chinese": "单臂举起",
+      "aliases": [
+        "举起一只手"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "arms behind head",
+      "chinese": "双手放在脑后",
+      "aliases": [
+        "抱头姿势"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hand on chest",
+      "chinese": "手放胸前",
+      "aliases": [
+        "抚胸"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hand on cheek",
+      "chinese": "手托脸颊",
+      "aliases": [
+        "手贴脸"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hand on chin",
+      "chinese": "手托下巴",
+      "aliases": [
+        "托腮"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hand on head",
+      "chinese": "手放头上",
+      "aliases": [
+        "摸头"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hand in hair",
+      "chinese": "手插入头发",
+      "aliases": [
+        "拨弄头发"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "touching face",
+      "chinese": "触摸脸部",
+      "aliases": [
+        "摸脸"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "covering mouth",
+      "chinese": "遮住嘴巴",
+      "aliases": [
+        "捂嘴"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "covering face",
+      "chinese": "遮住脸部",
+      "aliases": [
+        "捂脸"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "covering one eye",
+      "chinese": "遮住一只眼",
+      "aliases": [
+        "单手遮眼"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "finger to lips",
+      "chinese": "手指放在唇边",
+      "aliases": [
+        "噤声手势",
+        "嘘"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "index finger raised",
+      "chinese": "举起食指",
+      "aliases": [
+        "食指向上"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "pointing",
+      "chinese": "指向某处",
+      "aliases": [
+        "用手指示"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "pointing at viewer",
+      "chinese": "指向观众",
+      "aliases": [
+        "指向镜头"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "reaching",
+      "chinese": "伸手",
+      "aliases": [
+        "探手"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "reaching toward viewer",
+      "chinese": "伸手朝向观众",
+      "aliases": [
+        "手伸向镜头"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "salute",
+      "chinese": "敬礼",
+      "aliases": [
+        "行礼"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "thumbs up",
+      "chinese": "竖起大拇指",
+      "aliases": [
+        "点赞手势"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "heart hands",
+      "chinese": "双手比心",
+      "aliases": [
+        "手掌爱心"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "finger heart",
+      "chinese": "手指比心",
+      "aliases": [
+        "韩式比心"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "clenched fist",
+      "chinese": "握拳",
+      "aliases": [
+        "攥紧拳头"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "open palm",
+      "chinese": "张开手掌",
+      "aliases": [
+        "摊手"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "spread fingers",
+      "chinese": "张开手指",
+      "aliases": [
+        "五指分开"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "fist pump",
+      "chinese": "振臂握拳",
+      "aliases": [
+        "胜利挥拳"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "raised fist",
+      "chinese": "举起拳头",
+      "aliases": [
+        "高举拳头"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "beckoning",
+      "chinese": "招手示意靠近",
+      "aliases": [
+        "勾手"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "shrugging",
+      "chinese": "耸肩",
+      "aliases": [
+        "摊肩"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "facepalm",
+      "chinese": "扶额",
+      "aliases": [
+        "捂脸无奈"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hat tip",
+      "chinese": "轻触帽檐",
+      "aliases": [
+        "脱帽致意"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "adjusting hat",
+      "chinese": "整理帽子",
+      "aliases": [
+        "扶帽"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "adjusting glasses",
+      "chinese": "调整眼镜",
+      "aliases": [
+        "扶眼镜"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "holding object",
+      "chinese": "手持物品",
+      "aliases": [
+        "拿着物体"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "holding weapon",
+      "chinese": "手持武器",
+      "aliases": [
+        "拿武器"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hands together",
+      "chinese": "双手并拢",
+      "aliases": [
+        "合掌"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "open hands",
+      "chinese": "张开双手",
+      "aliases": [
+        "双手摊开"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "praying",
+      "chinese": "祈祷姿势",
+      "aliases": [
+        "双手祷告"
+      ],
+      "category": "手臂与手势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "legs crossed",
+      "chinese": "双腿交叉",
+      "aliases": [
+        "交叉腿"
+      ],
+      "category": "腿部姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "crossed ankles",
+      "chinese": "脚踝交叉",
+      "aliases": [
+        "双脚交叉"
+      ],
+      "category": "腿部姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "legs together",
+      "chinese": "双腿并拢",
+      "aliases": [
+        "并腿"
+      ],
+      "category": "腿部姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "knees together",
+      "chinese": "双膝并拢",
+      "aliases": [
+        "膝盖靠拢"
+      ],
+      "category": "腿部姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "knees apart",
+      "chinese": "双膝分开",
+      "aliases": [
+        "膝盖打开"
+      ],
+      "category": "腿部姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bent knee",
+      "chinese": "屈膝",
+      "aliases": [
+        "膝盖弯曲"
+      ],
+      "category": "腿部姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "one knee raised",
+      "chinese": "抬起一侧膝盖",
+      "aliases": [
+        "单膝抬起"
+      ],
+      "category": "腿部姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "pigeon-toed",
+      "chinese": "内八站姿",
+      "aliases": [
+        "脚尖内扣"
+      ],
+      "category": "腿部姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "wide stance",
+      "chinese": "宽站姿",
+      "aliases": [
+        "双脚分开站立"
+      ],
+      "category": "腿部姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "feet apart",
+      "chinese": "双脚分开",
+      "aliases": [
+        "分腿站立"
+      ],
+      "category": "腿部姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "one foot forward",
+      "chinese": "一只脚向前",
+      "aliases": [
+        "前后脚站姿"
+      ],
+      "category": "腿部姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "crossed legs while standing",
+      "chinese": "站立时双腿交叉",
+      "aliases": [
+        "交叉腿站姿"
+      ],
+      "category": "腿部姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "body facing away, head turned toward viewer",
+      "chinese": "身体背向镜头、头转向观众",
+      "aliases": [
+        "背身回头"
+      ],
+      "category": "身体与头部协调",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "body in profile, face toward viewer",
+      "chinese": "身体侧向、脸转向镜头",
+      "aliases": [
+        "侧身看镜头"
+      ],
+      "category": "身体与头部协调",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "body facing viewer, head turned aside",
+      "chinese": "身体正对镜头、头转向侧面",
+      "aliases": [
+        "正身侧脸"
+      ],
+      "category": "身体与头部协调",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "shoulders angled",
+      "chinese": "肩膀呈斜角",
+      "aliases": [
+        "肩线倾斜"
+      ],
+      "category": "身体与头部协调",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hips angled",
+      "chinese": "胯部呈斜角",
+      "aliases": [
+        "胯部侧转"
+      ],
+      "category": "身体与头部协调",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "torso facing left",
+      "chinese": "躯干朝左",
+      "aliases": [
+        "上身向左"
+      ],
+      "category": "身体与头部协调",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "torso facing right",
+      "chinese": "躯干朝右",
+      "aliases": [
+        "上身向右"
+      ],
+      "category": "身体与头部协调",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "head turned left",
+      "chinese": "头转向左侧",
+      "aliases": [
+        "向左转头"
+      ],
+      "category": "身体与头部协调",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "head turned right",
+      "chinese": "头转向右侧",
+      "aliases": [
+        "向右转头"
+      ],
+      "category": "身体与头部协调",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "over-the-shoulder pose",
+      "chinese": "越肩回望姿势",
+      "aliases": [
+        "回眸姿势"
+      ],
+      "category": "身体与头部协调",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "three-quarter pose",
+      "chinese": "四分之三侧身姿势",
+      "aliases": [
+        "半侧身"
+      ],
+      "category": "身体与头部协调",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "profile pose",
+      "chinese": "完全侧身姿势",
+      "aliases": [
+        "正侧面姿势"
+      ],
+      "category": "身体与头部协调",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "back view pose",
+      "chinese": "背面姿势",
+      "aliases": [
+        "背影姿势"
+      ],
+      "category": "身体与头部协调",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "front-facing pose",
+      "chinese": "正面姿势",
+      "aliases": [
+        "正对姿势"
+      ],
+      "category": "身体与头部协调",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "natural body twist",
+      "chinese": "自然身体扭转",
+      "aliases": [
+        "自然转体"
+      ],
+      "category": "身体与头部协调",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "contrasting head and body direction",
+      "chinese": "头身朝向相反",
+      "aliases": [
+        "头和身体不同向"
+      ],
+      "category": "身体与头部协调",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "holding hands",
+      "chinese": "牵手",
+      "aliases": [
+        "握手同行"
+      ],
+      "category": "双人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hugging",
+      "chinese": "拥抱",
+      "aliases": [
+        "相拥"
+      ],
+      "category": "双人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "head pat",
+      "chinese": "摸头",
+      "aliases": [
+        "轻拍头部"
+      ],
+      "category": "双人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "carrying",
+      "chinese": "抱起或背负",
+      "aliases": [
+        "携带人物"
+      ],
+      "category": "双人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bridal carry",
+      "chinese": "公主抱",
+      "aliases": [
+        "横抱"
+      ],
+      "category": "双人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "piggyback",
+      "chinese": "背人",
+      "aliases": [
+        "背负姿势"
+      ],
+      "category": "双人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "dancing together",
+      "chinese": "共同跳舞",
+      "aliases": [
+        "双人舞"
+      ],
+      "category": "双人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "back-to-back",
+      "chinese": "背靠背",
+      "aliases": [
+        "背对彼此"
+      ],
+      "category": "双人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sitting together",
+      "chinese": "坐在一起",
+      "aliases": [
+        "并排坐"
+      ],
+      "category": "双人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "standing together",
+      "chinese": "站在一起",
+      "aliases": [
+        "并肩站立"
+      ],
+      "category": "双人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "arm around shoulder",
+      "chinese": "手臂搭肩",
+      "aliases": [
+        "搂肩"
+      ],
+      "category": "双人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "arm around waist",
+      "chinese": "手臂环腰",
+      "aliases": [
+        "搂腰"
+      ],
+      "category": "双人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "forehead to forehead",
+      "chinese": "额头相贴",
+      "aliases": [
+        "额头碰额头"
+      ],
+      "category": "双人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "face-to-face",
+      "chinese": "面对面",
+      "aliases": [
+        "相对而立"
+      ],
+      "category": "双人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    }
+  ]
+}

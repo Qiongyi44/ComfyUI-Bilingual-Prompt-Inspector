@@ -1,0 +1,2646 @@
+{
+  "schema_version": 1,
+  "pack": {
+    "id": "clothing",
+    "name": "服装词库",
+    "version": "1.1.0",
+    "source": "Danbooru 服装标签组与人工精选",
+    "priority": 60
+  },
+  "tags": [
+    {
+      "english": "dress",
+      "chinese": "连衣裙",
+      "aliases": [],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "long dress",
+      "chinese": "长裙",
+      "aliases": [],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "short dress",
+      "chinese": "短裙",
+      "aliases": [],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "skirt",
+      "chinese": "裙子",
+      "aliases": [],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "pleated skirt",
+      "chinese": "百褶裙",
+      "aliases": [],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "shirt",
+      "chinese": "衬衫",
+      "aliases": [],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "white shirt",
+      "chinese": "白衬衫",
+      "aliases": [],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "t-shirt",
+      "chinese": "T恤",
+      "aliases": [],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "jacket",
+      "chinese": "夹克",
+      "aliases": [],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "coat",
+      "chinese": "外套",
+      "aliases": [],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "hoodie",
+      "chinese": "连帽衫",
+      "aliases": [],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "sweater",
+      "chinese": "毛衣",
+      "aliases": [],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "shorts",
+      "chinese": "短裤",
+      "aliases": [],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "pants",
+      "chinese": "长裤",
+      "aliases": [],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "black tights",
+      "chinese": "黑色连裤袜",
+      "aliases": [
+        "黑丝"
+      ],
+      "category": "腿部服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "white tights",
+      "chinese": "白色连裤袜",
+      "aliases": [
+        "白丝"
+      ],
+      "category": "腿部服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "thighhighs",
+      "chinese": "过膝袜",
+      "aliases": [
+        "长筒袜"
+      ],
+      "category": "腿部服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "gloves",
+      "chinese": "手套",
+      "aliases": [],
+      "category": "服饰配件",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "boots",
+      "chinese": "靴子",
+      "aliases": [],
+      "category": "鞋子",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "high heels",
+      "chinese": "高跟鞋",
+      "aliases": [],
+      "category": "鞋子",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "sneakers",
+      "chinese": "运动鞋",
+      "aliases": [],
+      "category": "鞋子",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "hat",
+      "chinese": "帽子",
+      "aliases": [],
+      "category": "服配件",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "school uniform",
+      "chinese": "校服",
+      "aliases": [],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "maid outfit",
+      "chinese": "女仆装",
+      "aliases": [],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "traditional chinese clothes",
+      "chinese": "中式传统服装",
+      "aliases": [
+        "中国风服装"
+      ],
+      "category": "服装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "blouse",
+      "chinese": "女式衬衫",
+      "aliases": [
+        "罩衫"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sleeveless shirt",
+      "chinese": "无袖衬衫",
+      "aliases": [
+        "无袖上衣"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "crop top",
+      "chinese": "露脐上衣",
+      "aliases": [
+        "短款上衣"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "camisole",
+      "chinese": "吊带背心",
+      "aliases": [
+        "细肩带上衣"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "tank top",
+      "chinese": "背心",
+      "aliases": [
+        "无袖背心"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "tube top",
+      "chinese": "抹胸上衣",
+      "aliases": [
+        "无肩带上衣"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "off-shoulder top",
+      "chinese": "露肩上衣",
+      "aliases": [
+        "一字肩上衣"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "turtleneck",
+      "chinese": "高领衫",
+      "aliases": [
+        "高领上衣"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "halter top",
+      "chinese": "挂脖上衣",
+      "aliases": [
+        "绕颈上衣"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "vest",
+      "chinese": "背心马甲",
+      "aliases": [
+        "无袖马甲"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "waistcoat",
+      "chinese": "西装马甲",
+      "aliases": [
+        "正装背心"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "blazer",
+      "chinese": "西装外套",
+      "aliases": [
+        "西服上衣"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cardigan",
+      "chinese": "开衫",
+      "aliases": [
+        "针织开衫"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cape",
+      "chinese": "披肩斗篷",
+      "aliases": [
+        "短斗篷"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cloak",
+      "chinese": "长斗篷",
+      "aliases": [
+        "披风"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "poncho",
+      "chinese": "斗篷式外套",
+      "aliases": [
+        "披巾"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bodysuit",
+      "chinese": "连体紧身衣",
+      "aliases": [
+        "紧身连体服"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "leotard",
+      "chinese": "体操服",
+      "aliases": [
+        "高叉连体衣"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "jersey",
+      "chinese": "运动球衣",
+      "aliases": [
+        "运动衫"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sportswear",
+      "chinese": "运动服",
+      "aliases": [
+        "运动装"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "uniform jacket",
+      "chinese": "制服外套",
+      "aliases": [
+        "制式上衣"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "open jacket",
+      "chinese": "敞开的夹克",
+      "aliases": [
+        "外套敞开"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "oversized shirt",
+      "chinese": "宽大衬衫",
+      "aliases": [
+        "超大号上衣"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "oversized sweater",
+      "chinese": "宽大毛衣",
+      "aliases": [
+        "大号针织衫"
+      ],
+      "category": "上装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "miniskirt",
+      "chinese": "迷你裙",
+      "aliases": [
+        "短裙"
+      ],
+      "category": "下装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "pencil skirt",
+      "chinese": "铅笔裙",
+      "aliases": [
+        "包臀裙"
+      ],
+      "category": "下装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "layered skirt",
+      "chinese": "分层裙",
+      "aliases": [
+        "多层裙"
+      ],
+      "category": "下装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "asymmetrical skirt",
+      "chinese": "不对称裙",
+      "aliases": [
+        "高低裙"
+      ],
+      "category": "下装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "denim skirt",
+      "chinese": "牛仔裙",
+      "aliases": [],
+      "category": "下装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "jeans",
+      "chinese": "牛仔裤",
+      "aliases": [],
+      "category": "下装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "leggings",
+      "chinese": "打底裤",
+      "aliases": [
+        "紧身裤"
+      ],
+      "category": "下装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cargo pants",
+      "chinese": "工装裤",
+      "aliases": [
+        "多口袋裤"
+      ],
+      "category": "下装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "wide-leg pants",
+      "chinese": "阔腿裤",
+      "aliases": [
+        "宽腿裤"
+      ],
+      "category": "下装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "capri pants",
+      "chinese": "七分裤",
+      "aliases": [
+        "中裤"
+      ],
+      "category": "下装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bloomers",
+      "chinese": "灯笼短裤",
+      "aliases": [
+        "运动衬裤"
+      ],
+      "category": "下装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "culottes",
+      "chinese": "裙裤",
+      "aliases": [
+        "宽松短裤"
+      ],
+      "category": "下装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "denim shorts",
+      "chinese": "牛仔短裤",
+      "aliases": [],
+      "category": "下装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "high-waisted shorts",
+      "chinese": "高腰短裤",
+      "aliases": [
+        "高腰热裤"
+      ],
+      "category": "下装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "low-rise shorts",
+      "chinese": "低腰短裤",
+      "aliases": [
+        "低腰裤"
+      ],
+      "category": "下装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hakama",
+      "chinese": "袴",
+      "aliases": [
+        "日式裙裤"
+      ],
+      "category": "下装",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sundress",
+      "chinese": "夏日连衣裙",
+      "aliases": [
+        "太阳裙"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cocktail dress",
+      "chinese": "鸡尾酒裙",
+      "aliases": [
+        "小礼服"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "evening gown",
+      "chinese": "晚礼服",
+      "aliases": [
+        "长礼裙"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "ball gown",
+      "chinese": "舞会礼服",
+      "aliases": [
+        "蓬裙礼服"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "qipao",
+      "chinese": "旗袍",
+      "aliases": [
+        "cheongsam"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "kimono",
+      "chinese": "和服",
+      "aliases": [],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "yukata",
+      "chinese": "浴衣",
+      "aliases": [
+        "日式浴衣"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hanfu",
+      "chinese": "汉服",
+      "aliases": [
+        "中国古装"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "shrine maiden outfit",
+      "chinese": "巫女服",
+      "aliases": [
+        "神社巫女装"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sailor uniform",
+      "chinese": "水手服",
+      "aliases": [
+        "日式校服"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "military uniform",
+      "chinese": "军装",
+      "aliases": [
+        "军事制服"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "business suit",
+      "chinese": "商务西装",
+      "aliases": [
+        "职业套装"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "lab coat",
+      "chinese": "实验室白大褂",
+      "aliases": [
+        "白大褂"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "nurse uniform",
+      "chinese": "护士服",
+      "aliases": [
+        "护理制服"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "witch outfit",
+      "chinese": "女巫服装",
+      "aliases": [
+        "魔女装束"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "fantasy armor",
+      "chinese": "奇幻盔甲",
+      "aliases": [
+        "幻想铠甲"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "plate armor",
+      "chinese": "板甲",
+      "aliases": [
+        "全身铠甲"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "light armor",
+      "chinese": "轻甲",
+      "aliases": [
+        "轻型护甲"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "robe",
+      "chinese": "长袍",
+      "aliases": [
+        "法袍"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "priestess outfit",
+      "chinese": "女祭司服装",
+      "aliases": [
+        "祭司装束"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "idol costume",
+      "chinese": "偶像服装",
+      "aliases": [
+        "舞台打歌服"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "stage costume",
+      "chinese": "舞台服装",
+      "aliases": [
+        "演出服"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "gothic lolita",
+      "chinese": "哥特洛丽塔",
+      "aliases": [
+        "哥特萝莉装"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "classic lolita",
+      "chinese": "古典洛丽塔",
+      "aliases": [
+        "经典洛丽塔"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "wa lolita",
+      "chinese": "和风洛丽塔",
+      "aliases": [
+        "日式洛丽塔"
+      ],
+      "category": "连衣裙与制服",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bikini",
+      "chinese": "比基尼",
+      "aliases": [
+        "两件式泳装"
+      ],
+      "category": "泳装与贴身衣物",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "one-piece swimsuit",
+      "chinese": "连体泳衣",
+      "aliases": [
+        "单件泳装"
+      ],
+      "category": "泳装与贴身衣物",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "school swimsuit",
+      "chinese": "学校泳衣",
+      "aliases": [
+        "日式校园泳装"
+      ],
+      "category": "泳装与贴身衣物",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "competition swimsuit",
+      "chinese": "竞技泳衣",
+      "aliases": [
+        "竞赛泳装"
+      ],
+      "category": "泳装与贴身衣物",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sports bra",
+      "chinese": "运动内衣",
+      "aliases": [
+        "运动胸衣"
+      ],
+      "category": "泳装与贴身衣物",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "briefs",
+      "chinese": "三角内裤",
+      "aliases": [
+        "短内裤"
+      ],
+      "category": "泳装与贴身衣物",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "boxer shorts",
+      "chinese": "平角内裤",
+      "aliases": [
+        "四角裤"
+      ],
+      "category": "泳装与贴身衣物",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "undershirt",
+      "chinese": "内穿背心",
+      "aliases": [
+        "汗衫"
+      ],
+      "category": "泳装与贴身衣物",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "slip dress",
+      "chinese": "吊带衬裙",
+      "aliases": [
+        "衬裙式连衣裙"
+      ],
+      "category": "泳装与贴身衣物",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "long sleeves",
+      "chinese": "长袖",
+      "aliases": [],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "short sleeves",
+      "chinese": "短袖",
+      "aliases": [],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sleeveless",
+      "chinese": "无袖",
+      "aliases": [],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "detached sleeves",
+      "chinese": "分离袖",
+      "aliases": [
+        "独立袖套"
+      ],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "puffy sleeves",
+      "chinese": "泡泡袖",
+      "aliases": [
+        "蓬袖"
+      ],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bell sleeves",
+      "chinese": "喇叭袖",
+      "aliases": [
+        "钟形袖"
+      ],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "wide sleeves",
+      "chinese": "宽袖",
+      "aliases": [
+        "大袖"
+      ],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "see-through sleeves",
+      "chinese": "透明袖",
+      "aliases": [
+        "薄纱袖"
+      ],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "rolled-up sleeves",
+      "chinese": "卷起袖子",
+      "aliases": [
+        "挽袖"
+      ],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "single sleeve",
+      "chinese": "单边袖子",
+      "aliases": [
+        "仅一侧有袖"
+      ],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "high collar",
+      "chinese": "高领",
+      "aliases": [
+        "立领"
+      ],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sailor collar",
+      "chinese": "水手领",
+      "aliases": [
+        "海军领"
+      ],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "mandarin collar",
+      "chinese": "中式立领",
+      "aliases": [
+        "旗袍领"
+      ],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "v-neck",
+      "chinese": "V形领口",
+      "aliases": [
+        "V领"
+      ],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "square neckline",
+      "chinese": "方形领口",
+      "aliases": [
+        "方领"
+      ],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "strapless",
+      "chinese": "无肩带",
+      "aliases": [
+        "抹胸式"
+      ],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "backless",
+      "chinese": "露背",
+      "aliases": [
+        "露背装"
+      ],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "open back",
+      "chinese": "背部开口",
+      "aliases": [
+        "开背设计"
+      ],
+      "category": "袖型与领口",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "frills",
+      "chinese": "荷叶边",
+      "aliases": [
+        "褶边"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "lace trim",
+      "chinese": "蕾丝花边",
+      "aliases": [
+        "蕾丝装饰"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "ribbon trim",
+      "chinese": "丝带镶边",
+      "aliases": [
+        "缎带装饰"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bow",
+      "chinese": "蝴蝶结",
+      "aliases": [
+        "结饰"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "buttons",
+      "chinese": "纽扣",
+      "aliases": [
+        "扣子"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "zipper",
+      "chinese": "拉链",
+      "aliases": [],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "belt",
+      "chinese": "腰带",
+      "aliases": [
+        "皮带"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sash",
+      "chinese": "腰封",
+      "aliases": [
+        "饰带"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "corset",
+      "chinese": "束腰",
+      "aliases": [
+        "紧身胸衣"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "collar",
+      "chinese": "衣领",
+      "aliases": [
+        "领子"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hood",
+      "chinese": "兜帽",
+      "aliases": [
+        "帽兜"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "embroidery",
+      "chinese": "刺绣",
+      "aliases": [
+        "绣花"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "floral print",
+      "chinese": "花卉印花",
+      "aliases": [
+        "碎花图案"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "plaid",
+      "chinese": "格纹",
+      "aliases": [
+        "格子图案"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "striped",
+      "chinese": "条纹",
+      "aliases": [
+        "条纹图案"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "polka dot",
+      "chinese": "波点",
+      "aliases": [
+        "圆点图案"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "lace fabric",
+      "chinese": "蕾丝面料",
+      "aliases": [
+        "蕾丝材质"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "leather",
+      "chinese": "皮革材质",
+      "aliases": [
+        "皮衣质感"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "denim",
+      "chinese": "牛仔布",
+      "aliases": [
+        "丹宁材质"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "silk",
+      "chinese": "丝绸材质",
+      "aliases": [
+        "真丝质感"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "velvet",
+      "chinese": "天鹅绒材质",
+      "aliases": [
+        "丝绒"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "transparent fabric",
+      "chinese": "透明面料",
+      "aliases": [
+        "透视布料"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "layered clothing",
+      "chinese": "多层穿搭",
+      "aliases": [
+        "叠穿"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "oversized clothing",
+      "chinese": "宽大服装",
+      "aliases": [
+        "超大号衣服"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "tight clothing",
+      "chinese": "紧身服装",
+      "aliases": [
+        "贴身衣物"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "wet clothes",
+      "chinese": "湿透的衣服",
+      "aliases": [
+        "湿衣"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "torn clothes",
+      "chinese": "破损衣物",
+      "aliases": [
+        "撕裂服装"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "unzipped",
+      "chinese": "拉链解开",
+      "aliases": [
+        "未拉拉链"
+      ],
+      "category": "装饰与材质",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "pantyhose",
+      "chinese": "连裤袜",
+      "aliases": [
+        "丝袜"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "stockings",
+      "chinese": "长筒袜",
+      "aliases": [
+        "丝袜长袜"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "knee highs",
+      "chinese": "及膝袜",
+      "aliases": [
+        "膝下长袜"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "ankle socks",
+      "chinese": "短袜",
+      "aliases": [
+        "踝袜"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "loose socks",
+      "chinese": "泡泡袜",
+      "aliases": [
+        "宽松袜"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "garter straps",
+      "chinese": "吊袜带",
+      "aliases": [
+        "袜带"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "leg warmers",
+      "chinese": "腿套",
+      "aliases": [
+        "暖腿套"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "fishnet stockings",
+      "chinese": "渔网袜",
+      "aliases": [
+        "网袜"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "striped thighhighs",
+      "chinese": "条纹过膝袜",
+      "aliases": [
+        "条纹长袜"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sandals",
+      "chinese": "凉鞋",
+      "aliases": [],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "loafers",
+      "chinese": "乐福鞋",
+      "aliases": [
+        "便鞋"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "pumps",
+      "chinese": "浅口高跟鞋",
+      "aliases": [
+        "单鞋"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "platform shoes",
+      "chinese": "厚底鞋",
+      "aliases": [
+        "松糕鞋"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "mary janes",
+      "chinese": "玛丽珍鞋",
+      "aliases": [
+        "搭扣鞋"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "slippers",
+      "chinese": "拖鞋",
+      "aliases": [
+        "室内鞋"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "barefoot",
+      "chinese": "赤脚",
+      "aliases": [
+        "光脚"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "ankle boots",
+      "chinese": "短靴",
+      "aliases": [
+        "踝靴"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "knee boots",
+      "chinese": "及膝长靴",
+      "aliases": [
+        "膝高靴"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "thigh boots",
+      "chinese": "过膝长靴",
+      "aliases": [
+        "大腿靴"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "combat boots",
+      "chinese": "战斗靴",
+      "aliases": [
+        "军靴"
+      ],
+      "category": "腿部服饰与鞋",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cap",
+      "chinese": "鸭舌帽",
+      "aliases": [
+        "便帽"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "beret",
+      "chinese": "贝雷帽",
+      "aliases": [],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "beanie",
+      "chinese": "针织帽",
+      "aliases": [
+        "毛线帽"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sun hat",
+      "chinese": "遮阳帽",
+      "aliases": [
+        "宽檐帽"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "witch hat",
+      "chinese": "女巫帽",
+      "aliases": [
+        "魔法帽"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hair ribbon",
+      "chinese": "发带丝带",
+      "aliases": [
+        "头发缎带"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hair bow",
+      "chinese": "发饰蝴蝶结",
+      "aliases": [
+        "头发蝴蝶结"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hair ornament",
+      "chinese": "头饰",
+      "aliases": [
+        "发饰"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hair flower",
+      "chinese": "头花",
+      "aliases": [
+        "花朵发饰"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hairclip",
+      "chinese": "发夹",
+      "aliases": [
+        "头发夹子"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "headband",
+      "chinese": "发箍",
+      "aliases": [
+        "头带"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "choker",
+      "chinese": "颈圈",
+      "aliases": [
+        "贴颈项链"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "necklace",
+      "chinese": "项链",
+      "aliases": [],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "earrings",
+      "chinese": "耳环",
+      "aliases": [
+        "耳坠"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bracelet",
+      "chinese": "手链",
+      "aliases": [
+        "手镯"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "ring",
+      "chinese": "戒指",
+      "aliases": [
+        "指环"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "scarf",
+      "chinese": "围巾",
+      "aliases": [
+        "丝巾"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "necktie",
+      "chinese": "领带",
+      "aliases": [],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bow tie",
+      "chinese": "领结",
+      "aliases": [
+        "蝴蝶领结"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "glasses",
+      "chinese": "眼镜",
+      "aliases": [],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sunglasses",
+      "chinese": "太阳镜",
+      "aliases": [
+        "墨镜"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "eyepatch",
+      "chinese": "眼罩",
+      "aliases": [
+        "单眼罩"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "face mask",
+      "chinese": "口罩",
+      "aliases": [
+        "面罩"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "veil",
+      "chinese": "面纱",
+      "aliases": [
+        "头纱"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "backpack",
+      "chinese": "双肩包",
+      "aliases": [
+        "背包"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "handbag",
+      "chinese": "手提包",
+      "aliases": [
+        "女包"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "parasol",
+      "chinese": "阳伞",
+      "aliases": [
+        "遮阳伞"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "umbrella",
+      "chinese": "雨伞",
+      "aliases": [
+        "伞"
+      ],
+      "category": "饰品",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+# Python caches and test artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+
+# JavaScript dependencies and caches
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local API configuration and secrets
+.env
+.env.*
+assistant_settings.json
+data/user_config/
+data/runtime/
+
+# User-created and third-party dictionary data
+data/user_tags.json
+data/backups/
+data/danbooru_tags.sqlite3
+data/danbooru_tags.sqlite3.*
+data/pack_settings.json
+data/large_dictionary.json
+data/packs/community_*.json
+tag.sqlite
+
+# Local builds and release archives
+/.staging/
+/output/
+*.zip
+*.log

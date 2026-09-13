@@ -1,0 +1,1688 @@
+{
+  "schema_version": 1,
+  "pack": {
+    "id": "adult",
+    "name": "成人内容词库",
+    "version": "1.1.0",
+    "source": "Civitai 成人分级社区示例、Danbooru 成人标签体系与人工筛选（仅成年角色）",
+    "priority": 70
+  },
+  "tags": [
+    {
+      "english": "adult woman",
+      "chinese": "成年女性",
+      "aliases": [
+        "成年女人"
+      ],
+      "category": "成年角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "adult man",
+      "chinese": "成年男性",
+      "aliases": [
+        "成年男人"
+      ],
+      "category": "成年角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "mature female",
+      "chinese": "成熟女性",
+      "aliases": [],
+      "category": "成年角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "mature male",
+      "chinese": "成熟男性",
+      "aliases": [],
+      "category": "成年角色",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "nude",
+      "chinese": "裸体",
+      "aliases": [],
+      "category": "成人内容",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "topless",
+      "chinese": "上身裸露",
+      "aliases": [],
+      "category": "成人内容",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "bottomless",
+      "chinese": "下身裸露",
+      "aliases": [],
+      "category": "成人内容",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "underwear",
+      "chinese": "内衣",
+      "aliases": [],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "lingerie",
+      "chinese": "情趣内衣",
+      "aliases": [],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "bra",
+      "chinese": "胸罩",
+      "aliases": [],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "panties",
+      "chinese": "内裤",
+      "aliases": [],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "cleavage",
+      "chinese": "乳沟",
+      "aliases": [],
+      "category": "成人身体",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "nipples",
+      "chinese": "乳头",
+      "aliases": [],
+      "category": "成人身体",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "bare breasts",
+      "chinese": "裸露乳房",
+      "aliases": [],
+      "category": "成人身体",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "ass",
+      "chinese": "臀部",
+      "aliases": [
+        "屁股"
+      ],
+      "category": "成人身体",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "spread legs",
+      "chinese": "张开双腿",
+      "aliases": [],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "suggestive pose",
+      "chinese": "挑逗姿势",
+      "aliases": [],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "consensual",
+      "chinese": "自愿",
+      "aliases": [
+        "双方自愿"
+      ],
+      "category": "成人限定",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "explicit",
+      "chinese": "露骨内容",
+      "aliases": [],
+      "category": "成人限定",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "NSFW",
+      "chinese": "不适合工作场合的成人内容",
+      "aliases": [
+        "成人内容"
+      ],
+      "category": "成人限定",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "builtin",
+      "verified": true
+    },
+    {
+      "english": "adult couple",
+      "chinese": "成年情侣",
+      "aliases": [
+        "成人伴侣"
+      ],
+      "category": "成年限定",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "mature couple",
+      "chinese": "成熟情侣",
+      "aliases": [
+        "成熟伴侣"
+      ],
+      "category": "成年限定",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "both adults",
+      "chinese": "双方均为成年人",
+      "aliases": [
+        "全部成年"
+      ],
+      "category": "成年限定",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "consenting adults",
+      "chinese": "自愿的成年人物",
+      "aliases": [
+        "成年自愿双方"
+      ],
+      "category": "成年限定",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "clearly adult",
+      "chinese": "明确成年",
+      "aliases": [
+        "清晰成人特征"
+      ],
+      "category": "成年限定",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "adult-only scene",
+      "chinese": "仅含成年人的场景",
+      "aliases": [
+        "成人限定场景"
+      ],
+      "category": "成年限定",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "partially nude",
+      "chinese": "半裸",
+      "aliases": [
+        "部分裸体"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "fully nude",
+      "chinese": "全裸",
+      "aliases": [
+        "完全裸体"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "naked",
+      "chinese": "裸体",
+      "aliases": [
+        "赤裸"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "nude under clothes",
+      "chinese": "衣服下裸体",
+      "aliases": [
+        "真空穿着"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "open clothes",
+      "chinese": "敞开的衣服",
+      "aliases": [
+        "衣物打开"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "clothes removed",
+      "chinese": "脱下衣服",
+      "aliases": [
+        "衣物已脱"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "exposed breasts",
+      "chinese": "乳房裸露",
+      "aliases": [
+        "露出胸部"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "exposed nipples",
+      "chinese": "乳头裸露",
+      "aliases": [
+        "露出乳头"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "exposed genitals",
+      "chinese": "生殖器裸露",
+      "aliases": [
+        "私处裸露"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "pubic hair",
+      "chinese": "阴毛",
+      "aliases": [
+        "体毛"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "areola",
+      "chinese": "乳晕",
+      "aliases": [],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "vulva",
+      "chinese": "外阴",
+      "aliases": [
+        "女性外生殖器"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "penis",
+      "chinese": "阴茎",
+      "aliases": [
+        "男性生殖器"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "testicles",
+      "chinese": "睾丸",
+      "aliases": [
+        "阴囊"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "erection",
+      "chinese": "勃起",
+      "aliases": [
+        "阴茎勃起"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "wet pussy",
+      "chinese": "湿润阴部",
+      "aliases": [
+        "湿润外阴"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "pussy juice",
+      "chinese": "爱液",
+      "aliases": [
+        "阴道分泌液"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cameltoe",
+      "chinese": "骆驼趾",
+      "aliases": [
+        "衣物勒出阴部轮廓"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sideboob",
+      "chinese": "侧乳",
+      "aliases": [
+        "乳房侧面"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "underboob",
+      "chinese": "下乳",
+      "aliases": [
+        "乳房下缘"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "covered nipples",
+      "chinese": "遮住乳头",
+      "aliases": [
+        "乳头被遮挡"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "covering breasts",
+      "chinese": "遮住乳房",
+      "aliases": [
+        "手遮胸部"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "covering crotch",
+      "chinese": "遮住私处",
+      "aliases": [
+        "手遮胯部"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "covering ass",
+      "chinese": "遮住臀部",
+      "aliases": [
+        "手遮屁股"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hand bra",
+      "chinese": "用手遮胸",
+      "aliases": [
+        "手掌胸罩"
+      ],
+      "category": "裸露程度",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "lace lingerie",
+      "chinese": "蕾丝内衣",
+      "aliases": [
+        "蕾丝贴身衣物"
+      ],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "see-through lingerie",
+      "chinese": "透明内衣",
+      "aliases": [
+        "透视内衣"
+      ],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "garter belt",
+      "chinese": "吊袜腰带",
+      "aliases": [
+        "吊袜带腰封"
+      ],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bodystocking",
+      "chinese": "连身丝袜",
+      "aliases": [
+        "全身丝袜"
+      ],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "babydoll lingerie",
+      "chinese": "娃娃式性感睡衣",
+      "aliases": [
+        "薄纱短睡衣"
+      ],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "negligee",
+      "chinese": "性感睡袍",
+      "aliases": [
+        "薄纱睡衣"
+      ],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "body harness",
+      "chinese": "身体束带",
+      "aliases": [
+        "装饰绑带"
+      ],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "nipple pasties",
+      "chinese": "乳贴",
+      "aliases": [
+        "胸贴"
+      ],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "open cup bra",
+      "chinese": "开杯胸罩",
+      "aliases": [
+        "露乳内衣"
+      ],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "micro bikini",
+      "chinese": "微型比基尼",
+      "aliases": [
+        "极小比基尼"
+      ],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "thong",
+      "chinese": "丁字裤",
+      "aliases": [
+        "T裤"
+      ],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "g-string",
+      "chinese": "细带丁字裤",
+      "aliases": [
+        "G弦裤"
+      ],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "no panties",
+      "chinese": "未穿内裤",
+      "aliases": [
+        "无内裤"
+      ],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "no bra",
+      "chinese": "未穿胸罩",
+      "aliases": [
+        "无胸衣"
+      ],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "latex outfit",
+      "chinese": "乳胶服装",
+      "aliases": [
+        "胶衣"
+      ],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "leather harness",
+      "chinese": "皮革束带",
+      "aliases": [
+        "皮质身体带"
+      ],
+      "category": "成人服饰",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "erotic pose",
+      "chinese": "色情姿势",
+      "aliases": [
+        "成人姿势"
+      ],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "seductive pose",
+      "chinese": "诱惑姿势",
+      "aliases": [
+        "撩人姿态"
+      ],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "nude pose",
+      "chinese": "裸体姿势",
+      "aliases": [
+        "裸身摆姿"
+      ],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "pinup pose",
+      "chinese": "海报女郎姿势",
+      "aliases": [
+        "复古性感姿势"
+      ],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bedroom pose",
+      "chinese": "卧室性感姿势",
+      "aliases": [
+        "床上姿势"
+      ],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "legs open",
+      "chinese": "张开双腿",
+      "aliases": [
+        "双腿打开"
+      ],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "presenting ass",
+      "chinese": "突出臀部",
+      "aliases": [
+        "展示臀部"
+      ],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "ass focus",
+      "chinese": "臀部特写",
+      "aliases": [
+        "以臀部为焦点"
+      ],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "breast focus",
+      "chinese": "胸部特写",
+      "aliases": [
+        "以乳房为焦点"
+      ],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "crotch focus",
+      "chinese": "胯部特写",
+      "aliases": [
+        "私处焦点"
+      ],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "nipple focus",
+      "chinese": "乳头特写",
+      "aliases": [
+        "乳头焦点"
+      ],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "arched back pose",
+      "chinese": "性感弓背姿势",
+      "aliases": [
+        "腰背后弯"
+      ],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sensual stretching",
+      "chinese": "性感伸展",
+      "aliases": [
+        "柔媚拉伸"
+      ],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "straddling",
+      "chinese": "跨坐",
+      "aliases": [
+        "骑跨姿势"
+      ],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "lap sitting",
+      "chinese": "坐在腿上",
+      "aliases": [
+        "坐大腿"
+      ],
+      "category": "成人姿势",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "passionate kiss",
+      "chinese": "热吻",
+      "aliases": [
+        "激情接吻"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "intimate embrace",
+      "chinese": "亲密拥抱",
+      "aliases": [
+        "贴身相拥"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "caressing",
+      "chinese": "爱抚",
+      "aliases": [
+        "轻抚身体"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "groping",
+      "chinese": "揉摸身体",
+      "aliases": [
+        "抓握身体"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "breast grab",
+      "chinese": "抓握乳房",
+      "aliases": [
+        "揉胸"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "butt grab",
+      "chinese": "抓握臀部",
+      "aliases": [
+        "摸臀"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "masturbation",
+      "chinese": "自慰",
+      "aliases": [
+        "手淫"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "female masturbation",
+      "chinese": "女性自慰",
+      "aliases": [
+        "女性手淫"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "male masturbation",
+      "chinese": "男性自慰",
+      "aliases": [
+        "男性手淫"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "fingering",
+      "chinese": "手指插入",
+      "aliases": [
+        "指交"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "handjob",
+      "chinese": "手交",
+      "aliases": [
+        "用手刺激阴茎"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "oral sex",
+      "chinese": "口交",
+      "aliases": [
+        "口腔性爱"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "fellatio",
+      "chinese": "口含阴茎",
+      "aliases": [
+        "男性口交"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cunnilingus",
+      "chinese": "舔阴",
+      "aliases": [
+        "女性口交"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "vaginal sex",
+      "chinese": "阴道性交",
+      "aliases": [
+        "性交"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "anal sex",
+      "chinese": "肛交",
+      "aliases": [
+        "肛门性交"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sex from behind",
+      "chinese": "后入式性交",
+      "aliases": [
+        "背后体位"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "missionary position",
+      "chinese": "传教士体位",
+      "aliases": [
+        "男上女下"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cowgirl position",
+      "chinese": "女上位",
+      "aliases": [
+        "骑乘位"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "reverse cowgirl position",
+      "chinese": "反向女上位",
+      "aliases": [
+        "反向骑乘"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sixty-nine position",
+      "chinese": "六九式",
+      "aliases": [
+        "69式"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "facesitting",
+      "chinese": "坐脸",
+      "aliases": [
+        "颜面骑乘"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "intercrural sex",
+      "chinese": "腿交",
+      "aliases": [
+        "股间性交"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "breast sex",
+      "chinese": "乳交",
+      "aliases": [
+        "乳房性交"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "double penetration",
+      "chinese": "双重插入",
+      "aliases": [
+        "双穴插入"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "orgasm",
+      "chinese": "高潮",
+      "aliases": [
+        "性高潮"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "ejaculation",
+      "chinese": "射精",
+      "aliases": [
+        "精液射出"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cum on body",
+      "chinese": "精液在身体上",
+      "aliases": [
+        "体表精液"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cum inside",
+      "chinese": "体内射精",
+      "aliases": [
+        "内射"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "after sex",
+      "chinese": "性交后",
+      "aliases": [
+        "事后场景"
+      ],
+      "category": "成人互动",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "consensual bondage",
+      "chinese": "自愿束缚",
+      "aliases": [
+        "成人自愿捆绑"
+      ],
+      "category": "成人束缚",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "rope bondage",
+      "chinese": "绳索束缚",
+      "aliases": [
+        "绳缚"
+      ],
+      "category": "成人束缚",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "shibari",
+      "chinese": "日式绳缚",
+      "aliases": [
+        "缚艺"
+      ],
+      "category": "成人束缚",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "blindfold",
+      "chinese": "蒙眼",
+      "aliases": [
+        "眼罩束缚"
+      ],
+      "category": "成人束缚",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "handcuffs",
+      "chinese": "手铐",
+      "aliases": [
+        "铐住双手"
+      ],
+      "category": "成人束缚",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bound wrists",
+      "chinese": "手腕被缚",
+      "aliases": [
+        "束缚手腕"
+      ],
+      "category": "成人束缚",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bound arms",
+      "chinese": "手臂被缚",
+      "aliases": [
+        "束缚双臂"
+      ],
+      "category": "成人束缚",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "collar and leash",
+      "chinese": "项圈和牵绳",
+      "aliases": [
+        "成人项圈牵引"
+      ],
+      "category": "成人束缚",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bondage harness",
+      "chinese": "束缚带",
+      "aliases": [
+        "身体束缚装具"
+      ],
+      "category": "成人束缚",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "restrained pose",
+      "chinese": "受束缚姿势",
+      "aliases": [
+        "被限制动作"
+      ],
+      "category": "成人束缚",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "civitai-danbooru-curated",
+      "verified": true
+    }
+  ]
+}

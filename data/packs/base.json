@@ -1,0 +1,3261 @@
+{
+  "schema_version": 1,
+  "pack": {
+    "id": "base",
+    "name": "基础常用词库",
+    "version": "1.1.0",
+    "source": "Danbooru 标签文档、Adobe/Nikon 摄影资料与人工精选",
+    "priority": 10
+  },
+  "tags": [
+    {
+      "english": "masterpiece",
+      "chinese": "杰作",
+      "aliases": [
+        "大师之作"
+      ],
+      "category": "质量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "best quality",
+      "chinese": "最佳质量",
+      "aliases": [
+        "最高质量"
+      ],
+      "category": "质量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "high quality",
+      "chinese": "高质量",
+      "aliases": [],
+      "category": "质量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "realistic",
+      "chinese": "写实",
+      "aliases": [
+        "真实感"
+      ],
+      "category": "风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "HDR",
+      "chinese": "高动态范围",
+      "aliases": [
+        "HDR效果"
+      ],
+      "category": "质量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "UHD",
+      "chinese": "超高清",
+      "aliases": [
+        "超高清画质"
+      ],
+      "category": "质量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "8K",
+      "chinese": "8K分辨率",
+      "aliases": [
+        "8K画质"
+      ],
+      "category": "质量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "4K",
+      "chinese": "4K分辨率",
+      "aliases": [
+        "4K画质"
+      ],
+      "category": "质量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "high resolution",
+      "chinese": "高分辨率",
+      "aliases": [
+        "高清晰度"
+      ],
+      "category": "质量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "highres",
+      "chinese": "高分辨率",
+      "aliases": [
+        "高清画质"
+      ],
+      "category": "质量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "ultra detailed",
+      "chinese": "超精细",
+      "aliases": [
+        "极致细节"
+      ],
+      "category": "质量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "sharp focus",
+      "chinese": "清晰对焦",
+      "aliases": [
+        "锐利对焦"
+      ],
+      "category": "质量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "highly detailed",
+      "chinese": "高度细节",
+      "aliases": [
+        "细节丰富"
+      ],
+      "category": "质量",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "cinematic",
+      "chinese": "电影感",
+      "aliases": [
+        "影视感"
+      ],
+      "category": "风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "photorealistic",
+      "chinese": "照片级写实",
+      "aliases": [
+        "摄影写实"
+      ],
+      "category": "风格",
+      "models": [
+        "general"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "watercolor",
+      "chinese": "水彩风格",
+      "aliases": [
+        "水彩画"
+      ],
+      "category": "风格",
+      "models": [
+        "general"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "oil painting",
+      "chinese": "油画风格",
+      "aliases": [
+        "油画"
+      ],
+      "category": "风格",
+      "models": [
+        "general"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "sketch",
+      "chinese": "素描",
+      "aliases": [
+        "草图"
+      ],
+      "category": "风格",
+      "models": [
+        "general"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "soft lighting",
+      "chinese": "柔和光线",
+      "aliases": [
+        "柔光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "dramatic lighting",
+      "chinese": "戏剧性光照",
+      "aliases": [
+        "戏剧光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "rim lighting",
+      "chinese": "轮廓光",
+      "aliases": [
+        "边缘光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "backlighting",
+      "chinese": "逆光",
+      "aliases": [
+        "背光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "volumetric lighting",
+      "chinese": "体积光",
+      "aliases": [
+        "丁达尔光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "sunlight",
+      "chinese": "阳光",
+      "aliases": [
+        "日光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "warm lighting",
+      "chinese": "暖色光照",
+      "aliases": [
+        "暖光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "cool lighting",
+      "chinese": "冷色光照",
+      "aliases": [
+        "冷光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "simple background",
+      "chinese": "简单背景",
+      "aliases": [
+        "简洁背景"
+      ],
+      "category": "背景",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "white background",
+      "chinese": "白色背景",
+      "aliases": [
+        "纯白背景"
+      ],
+      "category": "背景",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "black background",
+      "chinese": "黑色背景",
+      "aliases": [
+        "纯黑背景"
+      ],
+      "category": "背景",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "transparent background",
+      "chinese": "透明背景",
+      "aliases": [
+        "无背景"
+      ],
+      "category": "背景",
+      "models": [
+        "general"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "worst quality",
+      "chinese": "最差质量",
+      "aliases": [],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "low quality",
+      "chinese": "低质量",
+      "aliases": [],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "blurry",
+      "chinese": "模糊",
+      "aliases": [
+        "画面模糊"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "jpeg artifacts",
+      "chinese": "JPEG压缩瑕疵",
+      "aliases": [
+        "压缩噪点"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "bad anatomy",
+      "chinese": "错误人体结构",
+      "aliases": [
+        "人体结构异常"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "bad hands",
+      "chinese": "错误手部",
+      "aliases": [
+        "手部异常"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "extra fingers",
+      "chinese": "多余手指",
+      "aliases": [],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "missing fingers",
+      "chinese": "缺少手指",
+      "aliases": [],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "extra limbs",
+      "chinese": "多余肢体",
+      "aliases": [],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "missing limbs",
+      "chinese": "缺少肢体",
+      "aliases": [],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "duplicate",
+      "chinese": "重复主体",
+      "aliases": [
+        "重复人物"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "multiple views",
+      "chinese": "多视图",
+      "aliases": [
+        "同一角色多个视角"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "text",
+      "chinese": "文字",
+      "aliases": [
+        "画面文字"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "watermark",
+      "chinese": "水印",
+      "aliases": [],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "signature",
+      "chinese": "签名",
+      "aliases": [],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "starter",
+      "verified": true
+    },
+    {
+      "english": "anime style",
+      "chinese": "动漫风格",
+      "aliases": [
+        "动画风格"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "manga style",
+      "chinese": "漫画风格",
+      "aliases": [],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "semi-realistic",
+      "chinese": "半写实",
+      "aliases": [
+        "半现实风格"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "painterly",
+      "chinese": "绘画感",
+      "aliases": [
+        "画笔质感"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "digital painting",
+      "chinese": "数字绘画",
+      "aliases": [
+        "数字插画"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "concept art",
+      "chinese": "概念艺术",
+      "aliases": [
+        "概念设定图"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "key visual",
+      "chinese": "主视觉图",
+      "aliases": [
+        "宣传主视觉"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "visual novel cg",
+      "chinese": "视觉小说CG",
+      "aliases": [
+        "游戏CG"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "anime screencap",
+      "chinese": "动画截图风格",
+      "aliases": [
+        "动漫截帧"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "flat colors",
+      "chinese": "平涂色彩",
+      "aliases": [
+        "平面上色"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "soft shading",
+      "chinese": "柔和阴影",
+      "aliases": [
+        "柔和上色"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hard shading",
+      "chinese": "硬边阴影",
+      "aliases": [
+        "硬阴影"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "gradient shading",
+      "chinese": "渐变阴影",
+      "aliases": [
+        "渐变上色"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "line art",
+      "chinese": "线稿",
+      "aliases": [
+        "线描"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "thick line art",
+      "chinese": "粗线稿",
+      "aliases": [
+        "粗线条"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "thin line art",
+      "chinese": "细线稿",
+      "aliases": [
+        "纤细线条"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "rough sketch",
+      "chinese": "粗略草图",
+      "aliases": [
+        "速写"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "monochrome",
+      "chinese": "单色画面",
+      "aliases": [
+        "单色"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "grayscale",
+      "chinese": "灰度画面",
+      "aliases": [
+        "黑白灰"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "limited palette",
+      "chinese": "限制色板",
+      "aliases": [
+        "有限配色"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "vibrant colors",
+      "chinese": "鲜艳色彩",
+      "aliases": [
+        "高饱和色彩"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "pastel colors",
+      "chinese": "粉彩色调",
+      "aliases": [
+        "柔和粉彩"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "muted colors",
+      "chinese": "低饱和色彩",
+      "aliases": [
+        "柔和低饱和"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "warm color palette",
+      "chinese": "暖色调配色",
+      "aliases": [
+        "暖色配色"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cool color palette",
+      "chinese": "冷色调配色",
+      "aliases": [
+        "冷色配色"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "high contrast",
+      "chinese": "高对比度",
+      "aliases": [
+        "强对比"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "low contrast",
+      "chinese": "低对比度",
+      "aliases": [
+        "柔和对比"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "chiaroscuro",
+      "chinese": "明暗对照法",
+      "aliases": [
+        "强烈明暗"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "ink wash",
+      "chinese": "水墨风格",
+      "aliases": [
+        "水墨画"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "gouache",
+      "chinese": "水粉画",
+      "aliases": [
+        "水粉风格"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "acrylic painting",
+      "chinese": "丙烯画",
+      "aliases": [
+        "丙烯绘画"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "colored pencil",
+      "chinese": "彩色铅笔画",
+      "aliases": [
+        "彩铅"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "marker drawing",
+      "chinese": "马克笔绘画",
+      "aliases": [
+        "马克笔风格"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "pixel art",
+      "chinese": "像素艺术",
+      "aliases": [
+        "像素画"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "3D render",
+      "chinese": "三维渲染",
+      "aliases": [
+        "3D渲染"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "clay render",
+      "chinese": "黏土渲染",
+      "aliases": [
+        "黏土风格"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "papercut art",
+      "chinese": "剪纸艺术",
+      "aliases": [
+        "纸雕风格"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "stained glass",
+      "chinese": "彩色玻璃风格",
+      "aliases": [
+        "花窗玻璃"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "retro anime",
+      "chinese": "复古动漫风格",
+      "aliases": [
+        "老动画风格"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "1990s anime",
+      "chinese": "20世纪90年代动漫风格",
+      "aliases": [
+        "九十年代动漫"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "fantasy",
+      "chinese": "奇幻风格",
+      "aliases": [
+        "幻想题材"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "dark fantasy",
+      "chinese": "黑暗奇幻",
+      "aliases": [
+        "暗黑幻想"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "gothic",
+      "chinese": "哥特风格",
+      "aliases": [
+        "哥特式"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cyberpunk",
+      "chinese": "赛博朋克",
+      "aliases": [],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "steampunk",
+      "chinese": "蒸汽朋克",
+      "aliases": [],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "wuxia",
+      "chinese": "武侠风格",
+      "aliases": [
+        "武侠"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "xianxia",
+      "chinese": "仙侠风格",
+      "aliases": [
+        "仙侠"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "japanese aesthetic",
+      "chinese": "日式美学",
+      "aliases": [
+        "日本风格"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "chinese aesthetic",
+      "chinese": "中式美学",
+      "aliases": [
+        "中国风"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "minimalist",
+      "chinese": "极简主义",
+      "aliases": [
+        "简约风格"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "ornate",
+      "chinese": "华丽繁复",
+      "aliases": [
+        "繁复装饰"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "surreal",
+      "chinese": "超现实风格",
+      "aliases": [
+        "超现实主义"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "dreamlike",
+      "chinese": "梦幻感",
+      "aliases": [
+        "如梦似幻"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "ethereal",
+      "chinese": "空灵感",
+      "aliases": [
+        "轻盈空灵"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cinematic still",
+      "chinese": "电影静帧",
+      "aliases": [
+        "影视截图"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "editorial illustration",
+      "chinese": "编辑插画",
+      "aliases": [
+        "杂志插画"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "fashion illustration",
+      "chinese": "时装插画",
+      "aliases": [
+        "服装插画"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "poster art",
+      "chinese": "海报艺术",
+      "aliases": [
+        "宣传海报风格"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "book cover",
+      "chinese": "书籍封面",
+      "aliases": [
+        "封面设计"
+      ],
+      "category": "画面风格",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "soft diffused light",
+      "chinese": "柔和漫射光",
+      "aliases": [
+        "柔光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hard light",
+      "chinese": "硬光",
+      "aliases": [
+        "强硬光线"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "front lighting",
+      "chinese": "正面光",
+      "aliases": [
+        "顺光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "side lighting",
+      "chinese": "侧面光",
+      "aliases": [
+        "侧光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "top lighting",
+      "chinese": "顶部光",
+      "aliases": [
+        "顶光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "underlighting",
+      "chinese": "底部光",
+      "aliases": [
+        "下方照明"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "hair light",
+      "chinese": "发丝轮廓光",
+      "aliases": [
+        "头发轮廓光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "studio lighting",
+      "chinese": "摄影棚灯光",
+      "aliases": [
+        "棚拍光线"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "natural lighting",
+      "chinese": "自然光",
+      "aliases": [
+        "自然照明"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "window light",
+      "chinese": "窗户光",
+      "aliases": [
+        "窗边光线"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "candlelight",
+      "chinese": "烛光",
+      "aliases": [],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "moonlight",
+      "chinese": "月光",
+      "aliases": [],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "neon lighting",
+      "chinese": "霓虹灯光",
+      "aliases": [
+        "霓虹照明"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "golden hour",
+      "chinese": "黄金时刻光线",
+      "aliases": [
+        "日出日落金色光线"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "blue hour",
+      "chinese": "蓝调时刻光线",
+      "aliases": [
+        "暮光时刻"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sunrise lighting",
+      "chinese": "日出光线",
+      "aliases": [
+        "晨曦"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "sunset lighting",
+      "chinese": "日落光线",
+      "aliases": [
+        "夕阳"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "overcast lighting",
+      "chinese": "阴天漫射光",
+      "aliases": [
+        "阴天光线"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "dappled sunlight",
+      "chinese": "斑驳阳光",
+      "aliases": [
+        "树影光斑"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "god rays",
+      "chinese": "丁达尔光束",
+      "aliases": [
+        "耶稣光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "lens flare",
+      "chinese": "镜头光晕",
+      "aliases": [
+        "镜头耀斑"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bloom",
+      "chinese": "泛光效果",
+      "aliases": [
+        "柔光溢出"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "glowing",
+      "chinese": "发光",
+      "aliases": [
+        "闪耀"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bioluminescent glow",
+      "chinese": "生物荧光",
+      "aliases": [
+        "荧光发亮"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "caustic lighting",
+      "chinese": "焦散光",
+      "aliases": [
+        "水波焦散"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "subsurface scattering",
+      "chinese": "次表面散射",
+      "aliases": [
+        "皮肤透光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "ambient occlusion",
+      "chinese": "环境光遮蔽",
+      "aliases": [
+        "接触阴影"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cast shadow",
+      "chinese": "投射阴影",
+      "aliases": [
+        "投影"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "long shadows",
+      "chinese": "长阴影",
+      "aliases": [
+        "拉长的影子"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "soft shadows",
+      "chinese": "柔和阴影",
+      "aliases": [
+        "软阴影"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "harsh shadows",
+      "chinese": "强烈阴影",
+      "aliases": [
+        "硬阴影"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "colored lighting",
+      "chinese": "彩色灯光",
+      "aliases": [
+        "色彩照明"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "red lighting",
+      "chinese": "红色灯光",
+      "aliases": [
+        "红光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "blue lighting",
+      "chinese": "蓝色灯光",
+      "aliases": [
+        "蓝光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "purple lighting",
+      "chinese": "紫色灯光",
+      "aliases": [
+        "紫光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "warm backlight",
+      "chinese": "暖色逆光",
+      "aliases": [
+        "金色逆光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cool backlight",
+      "chinese": "冷色逆光",
+      "aliases": [
+        "蓝色逆光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "low-key lighting",
+      "chinese": "低调照明",
+      "aliases": [
+        "暗调布光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "high-key lighting",
+      "chinese": "高调照明",
+      "aliases": [
+        "明亮布光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "spotlight",
+      "chinese": "聚光灯",
+      "aliases": [
+        "舞台聚光"
+      ],
+      "category": "光照",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "indoors",
+      "chinese": "室内",
+      "aliases": [
+        "室内场景"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "outdoors",
+      "chinese": "室外",
+      "aliases": [
+        "户外场景"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bedroom",
+      "chinese": "卧室",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "living room",
+      "chinese": "客厅",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "classroom",
+      "chinese": "教室",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "library",
+      "chinese": "图书馆",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cafe",
+      "chinese": "咖啡馆",
+      "aliases": [
+        "咖啡店"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "restaurant",
+      "chinese": "餐厅",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "office",
+      "chinese": "办公室",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "laboratory",
+      "chinese": "实验室",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "street",
+      "chinese": "街道",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "city",
+      "chinese": "城市",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cityscape",
+      "chinese": "城市景观",
+      "aliases": [
+        "都市天际线"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "rooftop",
+      "chinese": "屋顶",
+      "aliases": [
+        "天台"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "alley",
+      "chinese": "小巷",
+      "aliases": [
+        "巷道"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "shrine",
+      "chinese": "神社",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "temple",
+      "chinese": "寺庙",
+      "aliases": [
+        "神殿"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "palace",
+      "chinese": "宫殿",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "castle",
+      "chinese": "城堡",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "forest",
+      "chinese": "森林",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bamboo forest",
+      "chinese": "竹林",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "flower field",
+      "chinese": "花田",
+      "aliases": [
+        "花海"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "grassland",
+      "chinese": "草原",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "desert",
+      "chinese": "沙漠",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "beach",
+      "chinese": "海滩",
+      "aliases": [
+        "沙滩"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "ocean",
+      "chinese": "海洋",
+      "aliases": [
+        "大海"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "lake",
+      "chinese": "湖泊",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "river",
+      "chinese": "河流",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "waterfall",
+      "chinese": "瀑布",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "mountain",
+      "chinese": "山地",
+      "aliases": [
+        "山脉"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "snowy mountain",
+      "chinese": "雪山",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cave",
+      "chinese": "洞穴",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "ruins",
+      "chinese": "遗迹",
+      "aliases": [
+        "废墟"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "dungeon",
+      "chinese": "地下城",
+      "aliases": [
+        "地牢"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "garden",
+      "chinese": "花园",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "courtyard",
+      "chinese": "庭院",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "balcony",
+      "chinese": "阳台",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "train station",
+      "chinese": "火车站",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "subway station",
+      "chinese": "地铁站",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "airport",
+      "chinese": "机场",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "spaceship interior",
+      "chinese": "宇宙飞船内部",
+      "aliases": [
+        "飞船舱内"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "fantasy landscape",
+      "chinese": "奇幻风景",
+      "aliases": [
+        "幻想景观"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "night sky",
+      "chinese": "夜空",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "starry sky",
+      "chinese": "星空",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cloudy sky",
+      "chinese": "多云天空",
+      "aliases": [
+        "云层天空"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "rain",
+      "chinese": "下雨",
+      "aliases": [
+        "雨景"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "snow",
+      "chinese": "下雪",
+      "aliases": [
+        "雪景"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "fog",
+      "chinese": "浓雾",
+      "aliases": [
+        "雾气"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "mist",
+      "chinese": "薄雾",
+      "aliases": [
+        "轻雾"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "storm",
+      "chinese": "暴风雨",
+      "aliases": [
+        "风暴"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cherry blossoms",
+      "chinese": "樱花",
+      "aliases": [
+        "樱花盛开"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "autumn leaves",
+      "chinese": "秋叶",
+      "aliases": [
+        "红叶"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "fireflies",
+      "chinese": "萤火虫",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "underwater",
+      "chinese": "水下",
+      "aliases": [
+        "水底"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "on the water",
+      "chinese": "水面上",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cozy interior",
+      "chinese": "温馨室内",
+      "aliases": [
+        "舒适房间"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "futuristic city",
+      "chinese": "未来城市",
+      "aliases": [
+        "科幻都市"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "ancient city",
+      "chinese": "古代城市",
+      "aliases": [
+        "古城"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "abandoned building",
+      "chinese": "废弃建筑",
+      "aliases": [
+        "荒废建筑"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "busy street",
+      "chinese": "繁华街道",
+      "aliases": [
+        "热闹街头"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "empty street",
+      "chinese": "空旷街道",
+      "aliases": [
+        "无人街道"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "simple gradient background",
+      "chinese": "简单渐变背景",
+      "aliases": [
+        "渐变背景"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "abstract background",
+      "chinese": "抽象背景",
+      "aliases": [],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "blurred background",
+      "chinese": "模糊背景",
+      "aliases": [
+        "背景虚化"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "detailed background",
+      "chinese": "细致背景",
+      "aliases": [
+        "丰富背景"
+      ],
+      "category": "背景与环境",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "deformed",
+      "chinese": "变形",
+      "aliases": [
+        "畸形"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "malformed limbs",
+      "chinese": "肢体畸形",
+      "aliases": [
+        "错误肢体"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "poorly drawn hands",
+      "chinese": "手部绘制差",
+      "aliases": [
+        "坏手"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "fused fingers",
+      "chinese": "手指粘连",
+      "aliases": [
+        "融合手指"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "too many fingers",
+      "chinese": "手指过多",
+      "aliases": [
+        "多余手指"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bad proportions",
+      "chinese": "比例错误",
+      "aliases": [
+        "身体比例异常"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cropped",
+      "chinese": "意外裁切",
+      "aliases": [
+        "被裁掉"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "out of frame",
+      "chinese": "主体超出画面",
+      "aliases": [
+        "画外"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "oversaturated",
+      "chinese": "过度饱和",
+      "aliases": [
+        "色彩过饱和"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "overexposed",
+      "chinese": "过曝",
+      "aliases": [
+        "曝光过度"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "underexposed",
+      "chinese": "欠曝",
+      "aliases": [
+        "曝光不足"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "digital noise",
+      "chinese": "数字噪点",
+      "aliases": [
+        "图像噪声"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "compression artifacts",
+      "chinese": "压缩伪影",
+      "aliases": [
+        "压缩瑕疵"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "color banding",
+      "chinese": "色彩断层",
+      "aliases": [
+        "色带"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "moire pattern",
+      "chinese": "摩尔纹",
+      "aliases": [
+        "网纹干扰"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "logo",
+      "chinese": "标志水印",
+      "aliases": [
+        "品牌标志"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "username",
+      "chinese": "用户名文字",
+      "aliases": [
+        "账号水印"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "speech bubble",
+      "chinese": "对话气泡",
+      "aliases": [
+        "对白框"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "multiple panels",
+      "chinese": "多格画面",
+      "aliases": [
+        "漫画分格"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "collage",
+      "chinese": "拼贴画面",
+      "aliases": [
+        "多图拼接"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cloned face",
+      "chinese": "重复面孔",
+      "aliases": [
+        "克隆脸"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "asymmetrical eyes",
+      "chinese": "双眼不对称",
+      "aliases": [
+        "大小眼"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "cross-eyed",
+      "chinese": "斗鸡眼",
+      "aliases": [
+        "对眼"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "disconnected limbs",
+      "chinese": "肢体断开",
+      "aliases": [
+        "身体断裂"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "floating limbs",
+      "chinese": "漂浮肢体",
+      "aliases": [
+        "脱离身体的肢体"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "extra arms",
+      "chinese": "多余手臂",
+      "aliases": [
+        "额外手臂"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "extra legs",
+      "chinese": "多余腿部",
+      "aliases": [
+        "额外腿"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "mutated hands",
+      "chinese": "手部变异",
+      "aliases": [
+        "畸形手"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "long neck",
+      "chinese": "脖子过长",
+      "aliases": [
+        "长颈"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    },
+    {
+      "english": "bad perspective",
+      "chinese": "透视错误",
+      "aliases": [
+        "错误透视"
+      ],
+      "category": "负面词",
+      "models": [
+        "general",
+        "anima"
+      ],
+      "source": "danbooru-curated",
+      "verified": true
+    }
+  ]
+}
