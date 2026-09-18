@@ -20,7 +20,66 @@ export function normalizePreferences(value) {
   };
   const englishInputHeight = boundedHeight(source.englishInputHeight, 84, 420);
   const chineseMirrorHeight = boundedHeight(source.chineseMirrorHeight, 92, 360);
-  return { favorites, recent, detailsExpanded, englishInputHeight, chineseMirrorHeight };
+  const chineseEditorHeight = boundedHeight(source.chineseEditorHeight, 110, 600);
+  return { favorites, recent, detailsExpanded, englishInputHeight, chineseMirrorHeight, chineseEditorHeight };
+}
+
+export function preservedSearchScroll(previousQuery, nextQuery, scrollTop) {
+  return String(previousQuery ?? "") === String(nextQuery ?? "")
+    ? Math.max(0, Number(scrollTop) || 0)
+    : 0;
+}
+
+export function inspectorNodeTargetHeight({
+  widgetY,
+  widgetMargin = 10,
+  nodeHeight,
+  currentWidgetHeight,
+  targetWidgetHeight,
+  fallbackBaseHeight = 70,
+  maximumBaseHeight = 320,
+  minimumHeight = 360,
+} = {}) {
+  const top = Number(widgetY);
+  const margin = Math.max(0, Number(widgetMargin) || 0);
+  const currentNode = Number(nodeHeight);
+  const currentWidget = Number(currentWidgetHeight);
+  const targetWidget = Math.max(0, Number(targetWidgetHeight) || 0);
+  let baseHeight;
+  if (Number.isFinite(top) && top >= 0) baseHeight = top + margin;
+  else if (Number.isFinite(currentNode) && Number.isFinite(currentWidget) && currentWidget > 0
+    && currentNode - currentWidget <= maximumBaseHeight) {
+    baseHeight = Math.max(0, currentNode - currentWidget);
+  } else baseHeight = Math.max(0, Number(fallbackBaseHeight) || 0);
+  return Math.max(Number(minimumHeight) || 0, Math.ceil(baseHeight + targetWidget));
+}
+
+export function createClearTextHistoryEntry(currentText, label, categoryView = false) {
+  const before = String(currentText ?? "");
+  if (!before) return null;
+  return {
+    before,
+    after: "",
+    beforeStart: 0,
+    beforeEnd: before.length,
+    afterCursor: 0,
+    label: String(label || "清空文本"),
+    beforeCategoryView: Boolean(categoryView),
+    afterCategoryView: false,
+  };
+}
+
+export function clearButtonAction(state, hasContent) {
+  if (state === "cleared") return "undo";
+  if (!hasContent) return "empty";
+  if (state === "confirm") return "clear";
+  return "confirm";
+}
+
+export function clearButtonLabel(state) {
+  if (state === "confirm") return "确认清空";
+  if (state === "cleared") return "撤销";
+  return "清空";
 }
 
 export function recordRecent(preferences, english) {
@@ -64,18 +123,75 @@ function matchScore(tag, rawQuery) {
   return null;
 }
 
-export function rankDictionaryTags(tags, query, preferences = {}, limit = 40) {
+export function searchQueryVariants(query, searchConcepts = {}) {
+  const rawQuery = String(query ?? "").trim();
+  if (!rawQuery) return [];
+  const variants = [];
+  const seen = new Set();
+  const add = (text, relation = "direct", label = "") => {
+    const value = String(text ?? "").trim();
+    const key = normalizeKey(value);
+    if (!key || seen.has(key)) return;
+    seen.add(key);
+    variants.push({ text: value, relation, label });
+  };
+  add(rawQuery);
+  const normalizedQuery = normalizeKey(rawQuery);
+  for (const concept of searchConcepts?.concepts ?? []) {
+    const queries = Array.isArray(concept?.queries) ? concept.queries.map((item) => String(item ?? "").trim()).filter(Boolean) : [];
+    const matchedQuery = queries.find((item) => normalizeKey(item) === normalizedQuery || rawQuery.toLowerCase().includes(item.toLowerCase()));
+    if (!matchedQuery) continue;
+    const label = String(concept.label ?? concept.id ?? "相关概念");
+    const residual = rawQuery.toLowerCase().replace(matchedQuery.toLowerCase(), "").trim();
+    const modifiers = [];
+    for (const [modifier, values] of Object.entries(searchConcepts?.modifiers ?? {})) {
+      if (modifier.trim() && residual.includes(modifier.trim().toLowerCase())) {
+        modifiers.push(...(Array.isArray(values) ? values : [values]));
+      }
+    }
+    const terms = Array.isArray(concept?.terms) ? concept.terms : [];
+    for (const modifier of modifiers.slice(0, 3)) {
+      for (const term of terms.slice(0, 12)) {
+        if (/[A-Za-z]/.test(String(term))) add(`${modifier} ${term}`, "concept-modified", label);
+      }
+    }
+    for (const term of terms) {
+      add(term, "concept", label);
+      if (variants.length >= 20) break;
+    }
+    if (variants.length >= 20) break;
+  }
+  return variants.slice(0, 20);
+}
+
+function matchReason(score, variant) {
+  if (variant.relation === "concept-modified") return `限定概念：${variant.label}`;
+  if (variant.relation === "concept") return `概念关联：${variant.label}`;
+  if (score <= 1) return "完全匹配";
+  if (score <= 5) return "前缀或别名匹配";
+  return "包含匹配";
+}
+
+export function rankDictionaryMatches(tags, query, preferences = {}, limit = 40, searchConcepts = {}) {
   const prefs = normalizePreferences(preferences);
   const favoriteSet = new Set(prefs.favorites);
   const recentIndex = new Map(prefs.recent.map((key, index) => [key, index]));
+  const variants = searchQueryVariants(query, searchConcepts);
   const ranked = [];
   for (const tag of tags ?? []) {
-    const score = matchScore(tag, query);
-    if (score === null) continue;
+    let best = null;
+    for (const [variantIndex, variant] of variants.entries()) {
+      const localScore = matchScore(tag, variant.text);
+      if (localScore === null) continue;
+      const score = localScore + variantIndex * 10;
+      if (!best || score < best.score) best = { score, reason: matchReason(localScore, variant) };
+    }
+    if (!best) continue;
     const key = normalizeKey(tag.english);
     ranked.push({
       tag,
-      score,
+      score: best.score,
+      reason: best.reason,
       favorite: favoriteSet.has(key),
       recent: recentIndex.get(key) ?? Number.MAX_SAFE_INTEGER,
     });
@@ -86,7 +202,11 @@ export function rankDictionaryTags(tags, query, preferences = {}, limit = 40) {
     left.recent - right.recent ||
     String(left.tag.english).localeCompare(String(right.tag.english), "en")
   );
-  return ranked.slice(0, limit).map((item) => item.tag);
+  return ranked.slice(0, limit);
+}
+
+export function rankDictionaryTags(tags, query, preferences = {}, limit = 40, searchConcepts = {}) {
+  return rankDictionaryMatches(tags, query, preferences, limit, searchConcepts).map((item) => item.tag);
 }
 
 export function suggestedTags(tags, preferences = {}, limit = 30) {

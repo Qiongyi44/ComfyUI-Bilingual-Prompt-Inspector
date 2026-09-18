@@ -1,9 +1,15 @@
 import assert from "node:assert/strict";
 
 import {
+  clearButtonAction,
+  clearButtonLabel,
+  createClearTextHistoryEntry,
+  inspectorNodeTargetHeight,
   normalizePreferences,
+  preservedSearchScroll,
   mergeImportAsAliases,
   previewImport,
+  rankDictionaryMatches,
   rankDictionaryTags,
   recordRecent,
   suggestedTags,
@@ -27,6 +33,30 @@ assert.equal(preferences.detailsExpanded, true);
 assert.equal(normalizePreferences({ detailsExpanded: false }).detailsExpanded, false);
 assert.equal(normalizePreferences({ englishInputHeight: 500 }).englishInputHeight, 420);
 assert.equal(normalizePreferences({ chineseMirrorHeight: 40 }).chineseMirrorHeight, 92);
+assert.equal(normalizePreferences({ chineseEditorHeight: 999 }).chineseEditorHeight, 600);
+assert.equal(preservedSearchScroll("裙子", "裙子", 824), 824);
+assert.equal(preservedSearchScroll("裙子", "丝袜", 824), 0);
+assert.equal(inspectorNodeTargetHeight({ widgetY: 58, targetWidgetHeight: 390 }), 458);
+assert.equal(inspectorNodeTargetHeight({ nodeHeight: 1060, currentWidgetHeight: 820, targetWidgetHeight: 390 }), 630);
+assert.equal(inspectorNodeTargetHeight({ widgetY: 58, targetWidgetHeight: 820, minimumHeight: 900 }), 900);
+assert.deepEqual(createClearTextHistoryEntry("masterpiece, 1girl", "清空英文提示词", true), {
+  before: "masterpiece, 1girl",
+  after: "",
+  beforeStart: 0,
+  beforeEnd: 18,
+  afterCursor: 0,
+  label: "清空英文提示词",
+  beforeCategoryView: true,
+  afterCategoryView: false,
+});
+assert.equal(createClearTextHistoryEntry("", "清空英文提示词"), null);
+assert.equal(clearButtonAction("idle", true), "confirm");
+assert.equal(clearButtonAction("confirm", true), "clear");
+assert.equal(clearButtonAction("cleared", false), "undo");
+assert.equal(clearButtonAction("idle", false), "empty");
+assert.equal(clearButtonLabel("idle"), "清空");
+assert.equal(clearButtonLabel("confirm"), "确认清空");
+assert.equal(clearButtonLabel("cleared"), "撤销");
 preferences = toggleFavorite(preferences, "from_front");
 preferences = recordRecent(preferences, "looking at viewer");
 assert.deepEqual(preferences.favorites, ["from front"]);
@@ -52,5 +82,19 @@ const aliasImport = mergeImportAsAliases(
 assert.equal(aliasImport[0].chinese, "正面视角");
 assert.deepEqual(aliasImport[0].aliases, ["正视", "前方", "正面"]);
 assert.equal(aliasImport[0].source, "user");
+
+const conceptConfig = {
+  modifiers: { 黑: ["black"] },
+  concepts: [{ id: "hosiery", label: "丝袜与袜类", queries: ["丝袜"], terms: ["pantyhose", "stockings", "thighhighs"] }],
+};
+const hosiery = [
+  { english: "pantyhose", chinese: "连裤袜", aliases: [], category: "腿部服饰" },
+  { english: "black pantyhose", chinese: "黑色连裤袜", aliases: [], category: "腿部服饰" },
+  { english: "thighhighs", chinese: "过膝袜", aliases: [], category: "腿部服饰" },
+];
+const fuzzy = rankDictionaryMatches(hosiery, "丝袜", {}, 40, conceptConfig);
+assert.deepEqual(fuzzy.map((item) => item.tag.english), ["pantyhose", "black pantyhose", "thighhighs"]);
+assert.match(fuzzy[0].reason, /概念关联/);
+assert.equal(rankDictionaryTags(hosiery, "黑丝袜", {}, 40, conceptConfig)[0].english, "black pantyhose");
 
 console.log("dictionary tools tests: OK");

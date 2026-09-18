@@ -25,6 +25,22 @@ class DictionaryStoreTests(unittest.TestCase):
         (data_dir / "user_tags.json").write_text('{"tags": []}', encoding="utf-8")
         return temp, DictionaryStore(data_dir)
 
+    def test_missing_runtime_files_use_safe_defaults(self):
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        data_dir = Path(temp.name)
+        (data_dir / "base_tags.json").write_text(
+            json.dumps({"tags": [{"english": "from front", "chinese": "正面视角"}]}),
+            encoding="utf-8",
+        )
+        store = DictionaryStore(data_dir)
+        self.assertEqual(store.user_tags(), [])
+        self.assertTrue(store.large_dictionary_snapshot()["enabled"])
+        self.assertEqual(store.snapshot()["tags"][0]["english"], "from front")
+        store.upsert({"english": "keep me", "chinese": "保留词条"})
+        self.assertTrue(store.user_path.exists())
+        self.assertEqual(store.user_tags()[0]["english"], "keep me")
+
     def test_normalize_matches_spaces_and_underscores(self):
         self.assertEqual(normalize_key(" Looking_At_Viewer "), "looking at viewer")
 
@@ -155,10 +171,13 @@ class DictionaryStoreTests(unittest.TestCase):
                 [
                     ("long_hair", "long hair", 0, "通用", 1000, "长发"),
                     ("keqing_(genshin_impact)", "keqing (genshin impact)", 4, "角色", 500, "刻晴（原神）"),
+                    ("pantyhose", "pantyhose", 0, "通用", 900, "连裤袜"),
+                    ("black_pantyhose", "black pantyhose", 0, "通用", 800, "黑色连裤袜"),
+                    ("thighhighs", "thighhighs", 0, "通用", 700, "过膝袜"),
                 ],
             )
             connection.executemany("INSERT INTO metadata(key,value) VALUES(?,?)", [
-                ("rows", "2"), ("updated", "2026-09-03"), ("source", "测试来源"),
+                ("rows", "5"), ("updated", "2026-09-03"), ("source", "测试来源"),
             ])
             connection.commit()
 
@@ -168,11 +187,32 @@ class DictionaryStoreTests(unittest.TestCase):
         self.install_large_dictionary(store)
         status = store.large_dictionary_snapshot()
         self.assertTrue(status["available"])
-        self.assertEqual(status["count"], 2)
+        self.assertEqual(status["count"], 5)
         matches = store.lookup_large_tags(["LONG HAIR", "missing", "long_hair"])
         self.assertEqual([item["english"] for item in matches], ["long_hair"])
         self.assertEqual(matches[0]["pack_id"], "danbooru_large")
         self.assertEqual(store.search_large_tags("刻晴", 10)[0]["english"], "keqing_(genshin_impact)")
+
+    def test_large_dictionary_concept_search_and_pagination(self):
+        temp, store = self.make_store()
+        self.addCleanup(temp.cleanup)
+        self.install_large_dictionary(store)
+        store.search_concepts_path.write_text(json.dumps({
+            "schema_version": 1,
+            "modifiers": {"黑": ["black"]},
+            "concepts": [{
+                "id": "hosiery", "label": "丝袜与袜类", "queries": ["丝袜"],
+                "terms": ["pantyhose", "stockings", "thighhighs"],
+            }],
+        }, ensure_ascii=False), encoding="utf-8")
+        first = store.search_large_tags_page("丝袜", limit=2, offset=0)
+        self.assertEqual([item["english"] for item in first["items"]], ["pantyhose", "black_pantyhose"])
+        self.assertTrue(first["has_more"])
+        second = store.search_large_tags_page("丝袜", limit=2, offset=first["next_offset"])
+        self.assertEqual([item["english"] for item in second["items"]], ["thighhighs"])
+        self.assertFalse(second["has_more"])
+        modified = store.search_large_tags_page("黑丝袜", limit=2, offset=0)
+        self.assertEqual(modified["items"][0]["english"], "black_pantyhose")
 
     def test_large_dictionary_can_be_disabled_without_affecting_small_tags(self):
         temp, store = self.make_store()

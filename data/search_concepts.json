@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "modifiers": {
+    "黑": ["black"],
+    "黑色": ["black"],
+    "白": ["white"],
+    "白色": ["white"],
+    "红": ["red"],
+    "红色": ["red"],
+    "蓝": ["blue"],
+    "蓝色": ["blue"],
+    "粉": ["pink"],
+    "粉色": ["pink"],
+    "透明": ["sheer", "transparent"],
+    "条纹": ["striped"]
+  },
+  "concepts": [
+    {
+      "id": "hosiery",
+      "label": "丝袜与袜类",
+      "queries": ["丝袜", "袜类", "腿部袜类", "hosiery"],
+      "terms": [
+        "pantyhose",
+        "stockings",
+        "thighhighs",
+        "kneehighs",
+        "garter stockings",
+        "sheer legwear",
+        "连裤袜",
+        "长筒袜",
+        "过膝袜",
+        "及膝袜",
+        "吊带袜"
+      ]
+    },
+    {
+      "id": "footwear",
+      "label": "鞋类",
+      "queries": ["鞋", "鞋子", "鞋类", "footwear"],
+      "terms": ["shoes", "boots", "heels", "high heels", "sneakers", "loafers", "sandals", "靴子", "高跟鞋", "运动鞋", "凉鞋"]
+    },
+    {
+      "id": "dress",
+      "label": "连衣裙与裙装",
+      "queries": ["裙子", "裙装", "连衣裙", "dress", "skirt"],
+      "terms": ["dress", "skirt", "miniskirt", "long skirt", "pleated skirt", "sundress", "gown", "短裙", "长裙", "百褶裙", "礼服"]
+    },
+    {
+      "id": "uniform",
+      "label": "制服",
+      "queries": ["制服", "uniform"],
+      "terms": ["school uniform", "sailor uniform", "military uniform", "office lady", "maid", "校服", "水手服", "军装", "女仆装"]
+    },
+    {
+      "id": "hairstyle",
+      "label": "发型",
+      "queries": ["发型", "头发造型", "hairstyle"],
+      "terms": ["long hair", "short hair", "ponytail", "twintails", "braid", "bob cut", "bangs", "长发", "短发", "马尾", "双马尾", "辫子", "刘海"]
+    },
+    {
+      "id": "pose",
+      "label": "动作与姿势",
+      "queries": ["动作", "姿势", "动态姿势", "pose", "action"],
+      "terms": ["dynamic pose", "standing", "sitting", "kneeling", "lying", "walking", "running", "jumping", "站立", "坐着", "跪姿", "躺着", "行走", "奔跑", "跳跃"]
+    },
+    {
+      "id": "camera_angle",
+      "label": "镜头角度",
+      "queries": ["镜头", "视角", "镜头角度", "camera angle"],
+      "terms": ["from above", "from below", "from side", "from behind", "dutch angle", "low angle", "high angle", "俯视", "仰视", "侧面视角", "背面视角"]
+    },
+    {
+      "id": "composition",
+      "label": "构图与景别",
+      "queries": ["构图", "景别", "composition"],
+      "terms": ["close-up", "portrait", "upper body", "full body", "cowboy shot", "wide shot", "特写", "肖像", "上半身", "全身", "远景"]
+    },
+    {
+      "id": "lighting",
+      "label": "光线",
+      "queries": ["光线", "灯光", "光照", "lighting"],
+      "terms": ["dramatic lighting", "soft lighting", "natural lighting", "backlighting", "rim light", "volumetric lighting", "戏剧光", "柔光", "自然光", "逆光", "轮廓光", "体积光"]
+    },
+    {
+      "id": "weather",
+      "label": "天气",
+      "queries": ["天气", "weather"],
+      "terms": ["rain", "snow", "fog", "storm", "sunny", "cloudy", "雨", "雪", "雾", "暴风雨", "晴天", "多云"]
+    },
+    {
+      "id": "art_style",
+      "label": "画风",
+      "queries": ["画风", "绘画风格", "art style"],
+      "terms": ["watercolor", "oil painting", "sketch", "lineart", "photorealistic", "anime coloring", "水彩", "油画", "素描", "线稿", "写实", "动漫上色"]
+    }
+  ]
+}

@@ -16,6 +16,7 @@ MAX_TEXT_LENGTH = 500
 MAX_ALIASES = 30
 MAX_LARGE_LOOKUP_TERMS = 200
 MAX_LARGE_SEARCH_RESULTS = 100
+MAX_LARGE_SEARCH_OFFSET = 10000
 MAX_PERSONAL_IMPORT_TAGS = 10000
 MAX_COMMUNITY_PACK_TAGS = 20000
 MAX_BACKUP_FILES = 50
@@ -114,6 +115,7 @@ class DictionaryStore:
         self.pack_settings_path = self.data_dir / "pack_settings.json"
         self.large_db_path = self.data_dir / "danbooru_tags.sqlite3"
         self.large_settings_path = self.data_dir / "large_dictionary.json"
+        self.search_concepts_path = self.data_dir / "search_concepts.json"
 
     @staticmethod
     def _read_json(path, default=None):
@@ -253,6 +255,22 @@ class DictionaryStore:
             "tags": list(effective.values()),
             "packs": self.pack_snapshot(),
             "large_dictionary": self.large_dictionary_snapshot(),
+            "search_concepts": self.search_concepts(),
+        }
+
+    def search_concepts(self):
+        payload = self._read_json(
+            self.search_concepts_path,
+            {"schema_version": 1, "modifiers": {}, "concepts": []},
+        )
+        if not isinstance(payload, dict):
+            return {"schema_version": 1, "modifiers": {}, "concepts": []}
+        modifiers = payload.get("modifiers", {})
+        concepts = payload.get("concepts", [])
+        return {
+            "schema_version": 1,
+            "modifiers": modifiers if isinstance(modifiers, dict) else {},
+            "concepts": concepts if isinstance(concepts, list) else [],
         }
 
     def _large_settings(self):
@@ -364,46 +382,129 @@ class DictionaryStore:
     def _escape_like(value):
         return str(value).replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_")
 
-    def search_large_tags(self, query, limit=40):
-        status = self.large_dictionary_snapshot()
-        if not status["available"] or not status["enabled"]:
-            return []
+    def _search_variants(self, query):
         raw_query = str(query or "").strip()
-        key = normalize_key(raw_query)
-        if not key:
+        if not raw_query:
             return []
+        variants = []
+        seen = set()
+
+        def add(value, relation="direct", label=""):
+            text = str(value or "").strip()
+            key = normalize_key(text)
+            if not key or key in seen:
+                return
+            seen.add(key)
+            variants.append({"text": text, "key": key, "relation": relation, "label": label})
+
+        add(raw_query)
+        payload = self.search_concepts()
+        normalized_query = normalize_key(raw_query)
+        for concept in payload.get("concepts", []):
+            if not isinstance(concept, dict):
+                continue
+            queries = [str(item or "").strip() for item in concept.get("queries", [])]
+            matched_query = next((item for item in queries if item and (
+                normalize_key(item) == normalized_query or item.lower() in raw_query.lower()
+            )), None)
+            if not matched_query:
+                continue
+            label = str(concept.get("label") or concept.get("id") or "相关概念")
+            residual = raw_query.lower().replace(matched_query.lower(), "").strip()
+            modifier_terms = []
+            for modifier, values in payload.get("modifiers", {}).items():
+                if str(modifier).strip() and str(modifier).strip().lower() in residual:
+                    modifier_terms.extend(values if isinstance(values, list) else [values])
+            terms = concept.get("terms", []) if isinstance(concept.get("terms", []), list) else []
+            if modifier_terms:
+                for modifier in modifier_terms[:3]:
+                    for term in terms[:12]:
+                        if re.search(r"[A-Za-z]", str(term)):
+                            add(f"{modifier} {term}", "concept-modified", label)
+            for term in terms:
+                add(term, "concept", label)
+                if len(variants) >= 20:
+                    break
+            if len(variants) >= 20:
+                break
+        return variants[:20]
+
+    def search_large_tags_page(self, query, limit=40, offset=0):
+        status = self.large_dictionary_snapshot()
+        raw_query = str(query or "").strip()
         limit = max(1, min(MAX_LARGE_SEARCH_RESULTS, int(limit)))
-        key_like = self._escape_like(key)
-        chinese_like = self._escape_like(raw_query.lower())
+        offset = max(0, min(MAX_LARGE_SEARCH_OFFSET, int(offset)))
+        if not status["available"] or not status["enabled"]:
+            return {
+                "items": [], "has_more": False, "offset": offset,
+                "next_offset": offset, "query": raw_query, "expanded_terms": [],
+            }
+        variants = self._search_variants(raw_query)
+        if not variants:
+            return {
+                "items": [], "has_more": False, "offset": offset,
+                "next_offset": offset, "query": raw_query, "expanded_terms": [],
+            }
+
+        rank_cases = []
+        rank_parameters = []
+        where_groups = []
+        where_parameters = []
+        for index, variant in enumerate(variants):
+            key = variant["key"]
+            raw_lower = variant["text"].lower()
+            key_like = self._escape_like(key)
+            chinese_like = self._escape_like(raw_lower)
+            base_rank = index * 10
+            rank_cases.extend([
+                f"WHEN name_key = ? THEN {base_rank}",
+                f"WHEN lower(chinese) = ? THEN {base_rank + 1}",
+                f"WHEN name_key LIKE ? ESCAPE '\\' THEN {base_rank + 2}",
+                f"WHEN lower(chinese) LIKE ? ESCAPE '\\' THEN {base_rank + 3}",
+                f"WHEN name_key LIKE ? ESCAPE '\\' THEN {base_rank + 4}",
+                f"WHEN lower(chinese) LIKE ? ESCAPE '\\' THEN {base_rank + 5}",
+            ])
+            parameters = [
+                key, raw_lower, f"{key_like}%", f"{chinese_like}%",
+                f"%{key_like}%", f"%{chinese_like}%",
+            ]
+            rank_parameters.extend(parameters)
+            where_groups.append("(" + " OR ".join([
+                "name_key = ?", "lower(chinese) = ?",
+                "name_key LIKE ? ESCAPE '\\'", "lower(chinese) LIKE ? ESCAPE '\\'",
+                "name_key LIKE ? ESCAPE '\\'", "lower(chinese) LIKE ? ESCAPE '\\'",
+            ]) + ")")
+            where_parameters.extend(parameters)
+
         with closing(self._open_large_db()) as connection:
             rows = connection.execute(
-                """
+                f"""
                 SELECT name, name_key, category_id, category, post_count, chinese,
-                       CASE
-                         WHEN name_key = ? THEN 0
-                         WHEN lower(chinese) = ? THEN 1
-                         WHEN name_key LIKE ? ESCAPE '\\' THEN 2
-                         WHEN lower(chinese) LIKE ? ESCAPE '\\' THEN 3
-                         WHEN name_key LIKE ? ESCAPE '\\' THEN 4
-                         ELSE 5
-                       END AS match_rank
+                       CASE {' '.join(rank_cases)} ELSE 9999 END AS match_rank
                   FROM tags
-                 WHERE name_key = ?
-                    OR lower(chinese) = ?
-                    OR name_key LIKE ? ESCAPE '\\'
-                    OR lower(chinese) LIKE ? ESCAPE '\\'
-                    OR name_key LIKE ? ESCAPE '\\'
-                    OR lower(chinese) LIKE ? ESCAPE '\\'
+                 WHERE {' OR '.join(where_groups)}
                  ORDER BY match_rank, post_count DESC, name_key
                  LIMIT ?
+                OFFSET ?
                 """,
-                (
-                    key, raw_query.lower(), f"{key_like}%", f"{chinese_like}%",
-                    f"%{key_like}%", key, raw_query.lower(), f"{key_like}%",
-                    f"{chinese_like}%", f"%{key_like}%", f"%{chinese_like}%", limit,
-                ),
+                (*rank_parameters, *where_parameters, limit + 1, offset),
             ).fetchall()
-        return [self._large_tag(row) for row in rows]
+        has_more = len(rows) > limit
+        items = [self._large_tag(row) for row in rows[:limit]]
+        return {
+            "items": items,
+            "has_more": has_more,
+            "offset": offset,
+            "next_offset": offset + len(items),
+            "query": raw_query,
+            "expanded_terms": [
+                {"text": item["text"], "relation": item["relation"], "label": item["label"]}
+                for item in variants[1:]
+            ],
+        }
+
+    def search_large_tags(self, query, limit=40):
+        return self.search_large_tags_page(query, limit=limit, offset=0)["items"]
 
     def _write_user_tags(self, tags):
         self.data_dir.mkdir(parents=True, exist_ok=True)

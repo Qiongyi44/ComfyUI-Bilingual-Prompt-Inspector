@@ -10,28 +10,34 @@ import {
   validateTranslationResult,
 } from "./parser.js";
 import {
+  clearButtonAction,
+  clearButtonLabel,
+  createClearTextHistoryEntry,
+  inspectorNodeTargetHeight,
   mergeImportAsAliases,
   normalizePreferences,
+  preservedSearchScroll,
   previewImport,
+  rankDictionaryMatches,
   rankDictionaryTags,
   recordRecent,
   suggestedTags,
   toggleFavorite,
 } from "./dictionary_tools.js";
-import { sortAnimaPrompt } from "./anima_sorter.js";
+import { groupAnimaTokensForDisplay, sortAnimaPrompt } from "./anima_sorter.js";
 import { panelSyncHub } from "./panel_sync.js";
 import { installBpiWheelGuard } from "./wheel_guard.js";
 
 const NODE_NAME = "BilingualPromptInspector";
 const API_ROOT = "/bpi";
-const EXTENSION_VERSION = "v19 Final";
+const EXTENSION_VERSION = "v1.1.0";
 const AUTHOR_URL = "https://space.bilibili.com/697555747";
 const PREFERENCES_KEY = "bpi.dictionary.preferences.v1";
 const COLLAPSED_WIDGET_FALLBACK_HEIGHT = 390;
 const EXPANDED_WIDGET_MIN_HEIGHT = 820;
 const EXPANDED_WIDGET_MAX_HEIGHT = 1160;
-const COLLAPSED_NODE_MIN_HEIGHT = 520;
-const EXPANDED_NODE_DEFAULT_HEIGHT = 1060;
+const COLLAPSED_NODE_MIN_HEIGHT = 360;
+const EXPANDED_NODE_DEFAULT_HEIGHT = 890;
 
 let dictionaryPromise = null;
 let sessionTokenPromise = null;
@@ -174,7 +180,7 @@ function injectStyles() {
     .bpi-panel{box-sizing:border-box;width:100%;height:100%;min-height:${EXPANDED_WIDGET_MIN_HEIGHT}px;padding:8px;display:flex;flex-direction:column;gap:7px;color:var(--input-text,#ddd);font:12px/1.4 Arial,sans-serif;background:rgba(10,12,18,.72);border:1px solid #3a4250;border-radius:8px;overflow:hidden}
     .bpi-panel.bpi-details-collapsed{min-height:var(--bpi-collapsed-height,${COLLAPSED_WIDGET_FALLBACK_HEIGHT}px);max-height:var(--bpi-collapsed-height,${COLLAPSED_WIDGET_FALLBACK_HEIGHT}px);overflow-y:auto;scrollbar-gutter:stable}
     .bpi-english-section{flex:none;border:1px solid #3e7197;border-radius:7px;background:rgba(18,29,43,.72);overflow:hidden}.bpi-english-head{display:flex;align-items:center;gap:7px;padding:5px 8px;background:rgba(38,65,88,.66);color:#cbe8ff;font-weight:700;flex-wrap:wrap}.bpi-english-hint{margin-left:auto;color:#91b4cf;font-size:10px;font-weight:400}.bpi-english-token-view{box-sizing:border-box;width:100%;height:auto;min-height:92px;max-height:360px;overflow:auto;scrollbar-gutter:stable;padding:8px 9px;outline:none;color:#d9edff;font:12px/1.85 Consolas,monospace;white-space:normal}.bpi-english-token-view:focus{box-shadow:inset 0 0 0 1px #5aa6d8}.bpi-english-editor{box-sizing:border-box;width:100%;height:120px;min-height:92px;max-height:420px;overflow-y:auto;resize:vertical;border:0;border-top:1px solid #3e7197;background:#111923;color:#edf7ff;padding:9px;outline:none;font:12px/1.55 Consolas,monospace}.bpi-english-editor:focus{box-shadow:inset 0 0 0 1px #5aa6d8}.bpi-english-token{font-family:Consolas,monospace;color:#e8f5ff}.bpi-english-token.bpi-linked{background:#147fc3;border-color:#76c9ff;color:#fff;box-shadow:0 0 0 1px rgba(118,201,255,.32)}
-    .bpi-mirror-section{flex:none;border:1px solid #488739;border-radius:7px;background:rgba(20,35,22,.64);overflow:hidden}.bpi-section-head{display:flex;align-items:center;gap:7px;padding:5px 8px;background:rgba(40,68,42,.55);color:#cbe9c8;font-weight:700;flex-wrap:wrap}.bpi-section-hint{margin-left:auto;color:#91ad93;font-size:10px;font-weight:400}.bpi-mirror-actions{display:flex;gap:4px;align-items:center;flex-wrap:wrap}.bpi-chinese-mirror{box-sizing:border-box;width:100%;height:auto;min-height:92px;max-height:360px;overflow:auto;resize:none;scrollbar-gutter:stable;padding:8px 9px;outline:none;color:#d7f3d3;line-height:1.85;cursor:text;white-space:normal}.bpi-chinese-mirror:focus{box-shadow:inset 0 0 0 1px #70b35f}.bpi-chinese-editor{box-sizing:border-box;width:100%;height:auto;min-height:110px;max-height:360px;overflow-y:auto;resize:none;border:0;border-top:1px solid #3b693c;background:#101b13;color:#e0f6dc;padding:9px;outline:none;font:12px/1.65 Arial,sans-serif}.bpi-chinese-editor:focus{box-shadow:inset 0 0 0 1px #70b35f}.bpi-hidden{display:none!important}.bpi-mirror-empty{color:#829486}.bpi-mirror-token{display:inline-flex;align-items:center;border:1px solid transparent;border-radius:5px;padding:0 3px;margin:1px 0;cursor:pointer;transition:background .12s,border-color .12s,color .12s}.bpi-mirror-token:hover{background:#345a3b;border-color:#5c8d63;color:#fff}.bpi-mirror-token.bpi-linked{background:#315f83;border-color:#72b7e8;color:#fff;box-shadow:0 0 0 1px rgba(98,181,239,.2)}.bpi-mirror-token.bpi-unknown{background:rgba(116,70,24,.45);border-color:#9a672e;color:#ffd18a}.bpi-mirror-token.bpi-machine{background:rgba(82,57,125,.55);border-color:#7659a1;color:#d8c5ff}.bpi-mirror-token.bpi-special{color:#aeb8c4}.bpi-mirror-separator{color:#6f8f75;white-space:pre}.bpi-mirror-delete{margin-left:4px;color:#ffb0b5;font-weight:700}.bpi-details-head{display:flex;align-items:center;gap:8px;border:1px solid #66551f;border-radius:6px;background:rgba(66,53,16,.42);padding:5px 7px;color:#ecd77d}.bpi-details-summary{margin-left:auto;color:#c8bc86;font-size:10px}.bpi-details-body{min-height:0;flex:1;display:flex;flex-direction:column;gap:7px;overflow:hidden}.bpi-details-body.bpi-collapsed{display:none}
+    .bpi-mirror-section{flex:none;border:1px solid #488739;border-radius:7px;background:rgba(20,35,22,.64);overflow:visible}.bpi-section-head{display:flex;align-items:center;gap:7px;padding:5px 8px;background:rgba(40,68,42,.55);color:#cbe9c8;font-weight:700;flex-wrap:wrap}.bpi-section-hint{margin-left:auto;color:#91ad93;font-size:10px;font-weight:400}.bpi-mirror-actions{display:flex;gap:4px;align-items:center;flex-wrap:wrap}.bpi-chinese-mirror{box-sizing:border-box;width:100%;height:auto;min-height:92px;max-height:360px;overflow:auto;resize:none;scrollbar-gutter:stable;padding:8px 9px;outline:none;color:#d7f3d3;line-height:1.85;cursor:text;white-space:normal}.bpi-chinese-mirror:focus{box-shadow:inset 0 0 0 1px #70b35f}.bpi-category-table{display:grid;grid-template-columns:minmax(110px,150px) minmax(0,1fr);border:1px solid #315f3a;border-radius:6px;overflow:hidden;background:rgba(8,22,12,.45)}.bpi-category-row{display:contents}.bpi-category-name,.bpi-category-content{padding:6px 8px;border-top:1px solid #31513a}.bpi-category-row:first-child .bpi-category-name,.bpi-category-row:first-child .bpi-category-content{border-top:0}.bpi-category-name{background:rgba(52,91,57,.46);border-right:1px solid #31513a;color:#9ee8a7;font-weight:700}.bpi-category-content{min-width:0}.bpi-chinese-editor{box-sizing:border-box;width:100%;height:auto;min-height:110px;max-height:600px;overflow-y:auto;resize:vertical;border:0;border-top:1px solid #3b693c;background:#101b13;color:#e0f6dc;padding:9px;outline:none;font:12px/1.65 Arial,sans-serif}.bpi-chinese-editor:focus{box-shadow:inset 0 0 0 1px #70b35f}.bpi-hidden{display:none!important}.bpi-mirror-empty{color:#829486}.bpi-mirror-token{display:inline-flex;align-items:center;border:1px solid transparent;border-radius:5px;padding:0 3px;margin:1px 0;cursor:pointer;transition:background .12s,border-color .12s,color .12s}.bpi-mirror-token:hover{background:#345a3b;border-color:#5c8d63;color:#fff}.bpi-mirror-token.bpi-linked{background:#315f83;border-color:#72b7e8;color:#fff;box-shadow:0 0 0 1px rgba(98,181,239,.2)}.bpi-mirror-token.bpi-unknown{background:rgba(116,70,24,.45);border-color:#9a672e;color:#ffd18a}.bpi-mirror-token.bpi-machine{background:rgba(82,57,125,.55);border-color:#7659a1;color:#d8c5ff}.bpi-mirror-token.bpi-special{color:#aeb8c4}.bpi-mirror-separator{color:#6f8f75;white-space:pre}.bpi-mirror-delete{margin-left:4px;color:#ffb0b5;font-weight:700}.bpi-details-head{display:flex;align-items:center;gap:8px;border:1px solid #66551f;border-radius:6px;background:rgba(66,53,16,.42);padding:5px 7px;color:#ecd77d}.bpi-details-summary{margin-left:auto;color:#c8bc86;font-size:10px}.bpi-details-body{min-height:0;flex:1;display:flex;flex-direction:column;gap:7px;overflow:hidden}.bpi-details-body.bpi-collapsed{display:none}
     .bpi-mirror-token.bpi-linked,.bpi-english-token.bpi-linked{background:#147fc3;border-color:#76c9ff;color:#fff;box-shadow:0 0 0 1px rgba(118,201,255,.32)}.bpi-english-token-view .bpi-mirror-separator{color:#7194ad}
     .bpi-toolbar,.bpi-search-line,.bpi-summary{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
     .bpi-toolbar{justify-content:space-between}.bpi-toolbar-group{display:flex;gap:5px;align-items:center;flex-wrap:wrap}
@@ -184,7 +190,7 @@ function injectStyles() {
     .bpi-mode{border:1px solid #4b5567;border-radius:5px;background:#171b22;color:#eef3fb;padding:5px 6px;font-size:11px;outline:none}.bpi-mode:focus{border-color:#4ca7e8}.bpi-mode-info{color:#87bfea}
     .bpi-summary{color:#aab5c5;font-size:11px;min-height:17px}.bpi-status{margin-left:auto}.bpi-status[data-kind="error"]{color:#ff8b93}.bpi-status[data-kind="ok"]{color:#7fdda2}.bpi-status[data-kind="busy"]{color:#ffd27a}
     .bpi-issues{display:none;max-height:105px;overflow:auto;border:1px solid #5b4a36;border-radius:6px;background:rgba(55,39,25,.55);padding:4px 6px}.bpi-issues.bpi-visible{display:block}.bpi-issue{padding:2px 4px;color:#e6c792}.bpi-issue[data-severity="error"]{color:#ff9299}.bpi-issue[data-severity="info"]{color:#86c8eb}.bpi-issue::before{content:"⚠ ";}.bpi-issue[data-severity="error"]::before{content:"⛔ ";}.bpi-issue[data-severity="info"]::before{content:"ℹ ";}
-    .bpi-results{display:none;max-height:130px;overflow:auto;border:1px solid #414b5c;border-radius:6px;background:#171b22}.bpi-results.bpi-visible{display:block}.bpi-result{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:7px;padding:5px 7px;border-bottom:1px solid #2d3541;cursor:pointer}.bpi-result:last-child{border-bottom:0}.bpi-result:hover{background:#29384a}.bpi-result-en{color:#e7f1ff}.bpi-result-zh{color:#9ed0ff}.bpi-category{color:#8794a8;font-size:10px;white-space:nowrap}
+    .bpi-search-label{color:#b9c7d8;font-size:10px;white-space:nowrap}.bpi-results{display:none;max-height:220px;overflow:auto;border:1px solid #414b5c;border-radius:6px;background:#171b22}.bpi-results.bpi-visible{display:block}.bpi-result{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(150px,auto);gap:7px;padding:5px 7px;border-bottom:1px solid #2d3541;cursor:pointer}.bpi-result:last-child{border-bottom:0}.bpi-result:hover{background:#29384a}.bpi-result-en{color:#e7f1ff}.bpi-result-zh{color:#9ed0ff}.bpi-category{color:#8794a8;font-size:10px;white-space:normal}.bpi-search-reason{display:block;color:#77b6df;margin-top:2px}.bpi-search-more{display:block;margin:7px auto}.bpi-results>.bpi-searching{text-align:center}
     .bpi-table{height:300px;min-height:180px;max-height:360px;flex:1 1 300px;overflow-x:hidden;overflow-y:scroll;scrollbar-gutter:stable;border:1px solid #3c4553;border-radius:6px;background:#11151b}.bpi-head,.bpi-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1px}.bpi-head{position:sticky;top:0;z-index:2;background:#252c36;color:#b9c4d4;font-weight:700}.bpi-head>div,.bpi-cell{padding:6px 8px}.bpi-head>div+div,.bpi-cell+.bpi-cell{border-left:1px solid #3c4553}
     .bpi-row{border-top:1px solid #29313d;cursor:pointer}.bpi-row:hover,.bpi-row.bpi-pinned{background:#314b68}.bpi-row:hover .bpi-cell,.bpi-row.bpi-pinned .bpi-cell{color:#fff}.bpi-row.bpi-unknown{background:rgba(112,70,28,.18)}.bpi-row.bpi-machine{background:rgba(85,62,131,.22)}.bpi-row.bpi-has-warning{box-shadow:inset 3px 0 #d39845}.bpi-row.bpi-has-error{box-shadow:inset 3px 0 #e35b66}
     .bpi-cell{min-width:0;word-break:break-word;display:flex;align-items:flex-start;gap:5px}.bpi-en{color:#e6edf7;font-family:Consolas,monospace}.bpi-zh{color:#9ed0ff}.bpi-row:hover .bpi-en,.bpi-row:hover .bpi-zh,.bpi-row.bpi-pinned .bpi-en,.bpi-row.bpi-pinned .bpi-zh{color:#fff;text-shadow:0 0 7px rgba(109,190,255,.6)}
@@ -312,12 +318,15 @@ async function lookupLargeDictionary(terms) {
   return result.data ?? [];
 }
 
-async function searchLargeDictionary(query, limit = 60) {
-  const parameters = new URLSearchParams({ q: query, limit: String(limit) });
+async function searchLargeDictionary(query, limit = 40, offset = 0) {
+  const parameters = new URLSearchParams({ q: query, limit: String(limit), offset: String(offset) });
   const response = await bpiFetch(`${API_ROOT}/large/search?${parameters}`);
   const result = await response.json();
   if (!response.ok || !result.success) throw new Error(result.error || "大型词库搜索失败");
-  return result.data ?? [];
+  if (Array.isArray(result.data)) {
+    return { items: result.data, has_more: false, next_offset: offset + result.data.length, expanded_terms: [] };
+  }
+  return result.data ?? { items: [], has_more: false, next_offset: offset, expanded_terms: [] };
 }
 
 async function setLargeDictionaryEnabled(enabled) {
@@ -462,7 +471,17 @@ async function openAssistantSettings(onSaved, onStatus) {
     form.append(providerLabel, provider);
     const baseUrl = field(form, "API 地址", "assistant-base-url", config.base_url, "Ollama 可留空；兼容接口示例 https://host/v1");
     const model = field(form, "模型名称", "assistant-model", config.model, "例如 qwen3:8b 或服务商模型 ID");
-    const apiKey = field(form, "API Key", "assistant-api-key", "", config.api_key_configured ? "已保存；留空保持不变" : "本地 Ollama 可留空");
+    const presetLine = element("div", "bpi-manager-head");
+    presetLine.style.gridColumn = "1 / -1";
+    const lmStudioPreset = button("使用 LM Studio 本地预设", () => {
+      provider.value = "openai_compatible";
+      baseUrl.value = "http://127.0.0.1:1234/v1";
+      error.textContent = "已填入 LM Studio 默认地址；请选择已加载模型的 ID，再保存并测试连接";
+      error.dataset.kind = "ok";
+    });
+    presetLine.append(lmStudioPreset, element("span", "bpi-config-note", "默认连接本机 1234 端口，不要求购买外部 API。"));
+    form.append(presetLine);
+    const apiKey = field(form, "API Key", "assistant-api-key", "", config.api_key_configured ? "已保存；留空保持不变" : "本地 Ollama / LM Studio 可留空");
     apiKey.type = "password";
     const clearLine = element("label", "bpi-manager-head");
     const clearApiKey = element("input");
@@ -560,8 +579,10 @@ function createPanel(node, textWidget) {
   const englishTitle = element("span", "", "英文提示词（实际输出）");
   const englishHint = element("span", "bpi-english-hint", "空内容时直接编辑");
   const editEnglishButton = element("button", "bpi-button bpi-mini", "完成编辑");
+  const clearEnglishButton = element("button", "bpi-button bpi-mini bpi-danger", "清空");
   editEnglishButton.type = "button";
-  englishHead.append(englishTitle, englishHint, editEnglishButton);
+  clearEnglishButton.type = "button";
+  englishHead.append(englishTitle, englishHint, editEnglishButton, clearEnglishButton);
   const englishTokenView = element("div", "bpi-english-token-view bpi-hidden");
   englishTokenView.tabIndex = 0;
   englishTokenView.setAttribute("role", "textbox");
@@ -579,11 +600,12 @@ function createPanel(node, textWidget) {
   const translateChineseButton = element("button", "bpi-button bpi-mini", "仅翻译");
   const translateOptimizeButton = element("button", "bpi-button bpi-mini bpi-primary", "翻译并优化");
   const optimizeChineseButton = element("button", "bpi-button bpi-mini", "优化为 Anima");
+  const expandChineseButton = element("button", "bpi-button bpi-mini", "展开编辑");
   const syncTextButton = element("button", "bpi-button bpi-mini", "同步到英文输出");
   const sortPromptButton = element("button", "bpi-button bpi-mini", "按官方顺序整理");
   const assistantSettingsButton = element("button", "bpi-button bpi-mini", "助手设置");
-  for (const control of [editChineseButton, translateChineseButton, translateOptimizeButton, optimizeChineseButton, syncTextButton, sortPromptButton, assistantSettingsButton]) control.type = "button";
-  mirrorActions.append(editChineseButton, translateChineseButton, translateOptimizeButton, optimizeChineseButton, syncTextButton, sortPromptButton, assistantSettingsButton);
+  for (const control of [editChineseButton, expandChineseButton, translateChineseButton, translateOptimizeButton, optimizeChineseButton, syncTextButton, sortPromptButton, assistantSettingsButton]) control.type = "button";
+  mirrorActions.append(editChineseButton, expandChineseButton, translateChineseButton, translateOptimizeButton, optimizeChineseButton, syncTextButton, sortPromptButton, assistantSettingsButton);
   mirrorHead.append(mirrorTitle, mirrorHint, mirrorActions);
   const chineseMirror = element("div", "bpi-chinese-mirror");
   chineseMirror.tabIndex = 0;
@@ -601,9 +623,10 @@ function createPanel(node, textWidget) {
   const leftTools = element("div", "bpi-toolbar-group");
   const rightTools = element("div", "bpi-toolbar-group");
   const searchLine = element("div", "bpi-search-line");
+  const searchLabel = element("strong", "bpi-search-label", "词库搜索");
   const search = element("input", "bpi-search");
   search.type = "search";
-  search.placeholder = "搜索中英标签（含大型词库）；点击结果插入英文";
+  search.placeholder = "输入中文、英文、别名或概念；点击结果插入英文";
   const results = element("div", "bpi-results");
   const summary = element("div", "bpi-summary");
   const counts = element("span");
@@ -668,11 +691,18 @@ function createPanel(node, textWidget) {
     largeSearchLoading: false,
     largeSearchTimer: null,
     largeSearchGeneration: 0,
+    largeSearchOffset: 0,
+    largeSearchHasMore: false,
+    largeSearchExpandedTerms: [],
+    searchVisibleLimit: 40,
+    lastRenderedSearchQuery: "",
+    categoryView: false,
     chineseEditing: false,
     englishEditing: !String(textWidget.value ?? "").trim(),
     englishEditingExplicit: false,
     englishEditorDirty: false,
-    nativeEnglishContainer: null,
+    englishClearState: "idle",
+    clearedEnglishEntry: null,
     assistantBusy: false,
     stagedText: null,
     editorInitialized: false,
@@ -680,8 +710,7 @@ function createPanel(node, textWidget) {
     redoStack: [],
     boundTextarea: null,
     textareaListeners: null,
-    expandedNodeHeight: null,
-    collapsedBaseHeight: null,
+    nodeBaseHeight: null,
     collapsedWidgetHeight: COLLAPSED_WIDGET_FALLBACK_HEIGHT,
     resizeFrame: null,
     manualResize: null,
@@ -701,8 +730,10 @@ function createPanel(node, textWidget) {
   };
   const autoFitGreenArea = (target, minimum) => {
     if (!target || target.classList.contains("bpi-hidden")) return;
+    const preferred = target === chineseEditor ? state.preferences.chineseEditorHeight : 0;
+    const maximum = target === chineseEditor ? 600 : 360;
     target.style.height = "auto";
-    const height = Math.max(minimum, Math.min(360, Math.ceil(target.scrollHeight + 2)));
+    const height = Math.max(minimum, preferred, Math.min(maximum, Math.ceil(target.scrollHeight + 2)));
     target.style.height = `${height}px`;
     target.style.overflowY = target.scrollHeight > height + 1 ? "auto" : "hidden";
   };
@@ -722,10 +753,6 @@ function createPanel(node, textWidget) {
     } catch {
       return widget;
     }
-  };
-  const textWidgetTargets = () => {
-    const resolved = resolveDeepestWidget(textWidget);
-    return [...new Set([textWidget, resolved].filter(Boolean))];
   };
   const applyEnglishEditorHeight = (height) => {
     const value = Math.max(84, Math.min(420, Math.round(Number(height) || 0)));
@@ -751,6 +778,15 @@ function createPanel(node, textWidget) {
         const height = applyEnglishEditorHeight(resize.target.offsetHeight);
         const delta = height - resize.startHeight;
         state.preferences = { ...state.preferences, englishInputHeight: height };
+        persistPreferences();
+        if (hasNodeSize() && Math.abs(delta) > 0.5) {
+          node.setSize?.([node.size[0], Math.max(COLLAPSED_NODE_MIN_HEIGHT, resize.startNodeHeight + delta)]);
+        }
+      } else if (resize.kind === "chinese") {
+        const height = Math.max(110, Math.min(600, Math.round(resize.target.offsetHeight)));
+        const delta = height - resize.startHeight;
+        resize.target.style.height = `${height}px`;
+        state.preferences = { ...state.preferences, chineseEditorHeight: height };
         persistPreferences();
         if (hasNodeSize() && Math.abs(delta) > 0.5) {
           node.setSize?.([node.size[0], Math.max(COLLAPSED_NODE_MIN_HEIGHT, resize.startNodeHeight + delta)]);
@@ -785,13 +821,23 @@ function createPanel(node, textWidget) {
         panel.style.setProperty("--bpi-collapsed-height", `${state.collapsedWidgetHeight}px`);
       }
       const width = Math.max(node.size?.[0] ?? 0, 590);
-      const computedHeight = node.computeSize?.()?.[1] ?? 0;
-      const targetHeight = expanded
-        ? Math.max(computedHeight, state.expandedNodeHeight ?? 0, EXPANDED_NODE_DEFAULT_HEIGHT)
-        : Math.max(
-            state.collapsedBaseHeight === null ? computedHeight : state.collapsedBaseHeight + state.collapsedWidgetHeight,
-            COLLAPSED_NODE_MIN_HEIGHT,
-          );
+      const widget = inspectorWidget();
+      const computedWidgetHeight = Number(widget?.computedHeight);
+      const panelHeight = Number(panel.offsetHeight);
+      const currentWidgetHeight = Number.isFinite(computedWidgetHeight) && computedWidgetHeight > 0
+        ? computedWidgetHeight
+        : Number.isFinite(panelHeight) && panelHeight > 0 ? panelHeight : undefined;
+      const targetWidgetHeight = expanded ? EXPANDED_WIDGET_MIN_HEIGHT : state.collapsedWidgetHeight;
+      const targetHeight = inspectorNodeTargetHeight({
+        widgetY: widget?.y,
+        widgetMargin: widget?.margin ?? 10,
+        nodeHeight: node.size?.[1],
+        currentWidgetHeight,
+        targetWidgetHeight,
+        fallbackBaseHeight: state.nodeBaseHeight ?? 70,
+        minimumHeight: expanded ? EXPANDED_NODE_DEFAULT_HEIGHT : COLLAPSED_NODE_MIN_HEIGHT,
+      });
+      state.nodeBaseHeight = Math.max(0, targetHeight - targetWidgetHeight);
       const sizeChanged = Math.abs((node.size?.[0] ?? 0) - width) > 0.5
         || Math.abs((node.size?.[1] ?? 0) - targetHeight) > 0.5;
       if (sizeChanged) {
@@ -811,13 +857,6 @@ function createPanel(node, textWidget) {
   };
   const setDetailsExpanded = (expanded, resizeNode = true) => {
     const previous = state.preferences.detailsExpanded !== false;
-    if (previous && !expanded && hasNodeSize()) {
-      state.expandedNodeHeight = Math.max(node.size[1] ?? 0, EXPANDED_NODE_DEFAULT_HEIGHT);
-      const currentInspectorHeight = Number(inspectorWidget()?.computedHeight);
-      state.collapsedBaseHeight = Number.isFinite(currentInspectorHeight) && currentInspectorHeight > 0
-        ? Math.max(0, node.size[1] - currentInspectorHeight)
-        : null;
-    }
     state.preferences = { ...state.preferences, detailsExpanded: Boolean(expanded) };
     persistPreferences();
     applyDetailsVisibility(resizeNode && previous !== Boolean(expanded));
@@ -896,32 +935,17 @@ function createPanel(node, textWidget) {
     return textareas.length === 1 ? textareas[0] : null;
   };
 
-  const hideNativeEnglishWidget = () => {
-    for (const widget of textWidgetTargets()) {
-      widget.computeSize = () => [0, -4];
-      widget.options ??= {};
-      widget.options.getMinHeight = () => -4;
-      widget.options.getMaxHeight = () => -4;
-    }
-    const textarea = findTextarea();
-    if (!textarea) return false;
-    textarea.tabIndex = -1;
-    textarea.setAttribute("aria-hidden", "true");
-    const container = textarea.closest(".p-floatlabel, .dom-widget");
-    const nodeContainer = document.querySelector(`[data-node-id="${node.id}"]`);
-    const target = container && container !== nodeContainer ? container : textarea;
-    target.style.setProperty("display", "none", "important");
-    target.style.setProperty("height", "0", "important");
-    target.style.setProperty("min-height", "0", "important");
-    target.style.setProperty("padding", "0", "important");
-    target.style.setProperty("margin", "0", "important");
-    target.style.setProperty("border", "0", "important");
-    target.style.setProperty("overflow", "hidden", "important");
-    state.nativeEnglishContainer = target;
-    return true;
+  const updateEnglishClearButton = () => {
+    clearEnglishButton.textContent = clearButtonLabel(state.englishClearState);
+    clearEnglishButton.disabled = state.englishClearState === "idle" && !String(textWidget.value ?? "");
   };
-
-  const updateText = (nextText, cursorPosition = null) => {
+  const resetEnglishClearState = () => {
+    state.englishClearState = "idle";
+    state.clearedEnglishEntry = null;
+    updateEnglishClearButton();
+  };
+  const updateText = (nextText, cursorPosition = null, { preserveClearState = false } = {}) => {
+    if (!preserveClearState && state.englishClearState !== "idle") resetEnglishClearState();
     textWidget.value = nextText;
     textWidget.callback?.(nextText);
     node.graph?.change?.();
@@ -930,7 +954,7 @@ function createPanel(node, textWidget) {
     if (textarea) {
       textarea.value = nextText;
     }
-    if (document.activeElement !== englishEditor) englishEditor.value = nextText;
+    englishEditor.value = nextText;
     if (state.englishEditing && cursorPosition !== null) {
       const cursor = Math.max(0, Math.min(nextText.length, cursorPosition));
       englishEditor.focus({ preventScroll: true });
@@ -941,6 +965,7 @@ function createPanel(node, textWidget) {
 
   englishEditor.value = String(textWidget.value ?? "");
   if (state.preferences.englishInputHeight) applyEnglishEditorHeight(state.preferences.englishInputHeight);
+  if (state.preferences.chineseEditorHeight) chineseEditor.style.height = `${state.preferences.chineseEditorHeight}px`;
 
   const setEnglishEditing = (editing, explicit = true) => {
     const requested = Boolean(editing);
@@ -1012,6 +1037,11 @@ function createPanel(node, textWidget) {
       return false;
     }
     if (before === after) {
+      if (label === "官方顺序整理") {
+        state.categoryView = true;
+        render();
+        mirrorHint.textContent = "分类表格视图｜点击标签联动；分类名称不会写入提示词";
+      }
       setStatus("内容没有变化", "ok");
       return false;
     }
@@ -1022,10 +1052,13 @@ function createPanel(node, textWidget) {
       beforeEnd: before.length,
       afterCursor: after.length,
       label,
+      beforeCategoryView: state.categoryView,
+      afterCategoryView: label === "官方顺序整理",
     });
     if (state.undoStack.length > 50) state.undoStack.shift();
     state.redoStack = [];
     state.pinned = null;
+    state.categoryView = label === "官方顺序整理";
     state.chineseEditing = false;
     state.editorInitialized = false;
     state.stagedText = null;
@@ -1033,7 +1066,9 @@ function createPanel(node, textWidget) {
     chineseMirror.classList.remove("bpi-hidden");
     editChineseButton.textContent = "编辑文本";
     mirrorTitle.textContent = "中文同步编辑（逐标签组合）";
-    mirrorHint.textContent = "点击联动｜选中后按 Delete 删除";
+    mirrorHint.textContent = state.categoryView
+      ? "分类表格视图｜点击标签联动；分类名称不会写入提示词"
+      : "点击联动｜选中后按 Delete 删除";
     state.englishEditing = false;
     state.englishEditingExplicit = false;
     state.englishEditorDirty = false;
@@ -1046,6 +1081,57 @@ function createPanel(node, textWidget) {
     updateText(after);
     setStatus(`已应用${label}；按 Ctrl+Z 可撤销`, "ok");
     return true;
+  };
+
+  const clearEnglishText = () => {
+    const currentText = String(textWidget.value ?? "");
+    const action = clearButtonAction(state.englishClearState, Boolean(currentText));
+    if (action === "empty") {
+      setStatus("英文实际输出已经为空", "ok");
+      return;
+    }
+    if (action === "confirm") {
+      state.englishClearState = "confirm";
+      updateEnglishClearButton();
+      setStatus("再次点击“确认清空”才会清空英文实际输出", "busy");
+      return;
+    }
+    if (action === "undo") {
+      const entry = state.clearedEnglishEntry;
+      if (entry && state.undoStack.at(-1) === entry && undoStructuredEdit()) {
+        setEnglishEditing(false);
+        setStatus("已撤销英文清空", "ok");
+      } else {
+        resetEnglishClearState();
+        setStatus("英文内容已发生变化，无法撤销本次清空", "error");
+      }
+      return;
+    }
+    const entry = createClearTextHistoryEntry(currentText, "清空英文提示词", state.categoryView);
+    if (!entry) return;
+    state.undoStack.push(entry);
+    if (state.undoStack.length > 50) state.undoStack.shift();
+    state.redoStack = [];
+    state.pinned = null;
+    state.categoryView = false;
+    state.chineseEditing = false;
+    state.editorInitialized = false;
+    state.stagedText = null;
+    chineseEditor.classList.add("bpi-hidden");
+    chineseMirror.classList.remove("bpi-hidden");
+    state.englishEditing = true;
+    state.englishEditingExplicit = true;
+    state.englishEditorDirty = false;
+    englishEditor.value = "";
+    englishEditor.classList.remove("bpi-hidden");
+    englishTokenView.classList.add("bpi-hidden");
+    editEnglishButton.textContent = "完成编辑";
+    state.englishClearState = "cleared";
+    state.clearedEnglishEntry = entry;
+    updateEnglishClearButton();
+    updateText("", 0, { preserveClearState: true });
+    setStatus("已清空英文实际输出；点击“撤销”可立即恢复", "ok");
+    requestAnimationFrame(() => englishEditor.focus({ preventScroll: true }));
   };
 
   const openTextPreview = (title, proposed, detailNode, label) => {
@@ -1073,6 +1159,32 @@ function createPanel(node, textWidget) {
     document.body.appendChild(shade);
     shade.addEventListener("mousedown", (event) => { if (event.target === shade) close(); });
     modal.addEventListener("mousedown", (event) => event.stopPropagation());
+  };
+
+  const openExpandedChineseEditor = () => {
+    if (!state.chineseEditing) setChineseEditing(true);
+    const shade = element("div", "bpi-modal-shade");
+    const modal = element("div", "bpi-modal bpi-assistant-settings");
+    modal.appendChild(element("h3", "", "展开编辑中文／混合文本"));
+    const editor = element("textarea", "bpi-preview-text");
+    editor.style.minHeight = "360px";
+    editor.style.resize = "vertical";
+    editor.value = chineseEditor.value;
+    modal.appendChild(editor);
+    const actions = element("div", "bpi-modal-actions");
+    const close = () => shade.remove();
+    actions.append(button("取消", close), button("应用到编辑区", () => {
+      chineseEditor.value = editor.value;
+      chineseEditor.dispatchEvent(new Event("input", { bubbles: true }));
+      close();
+      chineseEditor.focus({ preventScroll: true });
+    }, "bpi-primary"));
+    modal.appendChild(actions);
+    shade.appendChild(modal);
+    document.body.appendChild(shade);
+    shade.addEventListener("mousedown", (event) => { if (event.target === shade) close(); });
+    modal.addEventListener("mousedown", (event) => event.stopPropagation());
+    setTimeout(() => editor.focus(), 0);
   };
 
   const revealLinkedToken = (token) => {
@@ -1209,6 +1321,7 @@ function createPanel(node, textWidget) {
     state.undoStack.pop();
     state.redoStack.push(entry);
     state.pinned = null;
+    if (typeof entry.beforeCategoryView === "boolean") state.categoryView = entry.beforeCategoryView;
     updateText(entry.before, entry.beforeStart);
     setStatus(`已撤销：${entry.label}`, "ok");
     return true;
@@ -1220,6 +1333,7 @@ function createPanel(node, textWidget) {
     state.redoStack.pop();
     state.undoStack.push(entry);
     state.pinned = null;
+    if (typeof entry.afterCategoryView === "boolean") state.categoryView = entry.afterCategoryView;
     updateText(entry.after, entry.afterCursor);
     setStatus(`已重做：${entry.label}`, "ok");
     return true;
@@ -1245,7 +1359,6 @@ function createPanel(node, textWidget) {
     }
     state.boundTextarea = textarea;
     state.textareaListeners = [];
-    hideNativeEnglishWidget();
   };
 
   const insertEnglish = (english, keepSearch = false) => {
@@ -1313,6 +1426,10 @@ function createPanel(node, textWidget) {
     state.largeSearchMatches = [];
     state.largeSearchQuery = "";
     state.largeSearchLoading = false;
+    state.largeSearchOffset = 0;
+    state.largeSearchHasMore = false;
+    state.largeSearchExpandedTerms = [];
+    state.searchVisibleLimit = 40;
   };
 
   const refreshDictionary = async (notifyPeers = true) => {
@@ -1448,7 +1565,11 @@ function createPanel(node, textWidget) {
     chineseEditor.classList.toggle("bpi-hidden", !state.chineseEditing);
     editChineseButton.textContent = state.chineseEditing ? "返回联动" : "编辑文本";
     mirrorTitle.textContent = state.chineseEditing ? "文本编辑与处理（支持中英混合）" : "中文同步编辑（逐标签组合）";
-    mirrorHint.textContent = state.chineseEditing ? "处理结果留在此处；点击同步才写入上方英文" : "点击联动｜选中后按 Delete 删除";
+    mirrorHint.textContent = state.chineseEditing
+      ? "处理结果留在此处；点击同步才写入上方英文"
+      : state.categoryView
+        ? "分类表格视图｜点击标签联动；分类名称不会写入提示词"
+        : "点击联动｜选中后按 Delete 删除";
     if (state.chineseEditing) {
       if (!state.editorInitialized) {
         chineseEditor.value = chineseDraftFromTokens();
@@ -1553,11 +1674,14 @@ function createPanel(node, textWidget) {
     setAssistantBusy(true);
     setStatus("正在识别标签分类…", "busy");
     try {
-      let tokens = parsePrompt(source, state.index, state.machine, { mode: "tags" });
+      let tokens = parsePrompt(source, state.index, state.machine, { mode: "auto" });
       await ensureLargeEntriesFor(tokens);
-      tokens = parsePrompt(source, state.index, state.machine, { mode: "tags" });
-      const result = sortAnimaPrompt(tokens);
+      tokens = parsePrompt(source, state.index, state.machine, { mode: "auto" });
+      const result = sortAnimaPrompt(tokens, { groupLines: true });
       if (result.text === source) {
+        state.categoryView = true;
+        render();
+        mirrorHint.textContent = "分类表格视图｜点击标签联动；分类名称不会写入提示词";
         setStatus(`已经符合 Anima 顺序${result.uncertain.length ? `｜待确认分类 ${result.uncertain.length} 项` : ""}`, "ok");
         return;
       }
@@ -1579,6 +1703,7 @@ function createPanel(node, textWidget) {
 
   const renderEnglishTokenView = (text) => {
     const hasText = Boolean(text.trim());
+    updateEnglishClearButton();
     if (!hasText && !state.englishEditing) {
       state.englishEditing = true;
       state.englishEditingExplicit = false;
@@ -1641,13 +1766,18 @@ function createPanel(node, textWidget) {
   };
 
   const renderChineseMirror = (text) => {
+    if (!state.chineseEditing) {
+      mirrorHint.textContent = state.categoryView
+        ? "分类表格视图｜点击标签联动；分类名称不会写入提示词"
+        : "点击联动｜选中后按 Delete 删除";
+    }
     chineseMirror.replaceChildren();
     if (!state.tokens.length) {
       chineseMirror.appendChild(element("span", "bpi-mirror-empty", "英文提示词的逐标签中文组合会显示在这里。"));
       autoFitActiveGreenArea();
       return;
     }
-    for (const [index, token] of state.tokens.entries()) {
+    const tokenChip = (token) => {
       const classes = ["bpi-mirror-token", `bpi-${token.status}`];
       if (state.pinned === token.id) classes.push("bpi-linked");
       const label = token.status === "unknown"
@@ -1689,11 +1819,30 @@ function createPanel(node, textWidget) {
         });
         chip.appendChild(remove);
       }
-      chineseMirror.appendChild(chip);
-      const next = state.tokens[index + 1];
-      if (next) {
-        const sourceGap = text.slice(token.end, next.start);
-        chineseMirror.appendChild(element("span", "bpi-mirror-separator", /[\r\n]/.test(sourceGap) ? "\n" : "，"));
+      return chip;
+    };
+    if (state.categoryView) {
+      const categoryTable = element("div", "bpi-category-table");
+      for (const group of groupAnimaTokensForDisplay(state.tokens)) {
+        const row = element("div", "bpi-category-row");
+        const name = element("div", "bpi-category-name", group.label);
+        const content = element("div", "bpi-category-content");
+        for (const [index, token] of group.tokens.entries()) {
+          content.appendChild(tokenChip(token));
+          if (index < group.tokens.length - 1) content.appendChild(element("span", "bpi-mirror-separator", "，"));
+        }
+        row.append(name, content);
+        categoryTable.appendChild(row);
+      }
+      chineseMirror.appendChild(categoryTable);
+    } else {
+      for (const [index, token] of state.tokens.entries()) {
+        chineseMirror.appendChild(tokenChip(token));
+        const next = state.tokens[index + 1];
+        if (next) {
+          const sourceGap = text.slice(token.end, next.start);
+          chineseMirror.appendChild(element("span", "bpi-mirror-separator", /[\r\n]/.test(sourceGap) ? "\n" : "，"));
+        }
       }
     }
     autoFitActiveGreenArea();
@@ -1829,6 +1978,27 @@ function createPanel(node, textWidget) {
 
         const actions = element("span", "bpi-inline-actions");
         if (token.status === "unknown" && !/[\u3400-\u9fff]/.test(token.term)) {
+          const searchButton = element("button", "bpi-mini", "搜索候选");
+          searchButton.addEventListener("click", (event) => {
+            event.stopPropagation();
+            setDetailsExpanded(true);
+            search.value = token.term;
+            renderSearch();
+            search.focus({ preventScroll: true });
+            results.scrollIntoView?.({ block: "nearest" });
+          });
+          const addButton = element("button", "bpi-mini", "手动添加");
+          addButton.addEventListener("click", (event) => {
+            event.stopPropagation();
+            openTagDialog({
+              english: token.term,
+              chinese: "",
+              category: "待整理",
+              models: ["general", "anima"],
+              source: "user",
+              verified: true,
+            }, refreshDictionary);
+          });
           const translating = state.translating.has(token.key);
           const translateButton = element("button", "bpi-mini", translating ? "翻译中" : "翻译");
           translateButton.disabled = translating;
@@ -1836,7 +2006,7 @@ function createPanel(node, textWidget) {
             event.stopPropagation();
             translateToken(token);
           });
-          actions.appendChild(translateButton);
+          actions.append(searchButton, addButton, translateButton);
         } else if (token.status === "unknown" && /[\u3400-\u9fff]/.test(token.term)) {
           const hint = element("span", "bpi-badge", "使用上方“编辑文本”处理");
           hint.title = "点击“编辑文本”，再使用检查器自己的“仅翻译”或“翻译并优化”";
@@ -1919,63 +2089,116 @@ function createPanel(node, textWidget) {
     state.renderTimer = setTimeout(render, immediate ? 0 : 180);
   };
 
+  const requestLargeSearchPage = (rawQuery, append = false) => {
+    if (!largeDictionaryReady() || state.largeSearchLoading) return;
+    clearTimeout(state.largeSearchTimer);
+    state.largeSearchLoading = true;
+    const generation = state.largeSearchGeneration;
+    const offset = append ? state.largeSearchOffset : 0;
+    state.largeSearchTimer = setTimeout(async () => {
+      try {
+        const page = await searchLargeDictionary(rawQuery, 40, offset);
+        if (generation !== state.largeSearchGeneration || search.value.trim() !== rawQuery) return;
+        const byKey = new Map((append ? state.largeSearchMatches : []).map((tag) => [normalizeKey(tag.english), tag]));
+        for (const tag of page.items ?? []) {
+          byKey.set(normalizeKey(tag.english), tag);
+          state.largeCache.set(normalizeKey(tag.english), tag);
+        }
+        state.largeSearchMatches = [...byKey.values()];
+        state.largeSearchOffset = Number(page.next_offset ?? (offset + (page.items?.length ?? 0)));
+        state.largeSearchHasMore = Boolean(page.has_more);
+        state.largeSearchExpandedTerms = page.expanded_terms ?? [];
+        rebuildDictionaryIndex();
+      } catch (error) {
+        if (generation === state.largeSearchGeneration) setStatus(error.message, "error");
+        state.largeSearchHasMore = false;
+      } finally {
+        if (generation === state.largeSearchGeneration) {
+          state.largeSearchLoading = false;
+          renderSearch();
+        }
+      }
+    }, append ? 0 : 260);
+  };
+
   const renderSearch = () => {
-    results.replaceChildren();
     const rawQuery = search.value.trim();
+    const previousScrollTop = preservedSearchScroll(
+      state.lastRenderedSearchQuery,
+      rawQuery,
+      results.scrollTop,
+    );
+    state.lastRenderedSearchQuery = rawQuery;
+    results.replaceChildren();
+    const restoreScroll = () => {
+      if (state.lastRenderedSearchQuery !== rawQuery || previousScrollTop <= 0) return;
+      results.scrollTop = previousScrollTop;
+      requestAnimationFrame(() => {
+        if (state.lastRenderedSearchQuery === rawQuery) results.scrollTop = previousScrollTop;
+      });
+    };
     if (!rawQuery) {
       clearTimeout(state.largeSearchTimer);
       state.largeSearchGeneration += 1;
       state.largeSearchQuery = "";
       state.largeSearchMatches = [];
       state.largeSearchLoading = false;
-    } else if (largeDictionaryReady() && rawQuery !== state.largeSearchQuery) {
+      state.largeSearchOffset = 0;
+      state.largeSearchHasMore = false;
+      state.largeSearchExpandedTerms = [];
+      state.searchVisibleLimit = 40;
+    } else if (rawQuery !== state.largeSearchQuery) {
       clearTimeout(state.largeSearchTimer);
+      state.largeSearchLoading = false;
       state.largeSearchQuery = rawQuery;
       state.largeSearchMatches = [];
-      state.largeSearchLoading = true;
-      const generation = ++state.largeSearchGeneration;
-      state.largeSearchTimer = setTimeout(async () => {
-        try {
-          const found = await searchLargeDictionary(rawQuery, 60);
-          if (generation !== state.largeSearchGeneration || search.value.trim() !== rawQuery) return;
-          state.largeSearchMatches = found;
-          for (const tag of found) state.largeCache.set(normalizeKey(tag.english), tag);
-          rebuildDictionaryIndex();
-        } catch (error) {
-          if (generation === state.largeSearchGeneration) setStatus(error.message, "error");
-        } finally {
-          if (generation === state.largeSearchGeneration) {
-            state.largeSearchLoading = false;
-            renderSearch();
-          }
-        }
-      }, 260);
+      state.largeSearchOffset = 0;
+      state.largeSearchHasMore = largeDictionaryReady();
+      state.largeSearchExpandedTerms = [];
+      state.searchVisibleLimit = 40;
+      state.largeSearchGeneration += 1;
+      if (largeDictionaryReady()) requestLargeSearchPage(rawQuery, false);
     }
     const localKeys = new Set((state.data.tags ?? []).map((tag) => normalizeKey(tag.english)));
     const searchable = [
       ...(state.data.tags ?? []),
       ...state.largeSearchMatches.filter((tag) => !localKeys.has(normalizeKey(tag.english))),
     ];
-    const matches = rawQuery
-      ? rankDictionaryTags(searchable, rawQuery, state.preferences, 40)
-      : suggestedTags(state.data.tags, state.preferences, 30);
+    const ranked = rawQuery
+      ? rankDictionaryMatches(
+          searchable,
+          rawQuery,
+          state.preferences,
+          Math.max(1, searchable.length),
+          state.data.search_concepts,
+        )
+      : suggestedTags(state.data.tags, state.preferences, 30).map((tag) => ({ tag, reason: "收藏或最近使用" }));
+    const visibleMatches = ranked.slice(0, state.searchVisibleLimit);
+    const matches = visibleMatches.map((item) => item.tag);
     state.searchMatches = matches;
     if (!matches.length) {
       state.searchIndex = -1;
       if (rawQuery) {
-        results.appendChild(element("div", "bpi-empty", state.largeSearchLoading ? "正在查询大型词库…" : "没有找到匹配标签，可添加到个人词库。"));
+        results.appendChild(element("div", "bpi-empty", state.largeSearchLoading ? "正在查询词库…" : "当前启用的词库中没有找到匹配标签，可手动添加到个人词库。"));
         results.classList.add("bpi-visible");
       } else {
         results.classList.remove("bpi-visible");
       }
+      restoreScroll();
       return;
     }
     if (state.searchIndex < 0 || state.searchIndex >= matches.length) state.searchIndex = 0;
-    for (const [index, tag] of matches.entries()) {
+    for (const [index, match] of visibleMatches.entries()) {
+      const tag = match.tag;
       const result = element("div", "bpi-result");
       if (index === state.searchIndex) result.classList.add("bpi-result-selected");
       const meta = element("span", "bpi-category");
-      meta.appendChild(element("span", "", `${tag.category} · ${tag.pack_name ?? sourceLabel(tag.source)}`));
+      const format = tag.pack_id === "danbooru_large"
+        ? (/[_()]/.test(tag.english) ? "Danbooru 原始格式" : "大型词库")
+        : "";
+      const usage = Number(tag.post_count) > 0 ? ` · 使用量 ${Number(tag.post_count).toLocaleString()}` : "";
+      meta.appendChild(element("span", "", `${tag.category} · ${tag.pack_name ?? sourceLabel(tag.source)}${format ? ` · ${format}` : ""}${usage}`));
+      meta.appendChild(element("span", "bpi-search-reason", match.reason));
       const star = element("span", `bpi-result-star${isFavorite(tag.english) ? " bpi-starred" : ""}`, isFavorite(tag.english) ? "★" : "☆");
       star.title = isFavorite(tag.english) ? "取消收藏" : "收藏标签";
       star.addEventListener("click", (event) => {
@@ -1994,8 +2217,23 @@ function createPanel(node, textWidget) {
       });
       results.appendChild(result);
     }
+    const moreKnown = ranked.length > state.searchVisibleLimit;
+    if (rawQuery && (moreKnown || state.largeSearchHasMore)) {
+      const moreButton = button(state.largeSearchLoading ? "正在搜索更多…" : "搜索更多", () => {
+        if (state.largeSearchLoading) return;
+        state.searchVisibleLimit += 40;
+        if (state.largeSearchHasMore) requestLargeSearchPage(rawQuery, true);
+        renderSearch();
+      }, "bpi-search-more");
+      moreButton.disabled = state.largeSearchLoading;
+      results.appendChild(moreButton);
+      results.appendChild(element("div", "bpi-searching", `当前显示 ${matches.length} 项，可能还有更多`));
+    } else if (rawQuery && !state.largeSearchLoading) {
+      results.appendChild(element("div", "bpi-searching", `已显示全部 ${matches.length} 项，没有更多结果`));
+    }
     if (state.largeSearchLoading) results.appendChild(element("div", "bpi-searching", "正在补充查询大型词库…"));
     results.classList.add("bpi-visible");
+    restoreScroll();
   };
 
   const translateAllUnknown = async (control) => {
@@ -2602,10 +2840,10 @@ function createPanel(node, textWidget) {
       const generation = ++managerLargeGeneration;
       managerLargeTimer = setTimeout(async () => {
         try {
-          const found = await searchLargeDictionary(query, 100);
+          const page = await searchLargeDictionary(query, 100);
           if (generation !== managerLargeGeneration || managerSearch.value.trim() !== query) return;
-          managerLargeMatches = found;
-          for (const tag of found) state.largeCache.set(normalizeKey(tag.english), tag);
+          managerLargeMatches = page.items ?? [];
+          for (const tag of managerLargeMatches) state.largeCache.set(normalizeKey(tag.english), tag);
           rebuildDictionaryIndex();
         } catch (error) {
           if (generation === managerLargeGeneration) {
@@ -2669,7 +2907,7 @@ function createPanel(node, textWidget) {
     button("刷新词库", refreshDictionary),
   );
   toolbar.append(leftTools, rightTools);
-  searchLine.append(modeSelect, search);
+  searchLine.append(modeSelect, searchLabel, search);
   summary.append(counts, modeInfo, status);
   detailsBody.append(toolbar, searchLine, results, summary, filtersBar, issuesPanel, table);
   panel.append(englishSection, mirrorSection, detailsHead, detailsBody, aboutFooter, importInput);
@@ -2698,7 +2936,7 @@ function createPanel(node, textWidget) {
   chineseMirror.title = "点击标签可与上方英文和下方明细联动";
   englishTokenView.title = "点击英文标签可与中文和下方明细联动";
   englishEditor.title = "输入期间保持文本编辑；失去焦点或点击完成编辑后切换为标签视图";
-  chineseEditor.title = "输入中文、英文或中英混合内容；高度会随内容自动调整";
+  chineseEditor.title = "输入中文、英文或中英混合内容；可拖动右下角改变高度并自动保存";
   englishTokenView.addEventListener("click", (event) => {
     if (event.target !== englishTokenView) return;
     state.pinned = null;
@@ -2715,12 +2953,14 @@ function createPanel(node, textWidget) {
     action();
   });
   editChineseButton.title = "在标签联动视图与中英文文本编辑框之间切换";
+  expandChineseButton.title = "在更大的弹窗中编辑中文或中英混合内容";
   translateChineseButton.title = "自动检测语言并忠实翻译；不优化、不自动同步";
   translateOptimizeButton.title = "自动翻译后优化成符合 Anima 格式的英文提示词";
   optimizeChineseButton.title = "只优化已有英文，不承担翻译";
-  sortPromptButton.title = "所有内容完成后，手动按 Anima 九段顺序整理";
+  sortPromptButton.title = "按 Anima 推荐分类稳定排序，每个非空分类单独一行；自然语言和 BREAK/AND 保持完整";
   assistantSettingsButton.title = "配置纯词库、Ollama 或 OpenAI 兼容 API 与自定义规则";
   bindMirrorAction(editChineseButton, () => setChineseEditing(!state.chineseEditing));
+  bindMirrorAction(expandChineseButton, openExpandedChineseEditor);
   bindMirrorAction(translateChineseButton, () => runTextAssistant("translate"));
   bindMirrorAction(translateOptimizeButton, () => runTextAssistant("translate_optimize"));
   bindMirrorAction(optimizeChineseButton, () => runTextAssistant("optimize"));
@@ -2728,6 +2968,7 @@ function createPanel(node, textWidget) {
   bindMirrorAction(sortPromptButton, sortByAnimaOrder);
   bindMirrorAction(assistantSettingsButton, () => openAssistantSettings(null, setStatus));
   editEnglishButton.title = "在英文文本编辑框和可联动标签视图之间切换";
+  clearEnglishButton.title = "需要再次确认才会清空英文实际输出；清空后可点同一按钮撤销，也可按 Ctrl+Z";
   editEnglishButton.addEventListener("mousedown", (event) => {
     event.preventDefault();
     event.stopPropagation();
@@ -2736,6 +2977,15 @@ function createPanel(node, textWidget) {
     event.preventDefault();
     event.stopPropagation();
     setEnglishEditing(!state.englishEditing);
+  });
+  clearEnglishButton.addEventListener("mousedown", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+  });
+  clearEnglishButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    clearEnglishText();
   });
   englishEditor.addEventListener("mousedown", (event) => {
     event.stopPropagation();
@@ -2758,7 +3008,10 @@ function createPanel(node, textWidget) {
       if (state.englishEditing && document.activeElement !== englishEditor) setEnglishEditing(false);
     }, 0);
   });
-  chineseEditor.addEventListener("mousedown", (event) => event.stopPropagation());
+  chineseEditor.addEventListener("mousedown", (event) => {
+    event.stopPropagation();
+    startManualResize("chinese", chineseEditor, event);
+  });
   chineseEditor.addEventListener("input", () => {
     state.stagedText = {
       text: chineseEditor.value,
@@ -2817,6 +3070,9 @@ function createPanel(node, textWidget) {
   textWidget.callback = function (value) {
     const result = originalCallback?.apply(this, arguments);
     const nextText = String(value ?? "");
+    if (state.englishClearState === "confirm" || (state.englishClearState === "cleared" && nextText)) {
+      resetEnglishClearState();
+    }
     if (state.englishEditing) {
       if (document.activeElement !== englishEditor && !state.englishEditingExplicit && nextText.trim()) {
         state.englishEditing = false;
@@ -2877,11 +3133,7 @@ function createPanel(node, textWidget) {
     },
     syncInitialLayout() {
       const expanded = state.preferences.detailsExpanded !== false;
-      if (!expanded && hasNodeSize() && (node.size[1] ?? 0) > COLLAPSED_NODE_MIN_HEIGHT) {
-        state.expandedNodeHeight = Math.max(node.size[1], EXPANDED_NODE_DEFAULT_HEIGHT);
-        state.collapsedBaseHeight = null;
-      }
-      if (!expanded || (node.size?.[1] ?? 0) < EXPANDED_NODE_DEFAULT_HEIGHT) requestNodeResize(expanded);
+      requestNodeResize(expanded);
     },
     checkForTextChange() {
       const current = String(textWidget.value ?? "");

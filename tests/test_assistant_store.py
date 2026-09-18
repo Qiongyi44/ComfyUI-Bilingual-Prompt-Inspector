@@ -12,6 +12,7 @@ from assistant_store import (
     LEGACY_DEFAULT_TRANSLATION_RULE,
     V17_DEFAULT_TRANSLATION_RULE,
     dictionary_translate,
+    openai_chat_endpoint,
     sanitize_anima_prompt,
     translation_direction,
 )
@@ -95,8 +96,22 @@ class AssistantStoreTests(unittest.TestCase):
     def test_dictionary_translation_reports_unknown(self):
         with tempfile.TemporaryDirectory() as root:
             dictionary = self.make_dictionary(root)
-            with self.assertRaisesRegex(ValueError, "纯词库模式无法翻译"):
+            with self.assertRaisesRegex(ValueError, "词库搜索.*手动加入个人词库"):
                 dictionary_translate("不存在的中文标签", dictionary)
+
+    def test_lm_studio_and_openai_endpoint_normalization(self):
+        self.assertEqual(
+            openai_chat_endpoint("http://127.0.0.1:1234"),
+            "http://127.0.0.1:1234/v1/chat/completions",
+        )
+        self.assertEqual(
+            openai_chat_endpoint("http://localhost:1234/v1"),
+            "http://localhost:1234/v1/chat/completions",
+        )
+        self.assertEqual(
+            openai_chat_endpoint("https://example.test/v1/chat/completions"),
+            "https://example.test/v1/chat/completions",
+        )
 
     def test_language_direction_and_anima_punctuation(self):
         self.assertEqual(translation_direction("masterpiece, best quality"), "to_chinese")

@@ -64,6 +64,20 @@ def translation_direction(text):
     return "to_english" if re.search(r"[\u3400-\u9fff]", str(text or "")) else "to_chinese"
 
 
+def openai_chat_endpoint(base_url):
+    """Return a chat-completions endpoint for an OpenAI-compatible base URL."""
+    base = str(base_url or "").strip().rstrip("/")
+    if not base:
+        return ""
+    if base.endswith("/chat/completions"):
+        return base
+    parsed = urlparse(base)
+    path = parsed.path.rstrip("/")
+    if not path and parsed.hostname in {"127.0.0.1", "localhost"} and parsed.port == 1234:
+        return f"{base}/v1/chat/completions"
+    return f"{base}/chat/completions"
+
+
 def sanitize_anima_prompt(value):
     text = str(value or "").strip()
     fenced = re.fullmatch(r"```(?:text|plaintext)?\s*([\s\S]*?)\s*```", text, re.IGNORECASE)
@@ -330,5 +344,8 @@ def dictionary_translate(text, dictionary_store):
             missing.append(lookup_part)
     if missing:
         preview = "、".join(missing[:8])
-        raise ValueError(f"纯词库模式无法翻译：{preview}。请配置 Ollama 或 OpenAI 兼容接口。")
+        raise ValueError(
+            f"纯词库模式暂未收录：{preview}。可在“词库搜索”查找候选、手动加入个人词库，"
+            "或按需配置免费的本地 Ollama / LM Studio；外部 API 不是必需项。"
+        )
     return ", ".join(output)

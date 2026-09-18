@@ -11,7 +11,13 @@ from urllib.parse import urlparse
 from aiohttp import ClientSession, ClientTimeout, web
 from server import PromptServer
 
-from .assistant_store import AssistantStore, dictionary_translate, sanitize_anima_prompt, translation_direction
+from .assistant_store import (
+    AssistantStore,
+    dictionary_translate,
+    openai_chat_endpoint,
+    sanitize_anima_prompt,
+    translation_direction,
+)
 from .dictionary_store import DictionaryStore, normalize_key
 
 
@@ -116,13 +122,11 @@ def _dictionary_explain(text):
         chinese = entry["chinese"]
         output.append(f"({chinese}:{weighted.group(2)})" if weighted else chinese)
     if missing:
-        raise ValueError(f"纯词库模式无法翻译：{'、'.join(missing[:8])}。请配置 Ollama 或 OpenAI 兼容接口。")
+        raise ValueError(
+            f"纯词库模式暂未收录：{'、'.join(missing[:8])}。可在“词库搜索”查找候选、"
+            "手动加入个人词库，或按需配置免费的本地 Ollama / LM Studio。"
+        )
     return "，".join(output)
-
-
-def _openai_endpoint(base_url):
-    base = str(base_url or "").rstrip("/")
-    return base if base.endswith("/chat/completions") else f"{base}/chat/completions"
 
 
 async def _call_configured_assistant(action, text, instruction="", connection_test=False):
@@ -188,7 +192,7 @@ async def _call_configured_assistant(action, text, instruction="", connection_te
             "messages": [{"role": "system", "content": rule}, {"role": "user", "content": text}],
         }
         async with ClientSession(timeout=timeout) as session:
-            async with session.post(_openai_endpoint(config["base_url"]), headers=headers, json=payload) as response:
+            async with session.post(openai_chat_endpoint(config["base_url"]), headers=headers, json=payload) as response:
                 data = await response.json(content_type=None)
                 if response.status >= 400:
                     detail = data.get("error") if isinstance(data, dict) else None
@@ -316,7 +320,11 @@ async def search_large_dictionary(request):
     try:
         query = request.query.get("q", "")
         limit = request.query.get("limit", "40")
-        return web.json_response({"success": True, "data": store.search_large_tags(query, limit=limit)})
+        offset = request.query.get("offset", "0")
+        return web.json_response({
+            "success": True,
+            "data": store.search_large_tags_page(query, limit=limit, offset=offset),
+        })
     except ValueError as error:
         return error_response(error)
     except (OSError, sqlite3.Error) as error:
